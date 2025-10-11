@@ -5,104 +5,184 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nhà & Đất Long Biên – Công Thị Tân</title>
 <meta name="description" content="Nhà & Đất Long Biên, Hà Nội – Bán nhà 3 – 10 tỷ, tầng 3 tiện mở văn phòng. Vị trí trung tâm Long Biên, gần Gia Lâm, sổ đỏ chính chủ. Liên hệ: 0374 966 430, congttan1981@gmail.com. Xem bản đồ: https://maps.app.goo.gl/tZB1fdUxP3WMSh9Q9?g_st=ipc. Fanpage: https://m.facebook.com/nhadatlongbien0374966430/">
+
+<!-- Schema JSON-LD nâng cao -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Nhà & Đất Long Biên – Công Thị Tân",
+  "url": "https://taihanoi.github.io/nhadatchinhchu/",
+  "logo": "https://i.postimg.cc/T2cW9Yk6/IMG-5191.png",
+  "telephone": "0374966430",
+  "email": "congttan1981@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tầng 3, 112 Nguyễn Văn Cừ",
+    "addressLocality": "Long Biên",
+    "addressRegion": "Hà Nội",
+    "addressCountry": "VN"
+  }
+}
+</script>
+
 <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:Arial, sans-serif;line-height:1.6;color:#333;background:#fff;}
-    a{text-decoration:none;color:inherit;}
-    h1,h2,h3{color:#e67e22;}
-    header{background:#e67e22;padding:15px 20px;position:fixed;width:100%;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
-    .logo{color:#fff;font-weight:bold;font-size:20px;}
-    nav ul{list-style:none;display:flex;}
-    nav ul li{margin-left:20px;position:relative;}
-    nav ul li a{color:#fff;padding:5px 10px;transition:0.3s;}
-    nav ul li a:hover{background:#bd6d1d;border-radius:5px;}
-    .hamburger{display:none;flex-direction:column;cursor:pointer;}
-    .hamburger div{width:25px;height:3px;background:#fff;margin:4px 0;transition:0.4s;}
-    @media(max-width:768px){
-        nav ul{flex-direction:column;display:none;background:#bd6d1d;position:absolute;top:60px;right:0;width:200px;border-radius:5px;}
-        nav ul.show{display:flex;}
-        .hamburger{display:flex;}
-    }
-    .banner{margin-top:70px;text-align:center;}
-    .banner img{width:100%;max-width:1200px;height:auto;border-radius:5px;}
-    .banner figcaption{margin-top:10px;font-style:italic;color:#555;}
-    main{max-width:1000px;margin:40px auto;padding:0 20px;}
-    section{margin-bottom:40px;}
-    table{width:100%;border-collapse:collapse;margin-bottom:20px;}
-    table, th, td{border:1px solid #ccc;}
-    th, td{padding:10px;text-align:center;}
-    th{background:#e67e22;color:#fff;}
-    tr:nth-child(even){background:#f9f9f9;}
-    .btn{display:inline-block;padding:10px 20px;background:#e67e22;color:#fff;border-radius:5px;transition:0.3s;cursor:pointer;}
-    .btn:hover{background:#d35400;transform:scale(1.05);}
-    #contact{background:#f1f1f1;padding:20px;border-radius:5px;}
-    #contact p{margin-bottom:10px;}
-    footer{background:#000;color:#fff;padding:20px;text-align:center;}
-    footer a{color:#e67e22;}
-    /* Reviews Slide */
-    .reviews{position:relative;overflow:hidden;padding:20px;background:#f9f9f9;border-radius:5px;margin-bottom:40px;}
-    .review-slide{display:flex;transition:0.5s;}
-    .review{min-width:100%;padding:20px;text-align:center;}
-    .review p{font-style:italic;}
-    /* FAQ Accordion */
-    .accordion {background:#e67e22;color:#fff;cursor:pointer;padding:15px;margin-bottom:5px;border:none;text-align:left;outline:none;font-size:16px;transition:0.3s;border-radius:5px;}
-    .accordion:hover{background:#d35400;}
-    .panel {padding:0 15px;background:#f1f1f1;max-height:0;overflow:hidden;transition:max-height 0.3s ease;}
-    /* Quick Call Buttons */
-    .quick-call{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:1000;}
-    .quick-call a{background:#e67e22;color:#fff;padding:12px;border-radius:50px;text-align:center;font-weight:bold;transition:0.3s;}
-    .quick-call a:hover{background:#d35400;transform:scale(1.1);}
+:root{
+--primary:#e67e22;
+--primary-hover:#d35400;
+--secondary:#000;
+--white:#fff;
+--gray:#f1f1f1;
+--shadow:0 4px 12px rgba(0,0,0,0.2);
+--banner-height:70vh;
+--transition:0.4s;
+}
+
+/* Reset & base */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,sans-serif;line-height:1.6;color:#333;background:var(--white);}
+a{text-decoration:none;color:inherit;}
+h1,h2,h3{color:var(--primary);}
+img{max-width:100%;display:block;}
+
+/* Header */
+header{background:var(--primary);position:fixed;width:100%;top:0;z-index:1000;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--shadow);}
+.logo{color:var(--white);font-weight:bold;font-size:20px;}
+nav ul{list-style:none;display:flex;gap:15px;}
+nav ul li a{color:var(--white);padding:5px 12px;border-radius:5px;transition:var(--transition);}
+nav ul li a:hover{background:var(--primary-hover);}
+.hamburger{display:none;flex-direction:column;cursor:pointer;}
+.hamburger div{width:25px;height:3px;background:#fff;margin:4px 0;transition:var(--transition);}
+@media(max-width:768px){
+nav ul{flex-direction:column;position:absolute;top:60px;left:0;width:220px;background:var(--primary);display:none;border-radius:5px;}
+nav ul.show{display:flex;}
+.hamburger{display:flex;}
+}
+
+/* Banner Parallax */
+.banner{height:var(--banner-height);overflow:hidden;position:relative;perspective:1px;}
+.banner img{width:100%;height:100%;object-fit:cover;transform:translateZ(0);}
+.banner figcaption{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#fff;font-size:1.5rem;text-shadow:0 2px 5px rgba(0,0,0,0.5);}
+
+/* Main sections */
+main{max-width:1000px;margin:80px auto 40px;padding:0 20px;}
+section{margin-bottom:50px;opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+section.show{opacity:1;transform:translateY(0);}
+
+/* Table hover card */
+table{width:100%;border-collapse:collapse;margin-bottom:20px;}
+th,td{padding:12px;text-align:center;border:1px solid #ccc;transition:all 0.3s ease;}
+th{background:var(--primary);color:#fff;}
+tr:nth-child(even){background:#f9f9f9;}
+tr:hover{background:linear-gradient(90deg, #fde5d0,#fff);transform:scale(1.03);box-shadow:var(--shadow);}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 20px;background:var(--primary);color:#fff;border-radius:8px;transition:var(--transition);}
+.btn:hover{background:var(--primary-hover);transform:scale(1.05);}
+.btn-phone{background:#fff;color:var(--primary);padding:8px 15px;border-radius:50px;font-weight:bold;transition:var(--transition);}
+.btn-phone:hover{background:#f1f1f1;transform:scale(1.05);}
+
+/* Review slide */
+.reviews{position:relative;overflow:hidden;padding:20px;background:var(--gray);border-radius:8px;margin-bottom:40px;}
+.review-slide{display:flex;transition:all 0.5s ease;}
+.review{min-width:100%;padding:20px;text-align:center;font-style:italic;}
+.dots{text-align:center;margin-top:10px;}
+.dot{display:inline-block;width:12px;height:12px;background:#ccc;border-radius:50%;margin:0 5px;cursor:pointer;transition:0.3s;}
+.dot.active{background:var(--primary);}
+
+/* FAQ */
+.accordion{background:var(--primary);color:#fff;cursor:pointer;padding:15px;margin-bottom:5px;border:none;text-align:left;font-size:16px;outline:none;border-radius:8px;transition:var(--transition);}
+.accordion:hover{background:var(--primary-hover);}
+.panel{padding:0 15px;background:#f1f1f1;max-height:0;overflow:hidden;transition:max-height 0.4s ease, padding 0.4s ease;box-shadow:inset 0 2px 5px rgba(0,0,0,0.1);border-radius:0 0 8px 8px;}
+
+/* Quick Call */
+.quick-call{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:12px;z-index:1000;}
+.quick-call a{background:linear-gradient(45deg,#e67e22,#d35400);color:#fff;padding:14px;border-radius:50px;text-align:center;font-weight:bold;transition:all 0.3s ease;}
+.quick-call a:hover{transform:scale(1.15);box-shadow:var(--shadow);}
+
+/* Diagram */
+.diagram-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:20px;}
+.step{text-align:center;margin:10px;transition:all 0.5s ease;}
+.circle{width:50px;height:50px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;margin:0 auto 10px auto;box-shadow:var(--shadow);}
+.arrow{font-size:24px;color:#333;margin:0 5px;}
+@media(max-width:768px){.diagram-container{flex-direction:column;align-items:flex-start;}.arrow{display:none;}}
 </style>
 </head>
-<body>
 
+<body>
 <header>
-    <div class="logo">Nhà & Đất Long Biên</div>
-    <div class="hamburger" onclick="toggleMenu()">
-        <div></div><div></div><div></div>
-    </div>
-    <nav>
-        <ul id="menu">
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#about">Giới thiệu</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-    </nav>
+<div class="logo">Nhà & Đất Long Biên</div>
+<div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div>
+<nav>
+<ul id="menu">
+<li><a href="#home">Trang chủ</a></li>
+<li><a href="#about">Giới thiệu</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Liên hệ</a></li>
+<li><a class="btn-phone" href="tel:0374966430">📞 0374 966 430</a></li>
+</ul>
+</nav>
 </header>
 
+<!-- Banner Parallax -->
 <div class="banner" id="home">
-    <figure>
-        <img src="https://postimg.cc/G9H23rw7" alt="Nhà đất Long Biên">
-        <figcaption>Nhà đất Long Biên – Giá tốt, trung tâm Long Biên, Hà Nội</figcaption>
-    </figure>
+<figure>
+<img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" alt="Nhà đất Long Biên" loading="lazy">
+<figcaption>Nhà đất Long Biên – Giá tốt, trung tâm Long Biên, Hà Nội</figcaption>
+</figure>
 </div>
 
 <main>
 <section id="about">
 <h2>Giới thiệu</h2>
-<p>Nhà & Đất Long Biên cung cấp các căn nhà đa dạng tại Long Biên, Hà Nội, từ 3 – 5 tỷ, 5 – 7 tỷ đến 7 – 10 tỷ, giá 60 – 150 triệu/m², nhiều căn có tầng 3 tiện mở văn phòng hoặc không gian sinh hoạt. Vị trí trung tâm Long Biên, gần Gia Lâm, Hà Nội. Sản phẩm minh bạch pháp lý, sổ đỏ chính chủ, hình ảnh/video thực tế giúp khách hàng dễ dàng lựa chọn.</p>
+<p>Nhà & Đất Long Biên cung cấp các căn nhà đa dạng tại Long Biên, Hà Nội, từ 3 – 5 tỷ, 5 – 7– 10 tỷ, giá 60 – 150 triệu/m². Nhiều căn có tầng 3 tiện mở văn phòng hoặc sinh hoạt. Vị trí trung tâm Long Biên, gần Gia Lâm, Hà Nội. Sản phẩm minh bạch, sổ đỏ chính chủ, hình ảnh/video thực tế giúp khách hàng dễ dàng lựa chọn.</p>
 </section>
 
+<!-- Sản phẩm nổi bật -->
+<section id="products">
+<h2>Giá Nhà Đất Long Biên, Hà Nội</h2>
+<table>
+<tr><th>Căn nhà</th><th>Giá</th><th>Diện tích</th><th>Tầng 3</th></tr>
+<tr><td>Nhà Long Biên 3 – 5 tỷ</td><td>3.5 tỷ</td><td>60 m²</td><td>Có thể mở văn phòng</td></tr>
+<tr><td>Nhà Long Biên 5 – 7 tỷ</td><td>6 tỷ</td><td>90 m²</td><td>Có thể mở văn phòng</td></tr>
+<tr><td>Bán nhà Long Biên 4 tỷ</td><td>4 tỷ</td><td>70 m²</td><td>Có tầng 3</td></tr>
+<tr><td>Mua nhà Long Biên dưới 2 tỷ</td><td>1.8 tỷ</td><td>50 m²</td><td>Không tầng 3</td></tr>
+<tr><td>Nhà Long Biên 5 đến 7 tỷ</td><td>6.5 tỷ</td><td>85 m²</td><td>Có tầng 3</td></tr>
+</table>
+<a class="btn" href="https://m.facebook.com/nhadatlongbien0374966430/" target="_blank">Xem thêm trên Fanpage</a>
+</section>
+
+<!-- Diagram sơ đồ -->
+<section id="diagram">
+<h2>Quy trình mua nhà Long Biên</h2>
+<div class="diagram-container">
+    <div class="step"><div class="circle">1</div><p>Tìm kiếm sản phẩm</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="circle">2</div><p>Xem hình/video thực tế</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="circle">3</div><p>Liên hệ tư vấn</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="circle">4</div><p>Kiểm tra sổ đỏ</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="circle">5</div><p>Ký hợp đồng</p></div>
+</div>
+</section>
+
+<!-- Reviews Slide -->
 <section class="reviews">
 <div class="review-slide" id="reviewSlide">
     <div class="review"><p>“Fanpage rất hữu ích, mình tìm được nhà ưng ý ở Long Biên nhanh chóng. Tư vấn nhiệt tình, thông tin minh bạch, thủ tục đơn giản. Rất đáng tin cậy!”</p></div>
     <div class="review"><p>“Nhà & Đất Long Biên hỗ trợ tôi mua căn hộ 5 – 7 tỷ, mọi thủ tục nhanh chóng, sổ đỏ chính chủ đầy đủ. Rất yên tâm khi giao dịch!”</p></div>
     <div class="review"><p>“Tìm nhà Long Biên 3 – 5 tỷ chưa bao giờ dễ dàng đến thế. Hình ảnh và video thực tế giúp mình đánh giá chính xác, cực kỳ hài lòng!”</p></div>
 </div>
+<div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
 </section>
 
-<section id="products">
-<h2>Sản phẩm nổi bật</h2>
-<table>
-<tr><th>Căn nhà</th><th>Giá</th><th>Diện tích</th><th>Tầng 3</th></tr>
-<tr><td>Nhà Long Biên 3 – 5 tỷ</td><td>3.5 tỷ</td><td>60 m²</td><td>Có thể mở văn phòng</td></tr>
-<tr><td>Nhà Long Biên 5 – 7 tỷ</td><td>6 tỷ</td><td>90 m²</td><td>Có thể mở văn phòng</td></tr>
-<tr><td>Bán nhà Long Biên 4 tỷ</td><td>4 tỷ</td><td>70 m²</td><td>Có tầng 3</td></tr>
-</table>
-<a class="btn" href="https://m.facebook.com/nhadatlongbien0374966430/" target="_blank">Xem thêm trên Fanpage</a>
-</section>
-
+<!-- FAQ Accordion -->
 <section id="faq">
 <h2>FAQ</h2>
 <button class="accordion">Các căn nhà có sổ đỏ không?</button>
@@ -113,11 +193,12 @@
 <div class="panel"><p>Chúng tôi cung cấp tư vấn chi tiết, minh bạch và hỗ trợ pháp lý cho mọi giao dịch.</p></div>
 </section>
 
+<!-- Contact -->
 <section id="contact">
 <h2>Liên hệ</h2>
 <p>📞 Số điện thoại: 0374 966 430</p>
 <p>📧 Email: congttan1981@gmail.com</p>
-    <p>📍 Địa chỉ: Tầng 3, 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
+<p>📍 Địa chỉ: Tầng 3, 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
 <p>📍 Xem bản đồ: <a href="https://maps.app.goo.gl/tZB1fdUxP3WMSh9Q9?g_st=ipc" target="_blank">Click để xem Local Map</a></p>
 </section>
 
@@ -133,60 +214,57 @@
 </footer>
 
 <script>
-    // Menu hamburger
-    function toggleMenu() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('show');
-    }
-    window.addEventListener('click', function(e){
-        const menu = document.getElementById('menu');
-        const hamburger = document.querySelector('.hamburger');
-        if(!menu.contains(e.target) && !hamburger.contains(e.target)) {
-            menu.classList.remove('show');
+// Menu hamburger
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('show');
+}
+window.addEventListener('click', function(e){
+    const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger');
+    if(!menu.contains(e.target) && !hamburger.contains(e.target)) menu.classList.remove('show');
+});
+
+// Smooth scroll + fade-in animation
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.getElementById(this.getAttribute('href').substring(1));
+        if(target){
+            window.scrollTo({top: target.offsetTop-60, behavior:'smooth'});
+            target.classList.add('show');
         }
+        document.getElementById('menu').classList.remove('show');
     });
-
-    // Smooth scroll
-    const links = document.querySelectorAll('nav ul li a');
-    for(const link of links){
-        link.addEventListener('click', function(e){
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if(targetSection){
-                window.scrollTo({
-                    top: targetSection.offsetTop - 60,
-                    behavior: 'smooth'
-                });
-            }
-            document.getElementById('menu').classList.remove('show');
-        });
-    }
-
-    // FAQ Accordion
-    const accordions = document.querySelectorAll(".accordion");
-    accordions.forEach(acc => {
-        acc.addEventListener("click", function() {
-            this.classList.toggle("active");
-            const panel = this.nextElementSibling;
-            if(panel.style.maxHeight){
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
+});
+window.addEventListener('scroll', function(){
+    document.querySelectorAll('section').forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100) el.classList.add('show');
     });
+});
 
-    // Review Slide
-    const slide = document.getElementById('reviewSlide');
-    let index = 0;
-    setInterval(() => {
-        index++;
-        if(index >= slide.children.length) index = 0;
-        slide.style.transform = `translateX(-${index*100}%)`;
-    }, 5000);
+// FAQ Accordion
+document.querySelectorAll(".accordion").forEach(acc => {
+    acc.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+    });
+});
+
+// Review Slide + dots
+const slide = document.getElementById('reviewSlide');
+const dots = document.querySelectorAll('.dot');
+let index = 0;
+function showSlide(i){
+    index = i;
+    slide.style.transform = `translateX(-${index*100}%)`;
+    dots.forEach(d=>d.classList.remove('active'));
+    dots[index].classList.add('active');
+}
+dots.forEach((d,i)=>{d.addEventListener('click',()=>showSlide(i));});
+setInterval(()=>{showSlide((index+1)%slide.children.length)},5000);
 </script>
 
 </body>
 </html>
- 
