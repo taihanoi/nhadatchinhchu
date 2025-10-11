@@ -1,444 +1,494 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Nhà & Đất Long Biên – Bán nhà chính chủ, giá tốt</title>
-<meta name="description" content="Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ. Mua nhà Long Biên dưới 10 tỷ. Mua nhà chính chủ Hà Nội. Tư vấn tận tâm, sổ đỏ chính chủ.">
-<meta name="keywords" content="bán nhà Long Biên dưới 3 tỷ, bán nhà Long Biên 4 tỷ, bán nhà Long Biên 5 tỷ, bán nhà Long Biên dưới 2 tỷ, mua nhà Long Biên dưới 10 tỷ, mua nhà chính chủ Hà Nội">
-<link rel="icon" href="https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg" type="image/jpeg">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --primary:#e67e22;
-  --primary-hover:#d35400;
-  --white:#fff;
-  --gray:#f1f1f1;
-  --shadow:0 6px 20px rgba(0,0,0,0.18);
-  --transition:0.35s;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Roboto',sans-serif;background:#fff;color:#222;line-height:1.6;-webkit-font-smoothing:antialiased;}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{color:var(--primary);margin-bottom:10px}
-img{max-width:100%;display:block}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nhà & Đất Long Biên – Bán nhà chính chủ, giá tốt</title>
 
-/* Sticky top bar */
-#sticky-bar{
-  position:fixed;top:0;left:0;width:100%;
-  background:linear-gradient(90deg,var(--primary),var(--primary-hover));
-  color:#fff;z-index:1200;padding:10px 18px;display:flex;justify-content:space-between;align-items:center;
-  box-shadow:0 4px 15px rgba(0,0,0,0.18);transform:translateY(-110%);transition:transform 0.4s ease;
-}
-#sticky-bar.show{transform:translateY(0)}
-#sticky-bar .logo{font-weight:700;font-size:1rem}
-#sticky-bar .actions a{margin-left:8px;padding:8px 14px;border-radius:30px;color:#fff;font-weight:700;display:inline-block;transition:transform .2s}
-#sticky-bar .call{background:#2ecc71}
-#sticky-bar .call:hover{transform:scale(1.05);background:#27ae60}
-#sticky-bar .zalo{background:#3498db}
-#sticky-bar .zalo:hover{transform:scale(1.05);background:#2980b9}
-@media(max-width:768px){
-  #sticky-bar{flex-direction:column;gap:6px;padding:8px}
-  #sticky-bar .actions a{margin-left:0}
-}
+  <!-- Primary SEO meta -->
+  <meta name="description" content="Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ. Mua nhà Long Biên dưới 10 tỷ. Mua nhà chính chủ Hà Nội. Tư vấn tận tâm, sổ đỏ chính chủ. 📞 0374 966 430">
+  <meta name="keywords" content="bán nhà Long Biên dưới 3 tỷ, bán nhà Long Biên 4 tỷ, bán nhà Long Biên 5 tỷ, bán nhà Long Biên dưới 2 tỷ, mua nhà Long Biên dưới 10 tỷ, mua nhà chính chủ Hà Nội">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Công Thị Tân - Nhà & Đất Long Biên">
+  <meta name="geo.region" content="VN-HN">
+  <meta name="geo.placename" content="Long Biên, Hà Nội">
+  <meta name="geo.position" content="21.0417;105.8904">
+  <meta name="ICBM" content="21.0417, 105.8904">
 
-/* Hamburger & sidebar */
-.hamburger{position:fixed;top:14px;left:14px;z-index:1300;display:flex;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger div{width:26px;height:3px;background:#222;border-radius:2px;transition:all .3s}
-#sidebar{
-  position:fixed;top:0;left:-260px;width:260px;height:100%;background:linear-gradient(180deg,#222,#111);color:#fff;padding-top:72px;
-  transition:left .35s;z-index:1250;box-shadow:4px 0 18px rgba(0,0,0,0.4)
-}
-#sidebar.show{left:0}
-#sidebar .menu-title{text-align:center;color:var(--primary);font-weight:700;margin-bottom:12px}
-#sidebar ul{list-style:none;padding:0 12px}
-#sidebar ul li{margin:12px 0;text-align:center}
-#sidebar ul li a{display:block;padding:10px 12px;border-radius:8px;transition:background .25s}
-#sidebar ul li a:hover{background:rgba(255,255,255,0.04)}
+  <!-- Open Graph for FB / Zalo / Messenger -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nhà & Đất Long Biên – Bán nhà chính chủ, giá tốt">
+  <meta property="og:description" content="Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ. Mua nhà Long Biên dưới 10 tỷ. Liên hệ: 0374 966 430">
+  <meta property="og:url" content="https://taihanoi.github.io/nhadatchinhchu/">
+  <meta property="og:site_name" content="Nhà & Đất Long Biên">
+  <meta property="og:image" content="https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-/* Page layout */
-.container{max-width:1100px;margin:100px auto 40px;padding:0 18px}
-.banner-hero{position:relative;text-align:center;margin-bottom:24px}
-.banner-hero figure{margin:0;position:relative}
-.banner-hero img{border-radius:12px;box-shadow:var(--shadow)}
-.banner-hero figcaption{position:absolute;top:12%;left:50%;transform:translateX(-50%);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.45);width:90%;max-width:680px}
-.hero-title{font-size:2rem}
-.hero-subtitle{font-size:1.1rem;margin-bottom:14px}
-.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-hero{padding:12px 24px;border-radius:999px;background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,0.12);transition:transform var(--transition)}
-.btn-hero:hover{transform:scale(1.05)}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nhà & Đất Long Biên – Bán nhà chính chủ, giá tốt">
+  <meta name="twitter:description" content="Bán nhà Long Biên giá tốt, sổ đỏ minh bạch. Liên hệ 0374 966 430 để xem nhà ngay.">
+  <meta name="twitter:image" content="https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg">
 
-/* Table */
-table{width:100%;max-width:760px;margin:18px auto;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden}
-th,td{padding:12px;border:1px solid #eee;text-align:center;font-size:15px}
-th{background:var(--primary);color:#fff;font-weight:700}
-tr:nth-child(even){background:#fafafa}
+  <link rel="icon" href="https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-/* Steps */
-.diagram-container{display:flex;flex-direction:column;gap:12px;align-items:center;margin:20px 0}
-.step{width:100%;max-width:760px;background:#fff;padding:16px;border-radius:10px;box-shadow:var(--shadow);transform:translateX(-20px);opacity:0;transition:all .5s}
-.step.show{transform:none;opacity:1}
-.step-number{width:38px;height:38px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
+  <style>
+    :root{
+      --primary:#e67e22;
+      --primary-hover:#d35400;
+      --dark-footer:#1d1f23;
+      --muted:#9aa0a6;
+      --white:#ffffff;
+      --shadow: 0 8px 26px rgba(0,0,0,0.15);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Roboto',sans-serif;background:#ffffff;color:#222;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:92px auto 36px;padding:0 18px}
 
-/* FAQ */
-.accordion{background:var(--primary);color:#fff;padding:12px;border:none;border-radius:8px;cursor:pointer;width:100%;max-width:760px;margin:10px auto;text-align:left;font-weight:700}
-.panel{background:#f6f6f6;max-height:0;overflow:hidden;transition:max-height .35s;padding:0 12px;border-radius:0 0 8px 8px}
+    /* Sticky top bar */
+    #sticky-bar{
+      position:fixed;top:0;left:0;width:100%;z-index:1200;
+      background:linear-gradient(90deg,var(--primary),var(--primary-hover));
+      color:var(--white);display:flex;justify-content:space-between;align-items:center;padding:10px 18px;
+      box-shadow:0 6px 22px rgba(0,0,0,0.18);transform:translateY(-120%);transition:transform .38s ease;
+    }
+    #sticky-bar.show{transform:translateY(0)}
+    #sticky-bar .logo{font-weight:700;font-size:1rem}
+    #sticky-bar .actions a{margin-left:8px;padding:8px 14px;border-radius:30px;color:#fff;font-weight:700;display:inline-block}
+    #sticky-bar .call{background:#2ecc71}
+    #sticky-bar .zalo{background:#3498db}
 
-/* Reviews */
-.reviews{max-width:760px;margin:18px auto;padding:18px;border-radius:10px;background:#fbfbfb;box-shadow:var(--shadow)}
-.review{display:none;padding:12px;text-align:center;font-style:italic}
-.review.active{display:block}
+    /* Hamburger & sidebar */
+    .hamburger{position:fixed;top:14px;left:14px;z-index:1300;display:flex;flex-direction:column;gap:6px;cursor:pointer}
+    .hamburger div{width:26px;height:3px;background:#222;border-radius:3px;transition:all .25s}
+    #sidebar{
+      position:fixed;top:0;left:-280px;width:280px;height:100%;z-index:1250;
+      background:linear-gradient(180deg,#1b1d1f,#0f1112);color:#fff;padding-top:78px;transition:left .32s;box-shadow:4px 0 18px rgba(0,0,0,0.5)
+    }
+    #sidebar.show{left:0}
+    #sidebar .menu-title{text-align:center;color:var(--primary);font-weight:700;margin-bottom:12px}
+    #sidebar ul{list-style:none;padding:0 14px}
+    #sidebar ul li{margin:12px 0;text-align:center}
+    #sidebar ul li a{display:block;padding:10px;border-radius:8px;transition:background .2s;color:#fff}
+    #sidebar ul li a:hover{background:rgba(255,255,255,0.04)}
 
-/* Quick-call (floating) */
-.quick-call{position:fixed;bottom:18px;right:18px;z-index:1400;display:flex;flex-direction:column;gap:10px}
-.quick-call a{background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;padding:12px 18px;border-radius:999px;font-weight:800;box-shadow:var(--shadow);display:inline-block}
-.quick-call a:hover{transform:scale(1.08)}
+    /* Hero */
+    .banner-hero{position:relative;text-align:center;margin-bottom:28px}
+    .banner-hero figure{margin:0;position:relative}
+    .banner-hero img{border-radius:12px;box-shadow:var(--shadow)}
+    .banner-hero figcaption{position:absolute;top:12%;left:50%;transform:translateX(-50%);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.5);width:92%;max-width:720px}
+    .hero-title{font-size:2rem;margin-bottom:8px}
+    .hero-subtitle{font-size:1.05rem;margin-bottom:14px}
+    .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-hero{padding:12px 22px;border-radius:999px;background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,0.12);transition:transform .18s}
+    .btn-hero:hover{transform:scale(1.04)}
 
-/* Back to top */
-#backToTop{position:fixed;bottom:88px;right:18px;background:var(--primary);color:#fff;padding:10px 14px;border-radius:999px;display:none;z-index:1400;cursor:pointer}
+    /* Table */
+    table{width:100%;max-width:760px;margin:18px auto;border-collapse:collapse;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+    th,td{padding:12px;border-bottom:1px solid #f0f0f0;text-align:center;font-size:15px}
+    th{background:var(--primary);color:#fff;font-weight:700}
+    tr:nth-child(even){background:#fafafa}
 
-/* Popup CTA */
-#ctaPopup{position:fixed;bottom:36px;left:50%;transform:translateX(-50%);background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;padding:18px;border-radius:12px;box-shadow:var(--shadow);z-index:1500;display:none;max-width:92%}
-#ctaPopup .close-btn{position:absolute;top:6px;right:10px;font-size:18px;cursor:pointer}
+    /* Steps */
+    .diagram-container{display:flex;flex-direction:column;gap:12px;align-items:center;margin:22px 0}
+    .step{width:100%;max-width:760px;background:#fff;padding:16px;border-radius:10px;box-shadow:var(--shadow);transform:translateX(-20px);opacity:0;transition:all .45s}
+    .step.show{transform:none;opacity:1}
+    .step-number{width:38px;height:38px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
 
-/* StickyNav small (fallback visible) */
-#stickyNav{position:fixed;top:-60px;left:0;width:100%;background:linear-gradient(90deg,var(--primary),var(--primary-hover));color:#fff;text-align:center;padding:12px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,0.25);transition:top .35s;z-index:1600}
-#stickyNav a{color:#fff;text-decoration:none}
+    /* FAQ */
+    .accordion{background:var(--primary);color:#fff;padding:12px;border-radius:8px;cursor:pointer;width:100%;max-width:760px;margin:10px auto;font-weight:700;border:none}
+    .panel{background:#fafafa;max-height:0;overflow:hidden;transition:max-height .35s;padding:0 12px;border-radius:0 0 8px 8px}
 
-/* Responsive */
-@media(max-width:768px){
-  .container{margin-top:86px}
-  .hero-title{font-size:1.4rem}
-  .banner-hero figcaption{top:8%}
-  table, .step, .reviews{width:95%}
-}
-</style>
+    /* Reviews */
+    .reviews{max-width:760px;margin:18px auto;padding:18px;border-radius:10px;background:#fbfbfb;box-shadow:var(--shadow)}
+    .review{display:none;text-align:center;font-style:italic}
+    .review.active{display:block}
+    .dots{margin-top:10px;text-align:center}
+    .dot{display:inline-block;width:12px;height:12px;background:#ddd;border-radius:50%;margin:0 6px;cursor:pointer}
+    .dot.active{background:var(--primary)}
+
+    /* Quick-call */
+    .quick-call{position:fixed;bottom:18px;right:18px;z-index:1400;display:flex;flex-direction:column;gap:10px}
+    .quick-call a{background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;padding:12px 18px;border-radius:999px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,0.12)}
+    .quick-call a:hover{transform:scale(1.06)}
+
+    /* Popup CTA */
+    #ctaPopup{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;padding:16px;border-radius:12px;box-shadow:0 10px 36px rgba(0,0,0,0.22);z-index:1500;display:none;max-width:92%}
+    #ctaPopup .close-btn{position:absolute;top:6px;right:10px;font-size:18px;cursor:pointer}
+
+    /* Sticky fallback nav */
+    #stickyNav{position:fixed;top:-60px;left:0;width:100%;background:linear-gradient(90deg,var(--primary),var(--primary-hover));color:#fff;text-align:center;padding:12px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,0.22);transition:top .35s;z-index:1600}
+
+    /* Footer (STYLE B: dark modern) */
+    footer.site-footer{
+      background:var(--dark-footer);
+      color:var(--white);
+      padding:28px 18px;
+      margin-top:28px;
+      border-top:4px solid rgba(255,255,255,0.03);
+    }
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+    .footer-col{flex:1;min-width:220px}
+    .footer-brand{font-weight:800;color:var(--primary);margin-bottom:8px}
+    .footer-contact p{margin:8px 0;color:var(--white);opacity:0.95}
+    .footer-actions a{display:inline-block;margin-right:10px;padding:10px 14px;border-radius:10px;background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,0.18)}
+    .footer-links a{color:var(--white);opacity:0.9;display:block;margin:6px 0}
+    .footer-bottom{width:100%;text-align:center;margin-top:18px;color:var(--muted);font-size:14px}
+    .footer-credit a{color:var(--primary);font-weight:700}
+    .footer-col .muted{color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media(max-width:768px){
+      .container{margin-top:86px}
+      .banner-hero figcaption{top:8%}
+      .footer-inner{flex-direction:column;align-items:center;text-align:center}
+      .footer-col{min-width:100%}
+      .hamburger{left:10px}
+    }
+  </style>
 </head>
 <body>
 
-<!-- Sticky top bar -->
-<div id="sticky-bar" aria-hidden="true">
-  <div class="logo">🏠 Nhà & Đất Long Biên</div>
-  <div class="actions">
-    <a class="call" href="tel:0374966430">📞 Gọi ngay</a>
-    <a class="zalo" href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Zalo</a>
+  <!-- STICKY TOP BAR -->
+  <div id="sticky-bar" aria-hidden="true">
+    <div class="logo">🏠 Nhà & Đất Long Biên</div>
+    <div class="actions">
+      <a class="call" href="tel:0374966430">📞 Gọi ngay</a>
+      <a class="zalo" href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Zalo</a>
+    </div>
   </div>
-</div>
 
-<!-- Hamburger + Sidebar -->
-<div class="hamburger" onclick="toggleSidebar()" aria-label="Mở menu">
-  <div></div><div></div><div></div>
-</div>
-<nav id="sidebar" aria-hidden="true">
-  <div class="menu-title">📋 Danh mục</div>
-  <ul>
-    <li><a href="#home">🏠 Trang chủ</a></li>
-    <li><a href="#products">📊 Giá nhà</a></li>
-    <li><a href="#diagram">🧭 Quy trình</a></li>
-    <li><a href="#faq">❓ FAQ</a></li>
-    <li><a href="#contact">📞 Liên hệ</a></li>
-    <li><a href="tel:0374966430">📞 0374 966 430</a></li>
-  </ul>
-</nav>
+  <!-- HAMBURGER + SIDEBAR -->
+  <div class="hamburger" onclick="toggleSidebar()" aria-label="Mở menu">
+    <div></div><div></div><div></div>
+  </div>
 
-<div class="container">
-  <!-- Banner / Hero -->
-  <section id="home" class="banner-hero" aria-label="Banner chính">
-    <figure>
-      <img src="https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg" alt="Nhà & Đất Long Biên – ảnh minh họa">
-      <figcaption>
-        <h1 class="hero-title">Nhà & Đất Long Biên – Giá tốt, chính chủ</h1>
-        <p class="hero-subtitle">Bán nhà Long Biên dưới 2 tỷ, dưới 3 tỷ, 4 tỷ, 5 tỷ — Mua nhà chính chủ Hà Nội. Liên hệ để nhận danh sách và xem nhà thực tế.</p>
-        <div class="hero-cta">
-          <a href="tel:0374966430" class="btn-hero">📞 Gọi Ngay</a>
-          <a href="https://zalo.me/0374966430" class="btn-hero" target="_blank" rel="noopener">💬 Chat Zalo</a>
+  <nav id="sidebar" aria-hidden="true">
+    <div class="menu-title">📋 Danh mục</div>
+    <ul>
+      <li><a href="#home">🏠 Trang chủ</a></li>
+      <li><a href="#products">📊 Giá nhà</a></li>
+      <li><a href="#diagram">🧭 Quy trình</a></li>
+      <li><a href="#faq">❓ FAQ</a></li>
+      <li><a href="#contact">📞 Liên hệ</a></li>
+      <li><a href="tel:0374966430">📞 0374 966 430</a></li>
+    </ul>
+  </nav>
+
+  <main class="container" id="main">
+    <!-- HERO -->
+    <section id="home" class="banner-hero" aria-label="Banner chính">
+      <figure>
+        <img src="https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg" alt="Nhà & Đất Long Biên – ảnh minh họa">
+        <figcaption>
+          <h1 class="hero-title">Nhà & Đất Long Biên – Giá tốt, chính chủ</h1>
+          <p class="hero-subtitle">Bán nhà Long Biên dưới 2 tỷ, dưới 3 tỷ, 4 tỷ, 5 tỷ — Mua nhà chính chủ Hà Nội. Liên hệ để nhận danh sách và xem nhà thực tế.</p>
+          <div class="hero-cta">
+            <a href="tel:0374966430" class="btn-hero">📞 Gọi Ngay</a>
+            <a href="https://zalo.me/0374966430" class="btn-hero" target="_blank" rel="noopener">💬 Chat Zalo</a>
+          </div>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" aria-label="Bảng giá nhà">
+      <h2>Giá Nhà Đất Long Biên Hà Nội</h2>
+      <table role="table" aria-label="Bảng giá nhà Long Biên">
+        <thead>
+          <tr><th>Căn nhà</th><th>Diện tích</th><th>Tầng</th><th>Giá (Tỷ)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nhà Long Biên - Tiêu chuẩn</td><td>30–50 m²</td><td>3–5</td><td>&lt;2</td></tr>
+          <tr><td>Nhà Long Biên - Đầu tư</td><td>30–70 m²</td><td>3–5</td><td>3–5</td></tr>
+          <tr><td>Nhà Long Biên - Tiêu chuẩn khá</td><td>50–90 m²</td><td>3–5</td><td>5–7</td></tr>
+          <tr><td>Nhà Long Biên - Mặt phố / cao cấp</td><td>70–120 m²</td><td>4–5</td><td>7–10</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- DIAGRAM -->
+    <section id="diagram" aria-label="Quy trình mua nhà">
+      <h2>Quy Trình Mua Nhà</h2>
+      <div class="diagram-container">
+        <div class="step"><div class="step-number">1</div><h3>Liên hệ & nhận danh sách</h3><p>Gửi yêu cầu qua hotline/Zalo để nhận danh sách nhà phù hợp.</p></div>
+        <div class="step"><div class="step-number">2</div><h3>Đến xem nhà</h3><p>Tham quan trực tiếp, kiểm tra pháp lý, tiện ích và môi trường xung quanh.</p></div>
+        <div class="step"><div class="step-number">3</div><h3>Đàm phán & ký kết</h3><p>Thương lượng, đặt cọc, hoàn thiện giấy tờ – nhận sổ đỏ chính chủ.</p></div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" aria-label="Đánh giá khách hàng">
+      <h2>Đánh giá khách hàng</h2>
+      <div class="reviews" role="region" aria-live="polite">
+        <div class="review active">"Dịch vụ chuyên nghiệp, nhanh chóng, sổ đỏ minh bạch!" – <b>Anh Hùng</b></div>
+        <div class="review">"Nhà đẹp, giá tốt, vị trí trung tâm Long Biên rất thuận tiện." – <b>Chị Lan</b></div>
+        <div class="review">"Tư vấn nhiệt tình, dễ dàng chọn lựa căn nhà phù hợp." – <b>Anh Nam</b></div>
+        <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-label="Câu hỏi thường gặp">
+      <h2>Câu hỏi thường gặp</h2>
+      <button class="accordion">Nhà có tầng 3 tiện mở văn phòng không?</button>
+      <div class="panel"><p>Nhiều nhà tầng 3–5 phù hợp vừa ở vừa làm văn phòng, tuỳ từng căn mà có phương án bố trí hợp lý.</p></div>
+
+      <button class="accordion">Sổ đỏ có minh bạch không?</button>
+      <div class="panel"><p>Tất cả sản phẩm đều có sổ đỏ chính chủ; chúng tôi hỗ trợ kiểm tra pháp lý trước khi giao dịch.</p></div>
+
+      <button class="accordion">Có hỗ trợ vay ngân hàng không?</button>
+      <div class="panel"><p>Có — chúng tôi liên kết nhiều ngân hàng để hỗ trợ khách hàng vay mua nhà với điều kiện tốt.</p></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-label="Liên hệ">
+      <h2>Liên hệ</h2>
+      <p style="text-align:center">📍 Tầng 3, 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
+      <div style="display:flex;justify-content:center;gap:12px;margin-top:10px;flex-wrap:wrap">
+        <a class="btn-hero" href="tel:0374966430">📞 0374 966 430</a>
+        <a class="btn-hero" href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Chat Zalo</a>
+        <a class="btn-hero" href="https://maps.app.goo.gl/tZB1fdUxP3WMSh9Q9?g_st=ipc" target="_blank" rel="noopener">📍 Xem bản đồ</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick-call (floating) -->
+  <div class="quick-call" aria-hidden="false">
+    <a href="tel:0374966430">📞 Gọi ngay</a>
+    <a href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Zalo</a>
+  </div>
+
+  <!-- Popup exit-intent (hidden by default) -->
+  <div id="ctaPopup" role="dialog" aria-modal="true" aria-hidden="true">
+    <span class="close-btn" onclick="closePopup()" aria-label="Đóng">&times;</span>
+    <h3>Gọi ngay để nhận tư vấn miễn phí!</h3>
+    <p>Nhận danh sách nhà phù hợp theo ngân sách của bạn.</p>
+    <a class="btn-hero" href="tel:0374966430">📞 0374 966 430</a>
+  </div>
+
+  <!-- Sticky fallback nav (small) -->
+  <div id="stickyNav" aria-hidden="true"></div>
+
+  <!-- FOOTER (STYLE B - dark modern) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">🏠 Nhà & Đất Long Biên</div>
+        <div class="muted">Chuyên mua bán nhà đất Long Biên — sổ đỏ chính chủ, tư vấn tận tâm.</div>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <p><strong>📞 Hotline:</strong> <a href="tel:0374966430" style="color:var(--white);text-decoration:underline">0374 966 430</a></p>
+        <p><strong>✉️ Email:</strong> <a href="mailto:congttan1981@gmail.com" style="color:var(--white);text-decoration:underline">congttan1981@gmail.com</a></p>
+        <p class="muted">Giờ làm việc: 08:00 – 20:00 (Hàng ngày)</p>
+        <div style="margin-top:10px">
+          <a class="footer-action" href="tel:0374966430" style="margin-right:8px"><span style="background:var(--primary);padding:8px 12px;border-radius:8px;color:#fff;font-weight:700">📞 Gọi</span></a>
+          <a class="footer-action" href="https://zalo.me/0374966430" target="_blank" rel="noopener"><span style="background:#2ea2f4;padding:8px 12px;border-radius:8px;color:#fff;font-weight:700">💬 Zalo</span></a>
         </div>
-      </figcaption>
-    </figure>
-  </section>
+      </div>
 
-  <!-- Products / Giá -->
-  <section id="products" aria-label="Bảng giá nhà">
-    <h2>Giá Nhà Đất Long Biên Hà Nội</h2>
-    <table role="table" aria-label="Bảng giá nhà Long Biên">
-      <thead>
-        <tr><th>Căn nhà</th><th>Diện tích</th><th>Tầng</th><th>Giá (Tỷ)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Nhà Long Biên - Tiêu chuẩn</td><td>30–50 m²</td><td>3–5</td><td>&lt;2</td></tr>
-        <tr><td>Nhà Long Biên - Đầu tư</td><td>30–70 m²</td><td>3–5</td><td>3–5</td></tr>
-        <tr><td>Nhà Long Biên - Tiêu chuẩn khá</td><td>50–90 m²</td><td>3–5</td><td>5–7</td></tr>
-        <tr><td>Nhà Long Biên - Mặt phố / cao cấp</td><td>70–120 m²</td><td>4–5</td><td>7–10</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Diagram / Quy trình -->
-  <section id="diagram" aria-label="Quy trình mua nhà">
-    <h2>Quy Trình Mua Nhà</h2>
-    <div class="diagram-container">
-      <div class="step"><div class="step-number">1</div><h3>Liên hệ & nhận danh sách</h3><p>Gửi yêu cầu qua hotline/Zalo để nhận danh sách nhà phù hợp.</p></div>
-      <div class="step"><div class="step-number">2</div><h3>Đến xem nhà</h3><p>Tham quan trực tiếp, kiểm tra pháp lý, tiện ích và môi trường xung quanh.</p></div>
-      <div class="step"><div class="step-number">3</div><h3>Đàm phán & ký kết</h3><p>Thương lượng, đặt cọc, hoàn thiện giấy tờ – nhận sổ đỏ chính chủ.</p></div>
+      <div class="footer-col footer-links">
+        <div><strong>Liên kết</strong></div>
+        <a href="#products">Giá nhà</a>
+        <a href="#diagram">Quy trình</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Liên hệ</a>
+      </div>
     </div>
-  </section>
 
-  <!-- Reviews -->
-  <section id="reviews" aria-label="Đánh giá khách hàng">
-    <h2>Đánh giá khách hàng</h2>
-    <div class="reviews" role="region" aria-live="polite">
-      <div class="review active">"Dịch vụ chuyên nghiệp, nhanh chóng, sổ đỏ minh bạch!" – <b>Anh Hùng</b></div>
-      <div class="review">"Nhà đẹp, giá tốt, vị trí trung tâm Long Biên rất thuận tiện." – <b>Chị Lan</b></div>
-      <div class="review">"Tư vấn nhiệt tình, dễ dàng chọn lựa căn nhà phù hợp." – <b>Anh Nam</b></div>
-      <div style="text-align:center;margin-top:10px;"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="footer-bottom">
+      <div class="footer-credit">© 2025 <a href="https://taihanoi.github.io/nhadatchinhchu/" target="_blank" rel="noopener">Nhà & Đất Long Biên – Công Thị Tân</a>. All rights reserved.</div>
     </div>
-  </section>
+  </footer>
 
-  <!-- FAQ -->
-  <section id="faq" aria-label="Câu hỏi thường gặp">
-    <h2>Câu hỏi thường gặp</h2>
-    <button class="accordion">Nhà có tầng 3 tiện mở văn phòng không?</button>
-    <div class="panel"><p>Nhiều nhà tầng 3–5 phù hợp vừa ở vừa làm văn phòng, tuỳ từng căn mà có phương án bố trí hợp lý.</p></div>
+  <!-- Schema SEO JSON-LD (WebSite + LocalBusiness + RealEstateAgent + OfferCatalog + keywords) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://taihanoi.github.io/nhadatchinhchu/#website",
+        "url":"https://taihanoi.github.io/nhadatchinhchu/",
+        "name":"Nhà & Đất Long Biên – Công Thị Tân",
+        "description":"Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ, mua nhà chính chủ Hà Nội, nhà dưới 10 tỷ – Long Biên, Hà Nội. Tư vấn tận tâm, sổ đỏ chính chủ.",
+        "keywords":["bán nhà Long Biên dưới 3 tỷ","bán nhà Long Biên 4 tỷ","bán nhà Long Biên 5 tỷ","bán nhà Long Biên dưới 2 tỷ","mua nhà Long Biên dưới 10 tỷ","mua nhà chính chủ Hà Nội"],
+        "publisher":{"@type":"Organization","name":"Nhà & Đất Long Biên","logo":{"@type":"ImageObject","url":"https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg"}},
+        "potentialAction":{"@type":"SearchAction","target":"https://taihanoi.github.io/nhadatchinhchu/?s={search_term_string}","query-input":"required name=search_term_string"}
+      },
+      {
+        "@type":"LocalBusiness",
+        "@id":"https://taihanoi.github.io/nhadatchinhchu/#localbusiness",
+        "name":"Nhà & Đất Long Biên – Công Thị Tân",
+        "image":"https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg",
+        "priceRange":"₫₫₫",
+        "telephone":"+84374966430",
+        "email":"congttan1981@gmail.com",
+        "address":{"@type":"PostalAddress","streetAddress":"112 Nguyễn Văn Cừ","addressLocality":"Long Biên","addressRegion":"Hà Nội","postalCode":"100000","addressCountry":"VN"},
+        "geo":{"@type":"GeoCoordinates","latitude":21.0417,"longitude":105.8904},
+        "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"},
+        "sameAs":["https://m.facebook.com/nhadatlongbien0374966430/","https://zalo.me/0374966430","https://maps.app.goo.gl/tZB1fdUxP3WMSh9Q9"],
+        "hasOfferCatalog":{"@type":"OfferCatalog","name":"Danh sách nhà bán tại Long Biên","itemListElement":[
+          {"@type":"Offer","name":"Bán nhà Long Biên dưới 2 tỷ"},
+          {"@type":"Offer","name":"Bán nhà Long Biên dưới 3 tỷ"},
+          {"@type":"Offer","name":"Bán nhà Long Biên 4 tỷ"},
+          {"@type":"Offer","name":"Bán nhà Long Biên 5 tỷ"},
+          {"@type":"Offer","name":"Mua nhà Long Biên dưới 10 tỷ"}
+        ]}
+      },
+      {
+        "@type":"RealEstateAgent",
+        "@id":"https://taihanoi.github.io/nhadatchinhchu/#realestateagent",
+        "name":"Nhà & Đất Long Biên – Công Thị Tân",
+        "description":"Chuyên mua bán nhà đất Long Biên – Sổ đỏ chính chủ, giá từ 2–10 tỷ, tầng 3–5 tiện mở văn phòng, trung tâm Hà Nội.",
+        "image":"https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg",
+        "telephone":"+84374966430",
+        "email":"congttan1981@gmail.com",
+        "address":{"@type":"PostalAddress","streetAddress":"112 Nguyễn Văn Cừ","addressLocality":"Long Biên","addressRegion":"Hà Nội","addressCountry":"VN"},
+        "openingHours":"Mo-Su 08:00-20:00",
+        "areaServed":{"@type":"Place","name":"Long Biên, Hà Nội, Việt Nam"}
+      }
+    ]
+  }
+  </script>
 
-    <button class="accordion">Sổ đỏ có minh bạch không?</button>
-    <div class="panel"><p>Tất cả sản phẩm đều có sổ đỏ chính chủ; chúng tôi hỗ trợ kiểm tra pháp lý trước khi giao dịch.</p></div>
+  <script>
+    /* ---------- Sidebar toggle ---------- */
+    function toggleSidebar(){ document.getElementById('sidebar').classList.toggle('show'); }
+    window.addEventListener('click', function(e){
+      const sidebar = document.getElementById('sidebar');
+      const hamburger = document.querySelector('.hamburger');
+      if(!sidebar.contains(e.target) && !hamburger.contains(e.target)){
+        sidebar.classList.remove('show');
+      }
+    });
 
-    <button class="accordion">Có hỗ trợ vay ngân hàng không?</button>
-    <div class="panel"><p>Có — chúng tôi liên kết nhiều ngân hàng để hỗ trợ khách hàng vay mua nhà với điều kiện tốt.</p></div>
-  </section>
+    /* ---------- Sticky top bar show on scroll ---------- */
+    (function(){
+      const stickyBar = document.getElementById('sticky-bar');
+      window.addEventListener('scroll', function(){
+        if(window.scrollY > 150) stickyBar.classList.add('show'); else stickyBar.classList.remove('show');
+      });
+    })();
 
-  <!-- Contact -->
-  <section id="contact" aria-label="Liên hệ">
-    <h2>Liên hệ</h2>
-    <p style="text-align:center">📍 Tầng 3, 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
-    <div style="display:flex;justify-content:center;gap:12px;margin-top:10px;flex-wrap:wrap">
-      <a class="btn-hero" href="tel:0374966430">📞 0374 966 430</a>
-      <a class="btn-hero" href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Chat Zalo</a>
-      <a class="btn-hero" href="https://maps.app.goo.gl/tZB1fdUxP3WMSh9Q9?g_st=ipc" target="_blank" rel="noopener">📍 Xem bản đồ</a>
-    </div>
-  </section>
-</div> <!-- /.container -->
+    /* ---------- Simple review slider ---------- */
+    (function(){
+      let rIndex = 0;
+      const reviews = document.querySelectorAll('.review');
+      const dots = document.querySelectorAll('.dot');
+      function showReview(n){
+        reviews.forEach((r,i)=>{ r.classList.remove('active'); if(dots[i]) dots[i].classList.remove('active'); });
+        if(reviews[n]){ reviews[n].classList.add('active'); if(dots[n]) dots[n].classList.add('active'); }
+      }
+      function nextReview(){ rIndex = (rIndex + 1) % reviews.length; showReview(rIndex); }
+      if(reviews.length) { showReview(rIndex); setInterval(nextReview,4200); }
+      dots.forEach((dot, idx)=>dot.addEventListener('click', ()=>{ rIndex = idx; showReview(rIndex); }));
+    })();
 
-<!-- Floating quick-call -->
-<div class="quick-call" aria-hidden="false">
-  <a href="tel:0374966430">📞 Gọi ngay</a>
-  <a href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Zalo</a>
-</div>
+    /* ---------- FAQ accordion ---------- */
+    (function(){
+      const acc = document.getElementsByClassName("accordion");
+      for(let i=0;i<acc.length;i++){
+        acc[i].addEventListener("click", function(){
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+        });
+      }
+    })();
 
-<!-- Back to top -->
-<div id="backToTop" onclick="scrollToTop()" title="Lên đầu trang">⬆️</div>
+    /* ---------- Reveal on scroll ---------- */
+    (function(){
+      const sections = document.querySelectorAll('section, .step');
+      function revealOnScroll(){
+        sections.forEach(el=>{
+          const rect = el.getBoundingClientRect();
+          if(rect.top < window.innerHeight - 60){
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+            if(el.classList.contains('step')) el.classList.add('show');
+          }
+        });
+      }
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+    })();
 
-<!-- Popup CTA -->
-<div id="ctaPopup" role="dialog" aria-modal="true">
-  <span class="close-btn" onclick="closePopup()" aria-label="Đóng">&times;</span>
-  <h3>Gọi ngay để nhận tư vấn miễn phí!</h3>
-  <p>Nhận danh sách nhà phù hợp theo ngân sách của bạn.</p>
-  <a class="btn-hero" href="tel:0374966430">📞 0374 966 430</a>
-</div>
+    /* ---------- Popup exit-intent logic ---------- */
+    (function(){
+      let exitIntentShown = false;
+      const popup = document.getElementById('ctaPopup');
 
-<!-- small sticky fallback (created via JS if needed) -->
-<div id="stickyNav" aria-hidden="true"></div>
-
-<!-- Footer -->
-<footer style="background:#111;color:#eee;padding:28px 16px;text-align:center;margin-top:28px;">
-  <div style="max-width:1000px;margin:0 auto;">
-    <p style="margin-bottom:8px">📍 Tầng 3, 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
-    <p style="margin-bottom:8px">📞 0374 966 430 | ✉️ <a href="mailto:congttan1981@gmail.com" style="color:var(--primary)"><b>congttan1981@gmail.com</b></a></p>
-    <p style="margin-bottom:8px">🌐 <a href="https://m.facebook.com/nhadatlongbien0374966430/" target="_blank" rel="noopener" style="color:var(--primary)">Fanpage Nhà Đất Long Biên</a> | <a href="https://taihanoi.github.io/nhadatchinhchu/" target="_blank" rel="noopener" style="color:var(--primary)">Landing Page</a></p>
-    <p style="font-size:0.9rem;margin-top:8px">&copy; 2025 Nhà & Đất Long Biên. All rights reserved.</p>
-  </div>
-</footer>
-
-<!-- Schema SEO JSON-LD (WebSite + LocalBusiness + RealEstateAgent + OfferCatalog + keywords) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://taihanoi.github.io/nhadatchinhchu/#website",
-      "url": "https://taihanoi.github.io/nhadatchinhchu/",
-      "name": "Nhà & Đất Long Biên – Công Thị Tân",
-      "description": "Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ, mua nhà chính chủ Hà Nội, nhà dưới 10 tỷ – Long Biên, Hà Nội. Tư vấn tận tâm, sổ đỏ chính chủ.",
-      "keywords": ["bán nhà Long Biên dưới 3 tỷ","bán nhà Long Biên 4 tỷ","bán nhà Long Biên 5 tỷ","bán nhà Long Biên dưới 2 tỷ","mua nhà Long Biên dưới 10 tỷ","mua nhà chính chủ Hà Nội"],
-      "publisher": {
-        "@type": "Organization",
-        "name": "Nhà & Đất Long Biên",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg"
+      function showPopup(){
+        if(exitIntentShown) return;
+        exitIntentShown = true;
+        if(popup){
+          popup.style.display = 'block';
+          popup.setAttribute('aria-hidden','false');
         }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://taihanoi.github.io/nhadatchinhchu/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
       }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://taihanoi.github.io/nhadatchinhchu/#localbusiness",
-      "name": "Nhà & Đất Long Biên – Công Thị Tân",
-      "image": "https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg",
-      "priceRange": "₫₫₫",
-      "telephone": "+84374966430",
-      "email": "congttan1981@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "112 Nguyễn Văn Cừ",
-        "addressLocality": "Long Biên",
-        "addressRegion": "Hà Nội",
-        "postalCode": "100000",
-        "addressCountry": "VN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 21.0417,
-        "longitude": 105.8904
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "08:00",
-        "closes": "20:00"
-      },
-      "sameAs": [
-        "https://m.facebook.com/nhadatlongbien0374966430/",
-        "https://zalo.me/0374966430",
-        "https://maps.app.goo.gl/tZB1fdUxP3WMSh9Q9"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Danh sách nhà bán tại Long Biên",
-        "itemListElement": [
-          {"@type": "Offer","name":"Bán nhà Long Biên dưới 2 tỷ"},
-          {"@type": "Offer","name":"Bán nhà Long Biên dưới 3 tỷ"},
-          {"@type": "Offer","name":"Bán nhà Long Biên 4 tỷ"},
-          {"@type": "Offer","name":"Bán nhà Long Biên 5 tỷ"},
-          {"@type": "Offer","name":"Mua nhà Long Biên dưới 10 tỷ"}
-        ]
+
+      function onMouseLeave(e){
+        // If mouse goes near top of viewport (user may leave tab)
+        if(e.clientY <= 15) showPopup();
       }
-    },
-    {
-      "@type": "RealEstateAgent",
-      "@id": "https://taihanoi.github.io/nhadatchinhchu/#realestateagent",
-      "name": "Nhà & Đất Long Biên – Công Thị Tân",
-      "description": "Chuyên mua bán nhà đất Long Biên – Sổ đỏ chính chủ, giá từ 2–10 tỷ, tầng 3–5 tiện mở văn phòng, trung tâm Hà Nội.",
-      "image": "https://i.postimg.cc/vmNJgSSZ/IMG-5180.jpg",
-      "telephone": "+84374966430",
-      "email": "congttan1981@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "112 Nguyễn Văn Cừ",
-        "addressLocality": "Long Biên",
-        "addressRegion": "Hà Nội",
-        "addressCountry": "VN"
-      },
-      "openingHours": "Mo-Su 08:00-20:00",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Long Biên, Hà Nội, Việt Nam"
+      document.addEventListener('mouseout', onMouseLeave);
+
+      // Another check: when user moves quickly to top (desktop)
+      document.addEventListener('mousemove', function(e){
+        if(e.clientY <= 10) showPopup();
+      });
+
+      // Mobile heuristics: detect "visibilitychange" when they switch tab (may not always work),
+      // or detect rapid scroll up near top within short time - show once.
+      let lastTouchY = null;
+      document.addEventListener('touchstart', function(e){
+        lastTouchY = e.touches && e.touches[0] ? e.touches[0].clientY : null;
+      }, {passive:true});
+      document.addEventListener('touchmove', function(e){
+        if(!lastTouchY) return;
+        const currentY = e.touches && e.touches[0] ? e.touches[0].clientY : null;
+        if(currentY !== null && lastTouchY - currentY > 120){ // large upward swipe -> likely going back/close
+          showPopup();
+        }
+      }, {passive:true});
+
+      // Visibilitychange (best-effort)
+      document.addEventListener('visibilitychange', function(){
+        if(document.visibilityState === 'hidden') {
+          // user left tab - show only if not already shown
+          showPopup();
+        }
+      });
+
+      // allow closing
+      window.closePopup = function(){
+        if(popup){
+          popup.style.display = 'none';
+          popup.setAttribute('aria-hidden','true');
+        }
+      };
+      // ESC to close
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') closePopup();
+      });
+    })();
+
+    /* ---------- StickyNav fallback ---------- */
+    (function(){
+      let sticky = document.getElementById('stickyNav');
+      if(!sticky){ sticky = document.createElement('div'); sticky.id='stickyNav'; sticky.style.top='-60px';
+        sticky.innerHTML = '<a href="tel:0374966430">📞 Gọi ngay: 0374 966 430</a>'; document.body.appendChild(sticky);
       }
-    }
-  ]
-}
-</script>
+      window.addEventListener('scroll', function(){ sticky.style.top = (window.scrollY > 250) ? '0' : '-60px'; });
+    })();
 
-<script>
-/* ---------- Sidebar toggle ---------- */
-function toggleSidebar(){
-  document.getElementById('sidebar').classList.toggle('show');
-}
-/* Click ngoài sidebar để đóng */
-window.addEventListener('click', function(e){
-  const sidebar = document.getElementById('sidebar');
-  const hamburger = document.querySelector('.hamburger');
-  if(!sidebar.contains(e.target) && !hamburger.contains(e.target)){
-    sidebar.classList.remove('show');
-  }
-});
-
-/* ---------- Sticky top bar hiển thị khi cuộn ---------- */
-const stickyBar = document.getElementById('sticky-bar');
-window.addEventListener('scroll', function(){
-  if(window.scrollY > 150) stickyBar.classList.add('show');
-  else stickyBar.classList.remove('show');
-});
-
-/* ---------- Reviews slider (simple) ---------- */
-let rIndex = 0;
-const reviews = document.querySelectorAll('.review');
-const dots = document.querySelectorAll('.dot');
-function showReview(n){
-  reviews.forEach((r,i)=>{ r.classList.remove('active'); if(dots[i]) dots[i].classList.remove('active'); });
-  reviews[n].classList.add('active');
-  if(dots[n]) dots[n].classList.add('active');
-}
-function nextReview(){ rIndex = (rIndex+1) % reviews.length; showReview(rIndex); }
-showReview(rIndex);
-setInterval(nextReview, 4200);
-
-/* Dot click */
-document.querySelectorAll('.dot').forEach((dot, idx)=> {
-  dot.addEventListener('click', ()=>{ rIndex=idx; showReview(rIndex); });
-});
-
-/* ---------- FAQ accordion ---------- */
-const acc = document.getElementsByClassName("accordion");
-for(let i=0;i<acc.length;i++){
-  acc[i].addEventListener("click", function(){
-    this.classList.toggle("active");
-    const panel = this.nextElementSibling;
-    panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
-  });
-}
-
-/* ---------- Scroll reveal & back to top ---------- */
-const sections = document.querySelectorAll('section, .step');
-function revealOnScroll(){
-  sections.forEach(el=>{
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 60){
-      el.classList.add('visible');
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-      if(el.classList.contains('step')) el.classList.add('show');
-    }
-  });
-  document.getElementById('backToTop').style.display = (window.scrollY > 300) ? 'block' : 'none';
-}
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
-
-/* ---------- Popup CTA ---------- */
-function closePopup(){ document.getElementById('ctaPopup').style.display = 'none'; }
-window.addEventListener('load', function(){
-  setTimeout(function(){
-    const popup = document.getElementById('ctaPopup');
-    if(popup) popup.style.display = 'block';
-  }, 5000);
-});
-
-/* ---------- Small sticky fallback (stickyNav) ---------- */
-(function(){
-  let sticky = document.getElementById('stickyNav');
-  if(!sticky){
-    sticky = document.createElement('div');
-    sticky.id = 'stickyNav';
-    sticky.style.top = '-60px';
-    sticky.innerHTML = '<a href="tel:0374966430">📞 Gọi ngay: 0374 966 430</a>';
-    document.body.appendChild(sticky);
-  }
-  window.addEventListener('scroll', function(){
-    sticky.style.top = (window.scrollY > 250) ? '0' : '-60px';
-  });
-})();
-
-/* Accessibility: allow keyboard closing of popup with ESC */
-document.addEventListener('keydown', function(e){
-  if(e.key === "Escape") closePopup();
-});
-</script>
+    /* Accessibility: focus trap not required here but allow keyboard closing */
+    function closePopup(){ const p=document.getElementById('ctaPopup'); if(p){ p.style.display='none'; p.setAttribute('aria-hidden','true'); } }
+  </script>
 </body>
 </html>
