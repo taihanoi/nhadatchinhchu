@@ -1,0 +1,48 @@
+# ============================================
+# 🤖 Robots.txt – Nâng cao cho Landing Page GitHub Pages
+# Website: https://taihanoi.github.io/nhadatchinhchu/
+# Tác giả: Nhà & Đất Long Biên Chính Chủ
+# Ngày cập nhật: 2025-10-11
+# ============================================
+
+# --- Cấu hình cho Googlebot & các công cụ chính ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+
+# --- Chặn bot rác & spam ---
+User-agent: MJ12bot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+
+# --- Khai báo sitemap & canonical domain ---
+Sitemap: https://taihanoi.github.io/nhadatchinhchu/sitemap.xml
+
+# --- Các cài đặt gợi ý thêm ---
+# Nếu bạn có nhiều subdomain hoặc bản song ngữ, có thể thêm:
+# Host: taihanoi.github.io
+# Crawl-delay: 5   # giúp tránh bị crawl quá dày
+
+# --- Gợi ý thêm cho Google Index ---
+# Googlebot nên hiểu rằng đây là trang chính, public hoàn toàn
+User-agent: *
+Allow: /
+
+# ============================================
+# ✅ Tệp này cho phép Google thu thập toàn bộ nội dung Landing Page
+# và ưu tiên hình ảnh, nội dung chính, cùng sitemap.
+# ============================================
