@@ -1,538 +1,505 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
-  <meta name="google-site-verification" content="RSlAm-bQ-Npx5tl7lw_eykXiWUaESTEm4lj3u_uUxC8" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nhà & Đất Long Biên – Bán nhà chính chủ, giá tốt</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Nhà Đất Long Biên Hà Nội - Mua Bán Chính Chủ Giá Tốt</title>
+   
+   <!-- SEO Meta Tags -->
+   <meta name="description" content="Mua bán nhà đất Long Biên Hà Nội chính chủ, giá tốt dưới 3 tỷ, 5 tỷ. Sổ đỏ trao tay, hỗ trợ vay vốn, xem nhà 24/7. Gọi ngay 0374 966 430.">
+   <meta name="keywords" content="nhà đất long biên, bán nhà long biên, mua nhà chính chủ hà nội, nhà đất giá rẻ long biên">
+   <meta name="author" content="Công Thị Tân">
+   <meta name="robots" content="index, follow">
+   
+   <!-- Canonical -->
+   <link rel="canonical" href="https://taihanoi.github.io/nhadatchinhchu/">
+   
+   <!-- Open Graph -->
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="Nhà Đất Long Biên Hà Nội - Chính Chủ Giá Tốt">
+   <meta property="og:description" content="Chuyên nhà đất Long Biên, sổ đỏ chính chủ. Liên hệ 0374 966 430.">
+   <meta property="og:image" content="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://taihanoi.github.io/nhadatchinhchu/">
+   <!-- Favicon -->
+   <link rel="icon" href="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" type="image/png">
 
-  <!-- Primary SEO meta -->
-  <meta name="description" content="Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ. Mua nhà Long Biên dưới 10 tỷ. Mua nhà chính chủ Hà Nội. Tư vấn tận tâm, sổ đỏ chính chủ. 📞 0374 966 430">
-  <meta name="keywords" content="bán nhà Long Biên dưới 3 tỷ, bán nhà Long Biên 4 tỷ, bán nhà Long Biên 5 tỷ, bán nhà Long Biên dưới 2 tỷ, mua nhà Long Biên dưới 10 tỷ, mua nhà chính chủ Hà Nội">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Công Thị Tân - Nhà & Đất Long Biên">
-  <meta name="geo.region" content="VN-HN">
-  <meta name="geo.placename" content="Long Biên, Hà Nội">
-  <meta name="geo.position" content="21.0417;105.8904">
-  <meta name="ICBM" content="21.0417, 105.8904">
+   <!-- Tailwind CSS (Framework giao diện) -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   
+   <!-- Config Tailwind cho chuẩn màu Facebook & iOS -->
+   <script>
+       tailwind.config = {
+           darkMode: 'class',
+           theme: {
+               extend: {
+                   colors: {
+                       fb: {
+                           blue: '#0084ff',
+                           bg: '#f0f2f5',
+                           dark: '#18191a',
+                           card: '#242526',
+                           text: '#e4e6eb',
+                           hover: '#3a3b3c'
+                       },
+                       ios: {
+                           blue: '#007AFF',
+                           gray: '#8E8E93',
+                           bg: '#F2F2F7'
+                       }
+                   },
+                   fontFamily: {
+                       sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                   },
+                   boxShadow: {
+                       'ios': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                       'float': '0 8px 30px rgba(0, 132, 255, 0.3)',
+                   }
+               }
+           }
+       }
+   </script>
 
-  <!-- Open Graph for FB / Zalo / Messenger -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nhà & Đất Long Biên – Bán nhà chính chủ, giá tốt">
-  <meta property="og:description" content="Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ. Mua nhà Long Biên dưới 10 tỷ. Liên hệ: 0374 966 430">
-  <meta property="og:url" content="https://taihanoi.github.io/nhadatchinhchu/">
-  <meta property="og:site_name" content="Nhà & Đất Long Biên">
-  <meta property="og:image" content="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+   <!-- Icons (Phosphor Icons - Giao diện hiện đại) -->
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nhà & Đất Long Biên – Bán nhà chính chủ, giá tốt">
-  <meta name="twitter:description" content="Bán nhà Long Biên giá tốt, sổ đỏ minh bạch. Liên hệ 0374 966 430 để xem nhà ngay.">
-  <meta name="twitter:image" content="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png">
+   <style>
+       /* CSS Tùy chỉnh cho cảm giác App Native */
+       body {
+           -webkit-tap-highlight-color: transparent;
+           -webkit-touch-callout: none;
+       }
+       
+       /* Ẩn thanh cuộn nhưng vẫn cuộn được */
+       .no-scrollbar::-webkit-scrollbar {
+           display: none;
+       }
+       .no-scrollbar {
+           -ms-overflow-style: none;
+           scrollbar-width: none;
+       }
 
-  <link rel="icon" href="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+       /* Hiệu ứng Glassmorphism */
+       .glass {
+           background: rgba(255, 255, 255, 0.85);
+           backdrop-filter: blur(12px);
+           -webkit-backdrop-filter: blur(12px);
+       }
+       .dark .glass {
+           background: rgba(36, 37, 38, 0.85);
+       }
 
-  <style>
-    :root{
-      --primary:#e67e22;
-      --primary-hover:#d35400;
-      --dark-footer:#1d1f23;
-      --muted:#9aa0a6;
-      --white:#ffffff;
-      --shadow: 0 8px 26px rgba(0,0,0,0.15);
-      --container-max:1100px;
-      --quick-size:64px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Roboto',sans-serif;background:#ffffff;color:#222;line-height:1.6;-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--container-max);margin:92px auto 36px;padding:0 18px}
+       /* Animation */
+       @keyframes pulse-green {
+           0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+           70% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+           100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+       }
+       @keyframes pulse-red {
+           0% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
+           70% { box-shadow: 0 0 0 10px rgba(248, 113, 113, 0); }
+           100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+       }
+       .status-open { animation: pulse-green 2s infinite; }
+       .status-closed { animation: pulse-red 2s infinite; }
 
-    /* Sticky top bar */
-    #sticky-bar{
-      position:fixed;top:0;left:0;width:100%;z-index:1200;
-      background:linear-gradient(90deg,var(--primary),var(--primary-hover));
-      color:var(--white);display:flex;justify-content:space-between;align-items:center;padding:10px 18px;
-      box-shadow:0 6px 22px rgba(0,0,0,0.18);transform:translateY(-120%);transition:transform .38s ease;
-    }
-    #sticky-bar.show{transform:translateY(0)}
-    #sticky-bar .logo{font-weight:700;font-size:1rem}
-    #sticky-bar .actions a{margin-left:8px;padding:8px 14px;border-radius:30px;color:#fff;font-weight:700;display:inline-block}
-    #sticky-bar .call{background:#2ecc71}
-    #sticky-bar .zalo{background:#3498db}
-
-    /* Hamburger & sidebar */
-    .hamburger{position:fixed;top:14px;left:14px;z-index:1300;display:flex;flex-direction:column;gap:6px;cursor:pointer}
-    .hamburger div{width:26px;height:3px;background:#222;border-radius:3px;transition:all .25s}
-    #sidebar{
-      position:fixed;top:0;left:-280px;width:280px;height:100%;z-index:1250;
-      background:linear-gradient(180deg,#1b1d1f,#0f1112);color:#fff;padding-top:78px;transition:left .32s;box-shadow:4px 0 18px rgba(0,0,0,0.5)
-    }
-    #sidebar.show{left:0}
-    #sidebar .menu-title{text-align:center;color:var(--primary);font-weight:700;margin-bottom:12px}
-    #sidebar ul{list-style:none;padding:0 14px}
-    #sidebar ul li{margin:12px 0;text-align:center}
-    #sidebar ul li a{display:block;padding:10px;border-radius:8px;transition:background .2s;color:#fff}
-    #sidebar ul li a:hover{background:rgba(255,255,255,0.04)}
-
-    /* Page content */
-    .section-title{color:var(--primary);margin-bottom:10px;font-weight:700;text-align:center}
-    .muted{color:var(--muted)}
-
-    /* Table */
-    table{width:100%;max-width:760px;margin:18px auto;border-collapse:collapse;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
-    th,td{padding:12px;border-bottom:1px solid #f0f0f0;text-align:center;font-size:15px}
-    th{background:var(--primary);color:#fff;font-weight:700}
-    tr:nth-child(even){background:#fafafa}
-
-    /* Image with overlay (placed under table) */
-    .image-hero {
-      max-width:760px;
-      margin:18px auto;
-      position:relative;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-    }
-    .image-hero img{display:block;width:100%;height:auto;vertical-align:middle;object-fit:cover}
-    .image-overlay{
-      position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;
-      padding:20px;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45));
-      text-align:center;
-    }
-    .image-overlay h3{color:#fff;font-size:1.2rem;margin-bottom:8px;font-weight:800}
-    .image-overlay p{color:#fff;opacity:0.95;font-size:0.95rem;line-height:1.4}
-
-    /* Steps */
-    .diagram-container{display:flex;flex-direction:column;gap:12px;align-items:center;margin:22px 0}
-    .step{width:100%;max-width:760px;background:#fff;padding:16px;border-radius:10px;box-shadow:var(--shadow);transform:translateX(-20px);opacity:0;transition:all .45s}
-    .step.show{transform:none;opacity:1}
-    .step-number{width:38px;height:38px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
-
-    /* FAQ */
-    .accordion{background:var(--primary);color:#fff;padding:12px;border-radius:8px;cursor:pointer;width:100%;max-width:760px;margin:10px auto;font-weight:700;border:none}
-    .panel{background:#fafafa;max-height:0;overflow:hidden;transition:max-height .35s;padding:0 12px;border-radius:0 0 8px 8px}
-
-    /* Reviews */
-    .reviews{max-width:760px;margin:18px auto;padding:18px;border-radius:10px;background:#fbfbfb;box-shadow:var(--shadow)}
-    .review{display:none;text-align:center;font-style:italic}
-    .review.active{display:block}
-    .dots{margin-top:10px;text-align:center}
-    .dot{display:inline-block;width:12px;height:12px;background:#ddd;border-radius:50%;margin:0 6px;cursor:pointer}
-    .dot.active{background:var(--primary)}
-
-    /* Quick-call – button group (style B: main button expands to show map) */
-    .quick-wrap{position:fixed;bottom:18px;right:18px;z-index:1500;display:flex;flex-direction:row;align-items:center;gap:10px}
-    .quick-btn{
-      width:var(--quick-size);height:var(--quick-size);border-radius:50%;display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;font-size:20px;font-weight:800;
-      box-shadow:0 10px 30px rgba(0,0,0,0.18);cursor:pointer;transition:transform .18s;
-    }
-    .quick-btn:active{transform:scale(.96)}
-    .quick-secondary{
-      width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#2ea2f4;color:#fff;
-      box-shadow:0 8px 24px rgba(0,0,0,0.14);opacity:0;transform:translateX(10px) scale(.9);transition:all .25s;
-    }
-    .quick-wrap.show .quick-secondary{opacity:1;transform:translateX(0) scale(1)}
-
-    /* Popup CTA */
-    #ctaPopup{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;padding:16px;border-radius:12px;box-shadow:0 10px 36px rgba(0,0,0,0.22);z-index:1400;display:none;max-width:92%}
-    #ctaPopup .close-btn{position:absolute;top:6px;right:10px;font-size:18px;cursor:pointer}
-
-    /* Sticky fallback nav */
-    #stickyNav{position:fixed;top:-60px;left:0;width:100%;background:linear-gradient(90deg,var(--primary),var(--primary-hover));color:#fff;text-align:center;padding:12px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,0.22);transition:top .35s;z-index:1600}
-
-    /* Footer (STYLE B: dark modern) */
-    footer.site-footer{
-      background:var(--dark-footer);
-      color:var(--white);
-      padding:28px 18px;
-      margin-top:28px;
-      border-top:4px solid rgba(255,255,255,0.03);
-    }
-    .footer-inner{max-width:var(--container-max);margin:0 auto;display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-    .footer-col{flex:1;min-width:220px}
-    .footer-brand{font-weight:800;color:var(--primary);margin-bottom:8px}
-    .footer-contact p{margin:8px 0;color:var(--white);opacity:0.95}
-    .footer-actions a{display:inline-block;margin-right:10px;padding:10px 14px;border-radius:10px;background:linear-gradient(45deg,var(--primary),var(--primary-hover));color:#fff;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,0.18)}
-    .footer-links a{color:var(--white);opacity:0.9;display:block;margin:6px 0}
-    .footer-bottom{width:100%;text-align:center;margin-top:18px;color:var(--muted);font-size:14px}
-    .footer-credit a{color:var(--primary);font-weight:700}
-    .footer-col .muted{color:var(--muted);font-size:14px}
-
-    /* Responsive */
-    @media(max-width:768px){
-      .container{margin-top:86px}
-      table, .step, .reviews, .image-hero {width:95%}
-      .footer-inner{flex-direction:column;align-items:center;text-align:center}
-      .footer-col{min-width:100%}
-    }
-  </style>
+       /* Điều chỉnh scroll margin để header không che nội dung khi click menu */
+       section { scroll-margin-top: 80px; }
+   </style>
 </head>
-<body>
+<body class="bg-fb-bg text-gray-900 dark:bg-fb-dark dark:text-fb-text transition-colors duration-300 antialiased selection:bg-fb-blue selection:text-white pb-24">
 
-  <!-- STICKY TOP BAR -->
-  <div id="sticky-bar" aria-hidden="true">
-    <div class="logo">🏠 Nhà & Đất Long Biên</div>
-    <div class="actions">
-      <a class="call" href="tel:0374966430">📞 Gọi ngay</a>
-      <a class="zalo" href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Zalo</a>
-    </div>
-  </div>
+   <!-- HEADER / APP BAR -->
+   <header class="fixed top-0 left-0 w-full z-50 glass border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+       <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+           
+           <!-- Logo & Status -->
+           <div class="flex items-center gap-3" onclick="window.scrollTo(0,0)">
+               <div class="relative w-10 h-10 rounded-xl overflow-hidden shadow-sm cursor-pointer">
+                   <img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" alt="Logo" class="w-full h-full object-cover">
+               </div>
+               <div class="flex flex-col">
+                   <span class="font-bold text-lg leading-tight text-fb-blue">Nhà Đất LB</span>
+                   <!-- AI Status Text -->
+                   <span id="shop-status" class="text-[11px] font-semibold flex items-center gap-1 text-gray-500 dark:text-gray-400">
+                       <span id="status-dot" class="w-2 h-2 rounded-full bg-gray-400"></span>
+                       Đang tải...
+                   </span>
+               </div>
+           </div>
 
-  <!-- HAMBURGER + SIDEBAR -->
-  <div class="hamburger" onclick="toggleSidebar()" aria-label="Mở menu">
-    <div></div><div></div><div></div>
-  </div>
+           <!-- Desktop Menu -->
+           <nav class="hidden md:flex gap-6 font-medium text-sm">
+               <a href="#trangchu" class="hover:text-fb-blue transition">Trang chủ</a>
+               <a href="#gioithieu" class="hover:text-fb-blue transition">Giới thiệu</a>
+               <a href="#banggia" class="hover:text-fb-blue transition">Bảng giá</a>
+               <a href="#faq" class="hover:text-fb-blue transition">FAQ</a>
+               <a href="#lienhe" class="hover:text-fb-blue transition">Liên hệ</a>
+           </nav>
 
-  <nav id="sidebar" aria-hidden="true">
-    <div class="menu-title">📋 Dan mục</div>
-    <ul>
-      <li><a href="#products">📊 Giá nhà</a></li>
-      <li><a href="#diagram">🧭 Quy trình</a></li>
-      <li><a href="#faq">❓ FAQ</a></li>
-      <li><a href="#contact">📞 Liên hệ</a></li>
-      <li><a href="tel:0374966430">📞 0374 966 430</a></li>
-    </ul>
-  </nav>
+           <!-- Actions Right -->
+           <div class="flex items-center gap-3">
+               <!-- Dark Mode Toggle -->
+               <button id="theme-toggle" class="w-9 h-9 rounded-full bg-gray-100 dark:bg-fb-hover flex items-center justify-center text-gray-600 dark:text-gray-200 transition active:scale-95">
+                   <i class="ph ph-moon text-xl" id="theme-icon"></i>
+               </button>
 
-  <main class="container" id="main">
-    <!-- Intro text (instead of hero banner) -->
-    <section aria-label="Giới thiệu nhanh" style="max-width:760px;margin:0 auto 18px;text-align:center;">
-      <h1 class="section-title">Nhà & Đất Long Biên – Giá tốt, chính chủ</h1>
-      <p class="muted">Bán nhà Long Biên dưới 2 tỷ, dưới 3 tỷ, 4 tỷ, 5 tỷ — Mua nhà chính chủ Hà Nội. Liên hệ để nhận danh sách và xem nhà thực tế.</p>
-    </section>
+               <!-- Mobile Menu Button -->
+               <button onclick="toggleMenu()" class="md:hidden w-9 h-9 rounded-full bg-gray-100 dark:bg-fb-hover flex items-center justify-center text-fb-blue transition active:scale-95">
+                   <i class="ph-bold ph-list text-xl"></i>
+               </button>
+           </div>
+       </div>
+   </header>
 
-    <!-- PRODUCTS / Bảng giá -->
-    <section id="products" aria-label="Bảng giá nhà">
-      <h2 style="text-align:center;margin-bottom:10px">Giá Nhà Đất Long Biên Hà Nội</h2>
-      <table role="table" aria-label="Bảng giá nhà Long Biên">
-        <thead>
-          <tr><th>Căn nhà</th><th>Diện tích</th><th>Tầng</th><th>Giá (Tỷ)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Nhà Long Biên - Tiêu chuẩn</td><td>30–50 m²</td><td>3–5</td><td>&lt;2</td></tr>
-          <tr><td>Nhà Long Biên - Đầu tư</td><td>30–70 m²</td><td>3–5</td><td>3–5</td></tr>
-          <tr><td>Nhà Long Biên - Tiêu chuẩn khá</td><td>50–90 m²</td><td>3–5</td><td>5–7</td></tr>
-          <tr><td>Nhà Long Biên - Mặt phố / cao cấp</td><td>70–120 m²</td><td>4–5</td><td>7–10</td></tr>
-        </tbody>
-      </table>
-    </section>
+   <!-- MOBILE MENU (Facebook Style Slide-up) -->
+   <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleMenu()"></div>
+   <div id="mobile-menu" class="fixed bottom-0 left-0 w-full bg-white dark:bg-fb-card rounded-t-[20px] z-[70] transform translate-y-full transition-transform duration-300 pb-8 shadow-2xl">
+       <div class="flex justify-center pt-3 pb-1">
+           <div class="w-12 h-1.5 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+       </div>
+       <div class="p-4 grid grid-cols-4 gap-4 text-center">
+           <a href="#trangchu" onclick="toggleMenu()" class="flex flex-col items-center gap-2">
+               <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-gray-700 text-fb-blue flex items-center justify-center"><i class="ph-fill ph-house text-2xl"></i></div>
+               <span class="text-xs font-medium">Trang chủ</span>
+           </a>
+           <a href="#gioithieu" onclick="toggleMenu()" class="flex flex-col items-center gap-2">
+               <div class="w-12 h-12 rounded-full bg-orange-100 dark:bg-gray-700 text-orange-500 flex items-center justify-center"><i class="ph-fill ph-info text-2xl"></i></div>
+               <span class="text-xs font-medium">Giới thiệu</span>
+           </a>
+           <a href="#banggia" onclick="toggleMenu()" class="flex flex-col items-center gap-2">
+               <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-gray-700 text-green-600 flex items-center justify-center"><i class="ph-fill ph-money text-2xl"></i></div>
+               <span class="text-xs font-medium">Bảng giá</span>
+           </a>
+           <a href="#faq" onclick="toggleMenu()" class="flex flex-col items-center gap-2">
+               <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-gray-700 text-purple-500 flex items-center justify-center"><i class="ph-fill ph-question text-2xl"></i></div>
+               <span class="text-xs font-medium">FAQ</span>
+           </a>
+           <a href="#chinhsach" onclick="toggleMenu()" class="flex flex-col items-center gap-2">
+               <div class="w-12 h-12 rounded-full bg-red-100 dark:bg-gray-700 text-red-500 flex items-center justify-center"><i class="ph-fill ph-shield-check text-2xl"></i></div>
+               <span class="text-xs font-medium">Chính sách</span>
+           </a>
+           <a href="#dieukhoan" onclick="toggleMenu()" class="flex flex-col items-center gap-2">
+               <div class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 flex items-center justify-center"><i class="ph-fill ph-file-text text-2xl"></i></div>
+               <span class="text-xs font-medium">Điều khoản</span>
+           </a>
+           <a href="#lienhe" onclick="toggleMenu()" class="flex flex-col items-center gap-2 col-span-2">
+               <div class="w-full h-12 rounded-full bg-fb-blue text-white flex items-center justify-center shadow-lg"><span class="font-bold mr-2">Gọi Ngay</span> <i class="ph-fill ph-phone-call text-xl"></i></div>
+               <span class="text-xs font-medium text-fb-blue">Liên hệ</span>
+           </a>
+       </div>
+   </div>
 
-    <!-- Image (placed under products) with overlay A -->
-    <div class="image-hero" role="img" aria-label="Nhà & Đất Long Biên – ảnh minh họa">
-      <img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" alt="Nhà & Đất Long Biên – Giá tốt, chính chủ" loading="lazy">
-      <div class="image-overlay">
-        <h3>Nhà & Đất Long Biên – Giá tốt, chính chủ</h3>
-        <p>Bán nhà Long Biên dưới 2 tỷ, dưới 3 tỷ, 4 tỷ, 5 tỷ — Mua nhà chính chủ Hà Nội. Liên hệ để nhận danh sách và xem nhà thực tế.</p>
-      </div>
-    </div>
+   <!-- MAIN CONTENT CONTAINER -->
+   <main class="max-w-3xl mx-auto px-4 pt-20 space-y-6">
 
-    <!-- DIAGRAM -->
-    <section id="diagram" aria-label="Quy trình mua nhà">
-      <h2 style="text-align:center;margin-bottom:8px">Quy Trình Mua Nhà</h2>
-      <div class="diagram-container">
-        <div class="step"><div class="step-number">1</div><h3>Liên hệ & nhận danh sách</h3><p>Gửi yêu cầu qua hotline/Zalo để nhận danh sách nhà phù hợp.</p></div>
-        <div class="step"><div class="step-number">2</div><h3>Đến xem nhà</h3><p>Tham quan trực tiếp, kiểm tra pháp lý, tiện ích và môi trường xung quanh.</p></div>
-        <div class="step"><div class="step-number">3</div><h3>Đàm phán & ký kết</h3><p>Thương lượng, đặt cọc, hoàn thiện giấy tờ – nhận sổ đỏ chính chủ.</p></div>
-      </div>
-    </section>
+       <!-- SECTION: TRANG CHỦ (HERO) -->
+       <section id="trangchu" class="relative rounded-3xl overflow-hidden shadow-ios aspect-[16/9] group">
+           <img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" alt="Nhà Đất Long Biên" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+               <!-- Tối ưu thẻ H1 chuẩn SEO ~60 ký tự -->
+               <h1 class="text-white text-2xl md:text-3xl font-bold leading-tight mb-2 drop-shadow-md">
+                   Mua Bán Nhà Đất Long Biên Hà Nội - Chính Chủ Giá Tốt
+               </h1>
+               <p class="text-gray-200 text-sm md:text-base line-clamp-2">
+                   Kho nhà đẹp dưới 3 tỷ, 5 tỷ. Sổ đỏ pháp lý rõ ràng. Hỗ trợ 24/7.
+               </p>
+           </div>
+       </section>
 
-    <!-- REVIEWS -->
-    <section id="reviews" aria-label="Đánh giá khách hàng">
-      <h2 style="text-align:center;margin-bottom:8px">Đánh giá khách hàng</h2>
-      <div class="reviews" role="region" aria-live="polite">
-        <div class="review active">"Dịch vụ chuyên nghiệp, nhanh chóng, sổ đỏ minh bạch!" – <b>Anh Hùng</b></div>
-        <div class="review">"Nhà đẹp, giá tốt, vị trí trung tâm Long Biên rất thuận tiện." – <b>Chị Lan</b></div>
-        <div class="review">"Tư vấn nhiệt tình, dễ dàng chọn lựa căn nhà phù hợp." – <b>Anh Nam</b></div>
-        <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-      </div>
-    </section>
+       <!-- SECTION: GIỚI THIỆU -->
+       <section id="gioithieu" class="bg-white dark:bg-fb-card p-6 rounded-2xl shadow-ios animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
+           <div class="flex items-center gap-2 mb-4">
+               <i class="ph-fill ph-info text-fb-blue text-xl"></i>
+               <h2 class="text-xl font-bold">Giới Thiệu</h2>
+           </div>
+           <p class="text-gray-600 dark:text-gray-300 mb-4 text-justify leading-relaxed">
+               Chào mừng bạn đến với kênh thông tin **Nhà & Đất Long Biên** uy tín nhất. Chúng tôi chuyên kết nối người mua và người bán trực tiếp, loại bỏ trung gian không cần thiết, giúp bạn tiết kiệm hàng trăm triệu đồng.
+           </p>
+           <div class="grid grid-cols-3 gap-3">
+               <div class="bg-fb-bg dark:bg-fb-hover p-3 rounded-xl text-center">
+                   <div class="text-fb-blue font-bold text-xl">100+</div>
+                   <div class="text-xs text-gray-500">Căn nhà</div>
+               </div>
+               <div class="bg-fb-bg dark:bg-fb-hover p-3 rounded-xl text-center">
+                   <div class="text-fb-blue font-bold text-xl">500+</div>
+                   <div class="text-xs text-gray-500">Khách hàng</div>
+               </div>
+               <div class="bg-fb-bg dark:bg-fb-hover p-3 rounded-xl text-center">
+                   <div class="text-fb-blue font-bold text-xl">24/7</div>
+                   <div class="text-xs text-gray-500">Hỗ trợ</div>
+               </div>
+           </div>
+       </section>
 
-    <!-- FAQ -->
-    <section id="faq" aria-label="Câu hỏi thường gặp">
-      <h2 style="text-align:center;margin-bottom:8px">Câu hỏi thường gặp</h2>
-      <button class="accordion">Nhà có tầng 3 tiện mở văn phòng không?</button>
-      <div class="panel"><p>Nhiều nhà tầng 3–5 phù hợp vừa ở vừa làm văn phòng, tuỳ từng căn mà có phương án bố trí hợp lý.</p></div>
+       <!-- SECTION: BẢNG GIÁ -->
+       <section id="banggia" class="animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
+           <div class="flex items-center justify-between mb-4 px-2">
+               <h2 class="text-xl font-bold flex items-center gap-2"><i class="ph-fill ph-tag text-green-500"></i> Bảng Giá Tham Khảo</h2>
+               <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-md font-bold">HOT</span>
+           </div>
+           
+           <div class="space-y-3">
+               <!-- Card 1 -->
+               <div class="bg-white dark:bg-fb-card p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                   <div>
+                       <h3 class="font-bold text-lg">Phân khúc Nhỏ</h3>
+                       <p class="text-sm text-gray-500">30m² - 45m² • Ngõ nhỏ</p>
+                   </div>
+                   <div class="text-right">
+                       <div class="text-fb-blue font-bold text-lg">~ 2 - 3 Tỷ</div>
+                       <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-200 px-2 py-0.5 rounded-full">Sổ đỏ</span>
+                   </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="bg-white dark:bg-fb-card p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                   <div>
+                       <h3 class="font-bold text-lg">Phân khúc Vừa</h3>
+                       <p class="text-sm text-gray-500">45m² - 60m² • Ô tô đỗ gần</p>
+                   </div>
+                   <div class="text-right">
+                       <div class="text-fb-blue font-bold text-lg">3 - 5 Tỷ</div>
+                       <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-200 px-2 py-0.5 rounded-full">Sổ đỏ</span>
+                   </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="bg-white dark:bg-fb-card p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                   <div>
+                       <h3 class="font-bold text-lg">Mặt Phố / VIP</h3>
+                       <p class="text-sm text-gray-500">KD tốt • Ô tô vào nhà</p>
+                   </div>
+                   <div class="text-right">
+                       <div class="text-fb-blue font-bold text-lg">5 - 10 Tỷ</div>
+                       <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-200 px-2 py-0.5 rounded-full">VIP</span>
+                   </div>
+               </div>
+           </div>
+       </section>
 
-      <button class="accordion">Sổ đỏ có minh bạch không?</button>
-      <div class="panel"><p>Tất cả sản phẩm đều có sổ đỏ chính chủ; chúng tôi hỗ trợ kiểm tra pháp lý trước khi giao dịch.</p></div>
+       <!-- SECTION: FAQ -->
+       <section id="faq" class="bg-white dark:bg-fb-card p-6 rounded-2xl shadow-ios animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
+           <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="ph-fill ph-question text-purple-500"></i> Câu Hỏi Thường Gặp</h2>
+           <div class="space-y-2">
+               <details class="group bg-fb-bg dark:bg-fb-hover rounded-xl overflow-hidden">
+                   <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                       <span>Làm sao để xem nhà?</span>
+                       <span class="transition group-open:rotate-180"><i class="ph-bold ph-caret-down"></i></span>
+                   </summary>
+                   <div class="text-gray-600 dark:text-gray-300 p-4 pt-0 text-sm leading-relaxed">
+                       Bạn chỉ cần gọi điện hoặc nhắn tin Zalo số 0374 966 430 trước 30 phút. Chúng tôi sẽ dẫn bạn đi xem miễn phí.
+                   </div>
+               </details>
+               <details class="group bg-fb-bg dark:bg-fb-hover rounded-xl overflow-hidden">
+                   <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                       <span>Phí môi giới là bao nhiêu?</span>
+                       <span class="transition group-open:rotate-180"><i class="ph-bold ph-caret-down"></i></span>
+                   </summary>
+                   <div class="text-gray-600 dark:text-gray-300 p-4 pt-0 text-sm leading-relaxed">
+                       Với người mua, chúng tôi **KHÔNG THU PHÍ**. Bạn làm việc trực tiếp giá cả với chủ nhà.
+                   </div>
+               </details>
+               <details class="group bg-fb-bg dark:bg-fb-hover rounded-xl overflow-hidden">
+                   <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                       <span>Có hỗ trợ vay ngân hàng không?</span>
+                       <span class="transition group-open:rotate-180"><i class="ph-bold ph-caret-down"></i></span>
+                   </summary>
+                   <div class="text-gray-600 dark:text-gray-300 p-4 pt-0 text-sm leading-relaxed">
+                       Có. Chúng tôi liên kết với các ngân hàng lớn (Vietcombank, Techcombank, VPBank...) để hỗ trợ thủ tục nhanh gọn.
+                   </div>
+               </details>
+           </div>
+       </section>
 
-      <button class="accordion">Có hỗ trợ vay ngân hàng không?</button>
-      <div class="panel"><p>Có — chúng tôi liên kết nhiều ngân hàng để hỗ trợ khách hàng vay mua nhà với điều kiện tốt.</p></div>
-    </section>
+       <!-- SECTION: CHÍNH SÁCH & ĐIỀU KHOẢN (Gộp gọn dạng Tab) -->
+       <section id="chinhsach" class="grid grid-cols-1 md:grid-cols-2 gap-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
+           <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-2xl text-white shadow-lg relative overflow-hidden">
+               <i class="ph-fill ph-shield-check absolute -right-4 -bottom-4 text-8xl text-white opacity-20"></i>
+               <h3 class="font-bold text-lg mb-2">Chính Sách</h3>
+               <ul class="text-sm space-y-1 opacity-90">
+                   <li>• Bảo mật thông tin khách hàng tuyệt đối.</li>
+                   <li>• Hỗ trợ pháp lý sang tên sổ đỏ trọn gói.</li>
+                   <li>• Tư vấn quy hoạch miễn phí.</li>
+               </ul>
+           </div>
+           <div id="dieukhoan" class="bg-white dark:bg-fb-card p-5 rounded-2xl shadow-ios border border-gray-100 dark:border-gray-700">
+               <h3 class="font-bold text-lg mb-2 text-fb-blue">Điều Khoản</h3>
+               <p class="text-sm text-gray-500 dark:text-gray-400 text-justify">
+                   Khách hàng cam kết cung cấp thông tin nhu cầu thực. Chúng tôi cam kết thông tin nhà đất là thật, ảnh thật, giá thật. Mọi giao dịch đặt cọc đều có văn bản pháp lý.
+               </p>
+           </div>
+       </section>
 
-    <!-- CONTACT -->
-    <section id="contact" aria-label="Liên hệ">
-      <h2 style="text-align:center;margin-bottom:8px">Liên hệ</h2>
-      <p style="text-align:center">📍 Tầng 3, 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
-      <div style="display:flex;justify-content:center;gap:12px;margin-top:10px;flex-wrap:wrap">
-        <a class="btn-hero" href="tel:0374966430">📞 0374 966 430</a>
-        <a class="btn-hero" href="https://zalo.me/0374966430" target="_blank" rel="noopener">💬 Chat Zalo</a>
-        <a class="btn-hero" href="https://maps.app.goo.gl/c18zQ3MQvLHTw5T87?g_st=ipc" target="_blank" rel="noopener">📍 Xem bản đồ</a>
-      </div>
-    </section>
-  </main>
+       <!-- SECTION: LIÊN HỆ (BẢN ĐỒ + NÚT GỌI) -->
+       <section id="lienhe" class="pb-10 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
+           <div class="bg-white dark:bg-fb-card p-2 rounded-2xl shadow-ios">
+               <div class="rounded-xl overflow-hidden h-64 w-full relative">
+                   <!-- Link bản đồ thực -->
+                   <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6559368521045!2d105.8882003154025!3d21.04644679255067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a96f1315053f%3A0x633519393355030!2zMTEyIE5ndXnhu4VuIFbEg24gQ-G7qywgTmfhu41jIEzDom0sIExvbmcgQmnDqm4sIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1652841000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   
+                   <a href="https://maps.app.goo.gl/c18zQ3MQvLHTw5T87?g_st=ipc" target="_blank" class="absolute bottom-3 right-3 bg-white text-black text-xs font-bold px-3 py-2 rounded-lg shadow-md flex items-center gap-1 hover:bg-gray-100 transition">
+                       <i class="ph-fill ph-map-pin"></i> Mở App Bản Đồ
+                   </a>
+               </div>
+               
+               <div class="p-4 text-center">
+                   <h2 class="text-xl font-bold mb-1">Liên Hệ Ngay</h2>
+                   <p class="text-gray-500 text-sm mb-4">112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
+                   
+                   <div class="flex flex-col gap-3">
+                       <a href="tel:0374966430" class="w-full py-3 bg-fb-blue hover:bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition active:scale-95">
+                           <i class="ph-fill ph-phone text-xl"></i> Gọi 0374 966 430
+                       </a>
+                       <div class="flex gap-3">
+                           <a href="https://zalo.me/0374966430" target="_blank" class="flex-1 py-3 bg-blue-500 text-white font-bold rounded-xl shadow-md flex items-center justify-center gap-2 hover:bg-blue-600 transition active:scale-95">
+                               <i class="ph-fill ph-chat-circle-text text-xl"></i> Zalo
+                           </a>
+                           <a href="sms:0374966430" class="flex-1 py-3 bg-green-500 text-white font-bold rounded-xl shadow-md flex items-center justify-center gap-2 hover:bg-green-600 transition active:scale-95">
+                               <i class="ph-fill ph-chat-teardrop-text text-xl"></i> SMS
+                           </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
 
-  <!-- Quick-call (B: main button expands secondary map button) -->
-  <div class="quick-wrap" id="quickWrap" aria-hidden="false" aria-label="Nút gọi nhanh">
-    <button class="quick-btn" id="quickCallBtn" title="Gọi ngay">📞</button>
-    <a class="quick-secondary" id="quickMapBtn" href="https://maps.app.goo.gl/c18zQ3MQvLHTw5T87?g_st=ipc" target="_blank" rel="noopener" title="Xem bản đồ">📍</a>
-  </div>
+   </main>
 
-  <!-- Popup exit-intent (hidden by default) -->
-  <div id="ctaPopup" role="dialog" aria-modal="true" aria-hidden="true">
-    <span class="close-btn" onclick="closePopup()" aria-label="Đóng">&times;</span>
-    <h3>Gọi ngay để nhận tư vấn miễn phí!</h3>
-    <p>Nhận danh sách nhà phù hợp theo ngân sách của bạn.</p>
-    <a class="btn-hero" href="tel:0374966430">📞 0374 966 430</a>
-  </div>
+   <!-- FOOTER (Đồng bộ với Menu) -->
+   <footer class="bg-fb-card dark:bg-black text-gray-400 py-10 mt-10">
+       <div class="max-w-3xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+           <div class="col-span-2">
+               <span class="text-white font-bold text-lg block mb-2">Nhà Đất Long Biên</span>
+               <p class="mb-4">Chuyên trang mua bán bất động sản thổ cư chính chủ tại quận Long Biên.</p>
+               <div class="flex gap-4">
+                   <a href="#" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-fb-blue hover:text-white transition"><i class="ph-fill ph-facebook-logo"></i></a>
+                   <a href="#" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-pink-500 hover:text-white transition"><i class="ph-fill ph-instagram-logo"></i></a>
+                   <a href="#" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-black hover:text-white transition"><i class="ph-fill ph-tiktok-logo"></i></a>
+               </div>
+           </div>
+           <div>
+               <h4 class="text-white font-bold mb-3">Liên kết</h4>
+               <ul class="space-y-2">
+                   <li><a href="#trangchu" class="hover:text-fb-blue transition">Trang chủ</a></li>
+                   <li><a href="#gioithieu" class="hover:text-fb-blue transition">Giới thiệu</a></li>
+                   <li><a href="#banggia" class="hover:text-fb-blue transition">Bảng giá</a></li>
+               </ul>
+           </div>
+           <div>
+               <h4 class="text-white font-bold mb-3">Thông tin</h4>
+               <ul class="space-y-2">
+                   <li><a href="#chinhsach" class="hover:text-fb-blue transition">Chính sách</a></li>
+                   <li><a href="#dieukhoan" class="hover:text-fb-blue transition">Điều khoản</a></li>
+                   <li><a href="#lienhe" class="hover:text-fb-blue transition">Liên hệ</a></li>
+               </ul>
+           </div>
+       </div>
+       <div class="text-center mt-8 pt-8 border-t border-gray-800 text-xs">
+           © 2025 Nhà Đất Long Biên. All rights reserved.
+       </div>
+   </footer>
 
-  <!-- Sticky fallback nav (small) -->
-  <div id="stickyNav" aria-hidden="true"></div>
+   <!-- QUICK ACTION FLOAT BUTTON (Facebook Style) -->
+   <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end group">
+       <!-- Zalo Icon (Hidden initially, shown on hover/click of main btn) -->
+       <a href="https://zalo.me/0374966430" target="_blank" class="w-12 h-12 rounded-full bg-blue-500 text-white shadow-float flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom">
+           <span class="font-bold text-xs">Zalo</span>
+       </a>
+        <!-- Map Icon -->
+        <a href="https://maps.app.goo.gl/c18zQ3MQvLHTw5T87?g_st=ipc" target="_blank" class="w-12 h-12 rounded-full bg-green-500 text-white shadow-float flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom delay-75">
+           <i class="ph-fill ph-map-pin text-xl"></i>
+       </a>
+       
+       <!-- Main Call Button -->
+       <a href="tel:0374966430" class="w-16 h-16 rounded-full bg-gradient-to-r from-fb-blue to-blue-600 text-white shadow-float flex items-center justify-center animate-bounce hover:animate-none transition active:scale-90">
+           <i class="ph-fill ph-phone-call text-3xl"></i>
+       </a>
+   </div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-col">
-        <div class="footer-brand">🏠 Nhà & Đất Long Biên</div>
-        <div class="muted">Chuyên mua bán nhà đất Long Biên — sổ đỏ chính chủ, tư vấn tận tâm.</div>
-      </div>
+   <!-- JAVASCRIPT LOGIC -->
+   <script>
+       // 1. AI Giả lập giờ mở cửa (8h - 20h)
+       function updateStatus() {
+           const now = new Date();
+           const hour = now.getHours();
+           const statusText = document.getElementById('shop-status');
+           const statusDot = document.getElementById('status-dot');
+           
+           // Mở cửa từ 8h đến 20h
+           if (hour >= 8 && hour < 20) {
+               statusText.innerHTML = '<span class="w-2 h-2 rounded-full bg-green-500 status-open"></span> Đang mở cửa';
+               statusText.classList.remove('text-red-500');
+               statusText.classList.add('text-green-600', 'dark:text-green-400');
+           } else {
+               statusText.innerHTML = '<span class="w-2 h-2 rounded-full bg-red-500 status-closed"></span> Đã đóng cửa';
+               statusText.classList.remove('text-green-600');
+               statusText.classList.add('text-red-500', 'dark:text-red-400');
+           }
+       }
+       updateStatus();
+       setInterval(updateStatus, 60000); // Check mỗi phút
 
-      <div class="footer-col footer-contact">
-        <p><strong>📞 Hotline:</strong> <a href="tel:0374966430" style="color:var(--white);text-decoration:underline">0374 966 430</a></p>
-        <p><strong>✉️ Email:</strong> <a href="mailto:congttan1981@gmail.com" style="color:var(--white);text-decoration:underline">congttan1981@gmail.com</a></p>
-        <p class="muted">Giờ làm việc: 08:00 – 20:00 (Hàng ngày)</p>
-        <div style="margin-top:10px">
-          <a class="footer-action" href="tel:0374966430" style="margin-right:8px"><span style="background:var(--primary);padding:8px 12px;border-radius:8px;color:#fff;font-weight:700">📞 Gọi</span></a>
-          <a class="footer-action" href="https://zalo.me/0374966430" target="_blank" rel="noopener"><span style="background:#2ea2f4;padding:8px 12px;border-radius:8px;color:#fff;font-weight:700">💬 Zalo</span></a>
-        </div>
-      </div>
+       // 2. Dark Mode Logic
+       const themeToggle = document.getElementById('theme-toggle');
+       const themeIcon = document.getElementById('theme-icon');
+       const html = document.documentElement;
 
-      <div class="footer-col footer-links">
-        <div><strong>Liên kết</strong></div>
-        <a href="#products">Giá nhà</a>
-        <a href="#diagram">Quy trình</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Liên hệ</a>
-      </div>
-    </div>
+       // Check Local Storage or System Preference
+       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+           html.classList.add('dark');
+           themeIcon.classList.replace('ph-moon', 'ph-sun');
+       } else {
+           html.classList.remove('dark');
+           themeIcon.classList.replace('ph-sun', 'ph-moon');
+       }
 
-    <div class="footer-bottom">
-      <div class="footer-credit">© 2025 <a href="https://taihanoi.github.io/nhadatchinhchu/" target="_blank" rel="noopener">Nhà & Đất Long Biên – Công Thị Tân</a>. All rights reserved.</div>
-    </div>
-  </footer>
+       themeToggle.addEventListener('click', () => {
+           html.classList.toggle('dark');
+           if (html.classList.contains('dark')) {
+               localStorage.theme = 'dark';
+               themeIcon.classList.replace('ph-moon', 'ph-sun');
+           } else {
+               localStorage.theme = 'light';
+               themeIcon.classList.replace('ph-sun', 'ph-moon');
+           }
+       });
 
-  <!-- SCHEMA JSON-LD (WebSite + LocalBusiness + RealEstateAgent + OfferCatalog + BreadcrumbList + AggregateRating) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"WebSite",
-        "@id":"https://taihanoi.github.io/nhadatchinhchu/#website",
-        "url":"https://taihanoi.github.io/nhadatchinhchu/",
-        "name":"Nhà & Đất Long Biên – Công Thị Tân",
-        "description":"Bán nhà Long Biên dưới 3 tỷ, 4 tỷ, 5 tỷ, dưới 2 tỷ, mua nhà chính chủ Hà Nội, nhà dưới 10 tỷ – Long Biên, Hà Nội. Tư vấn tận tâm, sổ đỏ chính chủ.",
-        "keywords":["bán nhà Long Biên dưới 3 tỷ","bán nhà Long Biên 4 tỷ","bán nhà Long Biên 5 tỷ","bán nhà Long Biên dưới 2 tỷ","mua nhà Long Biên dưới 10 tỷ","mua nhà chính chủ Hà Nội"],
-        "publisher":{"@type":"Organization","name":"Nhà & Đất Long Biên","logo":{"@type":"ImageObject","url":"https://i.postimg.cc/T2cW9Yk6/IMG-5191.png"}},
-        "potentialAction":{"@type":"SearchAction","target":"https://taihanoi.github.io/nhadatchinhchu/?s={search_term_string}","query-input":"required name=search_term_string"}
-      },
-      {
-        "@type":"BreadcrumbList",
-        "@id":"https://taihanoi.github.io/nhadatchinhchu/#breadcrumbs",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://taihanoi.github.io/nhadatchinhchu/"},
-          {"@type":"ListItem","position":2,"name":"Bán nhà Long Biên","item":"https://taihanoi.github.io/nhadatchinhchu/ban-nha-long-bien"}
-        ]
-      },
-      {
-        "@type":"LocalBusiness",
-        "@id":"https://taihanoi.github.io/nhadatchinhchu/#localbusiness",
-        "name":"Nhà & Đất Long Biên – Công Thị Tân",
-        "image":"https://i.postimg.cc/T2cW9Yk6/IMG-5191.png",
-        "priceRange":"₫₫₫",
-        "telephone":"+84374966430",
-        "email":"congttan1981@gmail.com",
-        "address":{"@type":"PostalAddress","streetAddress":"112 Nguyễn Văn Cừ","addressLocality":"Long Biên","addressRegion":"Hà Nội","postalCode":"100000","addressCountry":"VN"},
-        "geo":{"@type":"GeoCoordinates","latitude":21.0417,"longitude":105.8904},
-        "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"},
-        "sameAs":["https://m.facebook.com/nhadatlongbien0374966430/","https://zalo.me/0374966430","https://maps.app.goo.gl/c18zQ3MQvLHTw5T87?g_st=ipc"],
-        "hasOfferCatalog":{"@type":"OfferCatalog","name":"Danh sách nhà bán tại Long Biên","itemListElement":[
-          {"@type":"Offer","name":"Bán nhà Long Biên dưới 2 tỷ"},
-          {"@type":"Offer","name":"Bán nhà Long Biên dưới 3 tỷ"},
-          {"@type":"Offer","name":"Bán nhà Long Biên 4 tỷ"},
-          {"@type":"Offer","name":"Bán nhà Long Biên 5 tỷ"},
-          {"@type":"Offer","name":"Mua nhà Long Biên dưới 10 tỷ"}
-        ]}
-      },
-      {
-        "@type":"RealEstateAgent",
-        "@id":"https://taihanoi.github.io/nhadatchinhchu/#realestateagent",
-        "name":"Nhà & Đất Long Biên – Công Thị Tân",
-        "description":"Chuyên mua bán nhà đất Long Biên – Sổ đỏ chính chủ, giá từ 2–10 tỷ, tầng 3–5 tiện mở văn phòng, trung tâm Hà Nội.",
-        "image":"https://i.postimg.cc/T2cW9Yk6/IMG-5191.png",
-        "telephone":"+84374966430",
-        "email":"congttan1981@gmail.com",
-        "address":{"@type":"PostalAddress","streetAddress":"112 Nguyễn Văn Cừ","addressLocality":"Long Biên","addressRegion":"Hà Nội","addressCountry":"VN"},
-        "openingHours":"Mo-Su 08:00-20:00",
-        "areaServed":{"@type":"Place","name":"Long Biên, Hà Nội, Việt Nam"},
-        "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"128"}
-      }
-    ]
-  }
-  </script>
+       // 3. Mobile Menu Logic (Slide Up)
+       function toggleMenu() {
+           const menu = document.getElementById('mobile-menu');
+           const overlay = document.getElementById('mobile-menu-overlay');
+           
+           if (menu.classList.contains('translate-y-full')) {
+               // Open
+               menu.classList.remove('translate-y-full');
+               overlay.classList.remove('hidden');
+               setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+           } else {
+               // Close
+               menu.classList.add('translate-y-full');
+               overlay.classList.add('opacity-0');
+               setTimeout(() => overlay.classList.add('hidden'), 300);
+           }
+       }
 
-  <script>
-    /* ---------- Sidebar toggle ---------- */
-    function toggleSidebar(){ document.getElementById('sidebar').classList.toggle('show'); }
-    window.addEventListener('click', function(e){
-      const sidebar = document.getElementById('sidebar');
-      const hamburger = document.querySelector('.hamburger');
-      if(!sidebar.contains(e.target) && !hamburger.contains(e.target)){
-        sidebar.classList.remove('show');
-      }
-    });
+       // 4. Scroll Animation (Hiệu ứng hiện dần khi cuộn)
+       const observerOptions = {
+           root: null,
+           rootMargin: '0px',
+           threshold: 0.1
+       };
 
-    /* ---------- Sticky top bar show on scroll ---------- */
-    (function(){
-      const stickyBar = document.getElementById('sticky-bar');
-      window.addEventListener('scroll', function(){
-        if(window.scrollY > 150) stickyBar.classList.add('show'); else stickyBar.classList.remove('show');
-      });
-    })();
+       const observer = new IntersectionObserver((entries, observer) => {
+           entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                   entry.target.classList.remove('opacity-0', 'translate-y-4');
+                   observer.unobserve(entry.target);
+               }
+           });
+       }, observerOptions);
 
-    /* ---------- Simple review slider ---------- */
-    (function(){
-      let rIndex = 0;
-      const reviews = document.querySelectorAll('.review');
-      const dots = document.querySelectorAll('.dot');
-      function showReview(n){
-        reviews.forEach((r,i)=>{ r.classList.remove('active'); if(dots[i]) dots[i].classList.remove('active'); });
-        if(reviews[n]){ reviews[n].classList.add('active'); if(dots[n]) dots[n].classList.add('active'); }
-      }
-      function nextReview(){ rIndex = (rIndex + 1) % reviews.length; showReview(rIndex); }
-      if(reviews.length) { showReview(rIndex); setInterval(nextReview,4200); }
-      dots.forEach((dot, idx)=>dot.addEventListener('click', ()=>{ rIndex = idx; showReview(rIndex); }));
-    })();
+       document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+           observer.observe(el);
+       });
 
-    /* ---------- FAQ accordion ---------- */
-    (function(){
-      const acc = document.getElementsByClassName("accordion");
-      for(let i=0;i<acc.length;i++){
-        acc[i].addEventListener("click", function(){
-          this.classList.toggle("active");
-          const panel = this.nextElementSibling;
-          panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
-        });
-      }
-    })();
-
-    /* ---------- Reveal on scroll ---------- */
-    (function(){
-      const sections = document.querySelectorAll('section, .step');
-      function revealOnScroll(){
-        sections.forEach(el=>{
-          const rect = el.getBoundingClientRect();
-          if(rect.top < window.innerHeight - 60){
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-            if(el.classList.contains('step')) el.classList.add('show');
-          }
-        });
-      }
-      window.addEventListener('scroll', revealOnScroll);
-      window.addEventListener('load', revealOnScroll);
-    })();
-
-    /* ---------- Quick Call (B) logic ---------- */
-    (function(){
-      const wrap = document.getElementById('quickWrap');
-      const mainBtn = document.getElementById('quickCallBtn');
-      const mapBtn = document.getElementById('quickMapBtn');
-      let expanded = false;
-      // Toggle expand on tap/click
-      mainBtn.addEventListener('click', function(e){
-        e.stopPropagation();
-        expanded = !expanded;
-        if(expanded) wrap.classList.add('show'); else wrap.classList.remove('show');
-      });
-      // If user taps elsewhere, close
-      document.addEventListener('click', function(e){
-        if(!wrap.contains(e.target)){ expanded=false; wrap.classList.remove('show'); }
-      });
-      // Long-press also opens map (mobile convenience)
-      let pressTimer;
-      mainBtn.addEventListener('touchstart', function(e){
-        pressTimer = setTimeout(function(){ window.location.href = 'tel:0374966430'; }, 600);
-      }, {passive:true});
-      mainBtn.addEventListener('touchend', function(e){
-        clearTimeout(pressTimer);
-      }, {passive:true});
-      // mainBtn secondary action: quick call
-      mainBtn.addEventListener('dblclick', function(){ window.location.href = 'tel:0374966430'; });
-      // Map button already is anchor to map link
-    })();
-
-    /* ---------- Popup exit-intent logic ---------- */
-    (function(){
-      let exitIntentShown = false;
-      const popup = document.getElementById('ctaPopup');
-
-      function showPopup(){
-        if(exitIntentShown) return;
-        exitIntentShown = true;
-        if(popup){
-          popup.style.display = 'block';
-          popup.setAttribute('aria-hidden','false');
-        }
-      }
-
-      function onMouseLeave(e){
-        if(e.clientY <= 15) showPopup();
-      }
-      document.addEventListener('mouseout', onMouseLeave);
-      document.addEventListener('mousemove', function(e){
-        if(e.clientY <= 10) showPopup();
-      });
-
-      // Mobile heuristics (swipe up quickly)
-      let lastTouchY = null;
-      document.addEventListener('touchstart', function(e){
-        lastTouchY = e.touches && e.touches[0] ? e.touches[0].clientY : null;
-      }, {passive:true});
-      document.addEventListener('touchmove', function(e){
-        if(!lastTouchY) return;
-        const currentY = e.touches && e.touches[0] ? e.touches[0].clientY : null;
-        if(currentY !== null && lastTouchY - currentY > 120){
-          showPopup();
-        }
-      }, {passive:true});
-
-      document.addEventListener('visibilitychange', function(){
-        if(document.visibilityState === 'hidden') showPopup();
-      });
-
-      window.closePopup = function(){
-        if(popup){ popup.style.display='none'; popup.setAttribute('aria-hidden','true'); }
-      };
-      document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closePopup(); });
-    })();
-
-    /* ---------- StickyNav fallback ---------- */
-    (function(){
-      let sticky = document.getElementById('stickyNav');
-      if(!sticky){ sticky = document.createElement('div'); sticky.id='stickyNav'; sticky.style.top='-60px';
-        sticky.innerHTML = '<a href="tel:0374966430">📞 Gọi ngay: 0374 966 430</a>'; document.body.appendChild(sticky);
-      }
-      window.addEventListener('scroll', function(){ sticky.style.top = (window.scrollY > 250) ? '0' : '-60px'; });
-    })();
-  </script>
+   </script>
 </body>
 </html>
