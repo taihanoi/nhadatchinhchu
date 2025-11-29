@@ -833,5 +833,7 @@
        function toggleMenu() { const menu = document.getElementById('ultra-menu'); const backdrop = document.getElementById('menu-backdrop'); const isClosed = menu.classList.contains('translate-y-full'); if (isClosed) { menu.classList.remove('translate-y-full'); backdrop.classList.remove('hidden'); setTimeout(() => backdrop.classList.remove('opacity-0'), 10); document.body.style.overflow = 'hidden'; } else { menu.classList.add('translate-y-full'); backdrop.classList.add('opacity-0'); setTimeout(() => backdrop.classList.add('hidden'), 300); document.body.style.overflow = ''; } }
        function toggleQuickCall() { const actions = document.getElementById('quick-actions'); const btn = document.querySelector('button[onclick="toggleQuickCall()"]'); btn.classList.toggle('active'); if (btn.classList.contains('active')) { actions.classList.remove('opacity-0', 'translate-y-10', 'scale-90'); actions.classList.add('pointer-events-auto'); } else { actions.classList.add('opacity-0', 'translate-y-10', 'scale-90'); actions.classList.remove('pointer-events-auto'); } }
    </script>
+   <script src="https://taihanoi.github.io/nhadatchinhchu/realestate_ai.js"></script>
+
 </body>
 </html>
