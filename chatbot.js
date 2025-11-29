@@ -1,196 +1,266 @@
 /**
- * LOCAL AI CHATBOT - MESSENGER STYLE
- * Tự động tạo giao diện và thu thập dữ liệu từ website
+ * LOCAL AI CHATBOT - GPT STYLE (Dark/Modern)
+ * Giao diện giống ChatGPT, hiệu ứng gõ chữ, tự học dữ liệu website.
  */
 
 (function() {
-    // 1. CHÈN CSS VÀO TRANG (Giao diện Messenger)
+    // 1. CHÈN CSS (Phong cách ChatGPT Dark Mode)
     const style = document.createElement('style');
     style.innerHTML = `
-        :root { --ms-blue: #0084FF; --ms-grey: #F0F2F5; --ms-chat-bg: #FFFFFF; }
-        .dark { --ms-grey: #3A3B3C; --ms-chat-bg: #242526; }
+        /* GPT Colors */
+        :root {
+            --gpt-bg: #343541;
+            --gpt-sidebar: #202123;
+            --gpt-user: #40414F;
+            --gpt-bot: #444654;
+            --gpt-text: #ECECF1;
+            --gpt-border: #565869;
+            --gpt-green: #10A37F;
+        }
+
+        #gpt-widget-root {
+            font-family: 'Söhne', 'ui-sans-serif', 'system-ui', -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
+            z-index: 9999;
+        }
+
+        /* Nút mở Chat */
+        .gpt-launcher {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        .gpt-launcher:hover { transform: scale(1.1); box-shadow: 0 0 30px rgba(16, 163, 127, 0.4); }
+
+        /* Cửa sổ Chat */
+        .gpt-window {
+            background-color: var(--gpt-bg);
+            color: var(--gpt-text);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            border: 1px solid var(--gpt-border);
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gpt-window.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        /* Tin nhắn */
+        .msg-row {
+            padding: 20px 16px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            gap: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .msg-row.user { background-color: var(--gpt-bg); }
+        .msg-row.bot { background-color: var(--gpt-bot); }
         
-        /* Animation */
-        @keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-        .typing-dot { animation: typing 1.4s infinite ease-in-out both; }
-        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
-        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+        /* Avatar */
+        .avatar {
+            width: 30px; height: 30px; border-radius: 2px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .avatar.user-avt { background: #5436DA; border-radius: 4px; }
+        .avatar.bot-avt { background: var(--gpt-green); border-radius: 4px; }
+
+        /* Input Area */
+        .gpt-input-area {
+            background: var(--gpt-bg);
+            border-top: 1px solid var(--gpt-border);
+            padding: 16px;
+        }
+        .gpt-input-box {
+            background: #40414F;
+            border: 1px solid rgba(32,33,35,0.5);
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            width: 100%;
+            padding: 12px 40px 12px 16px;
+            outline: none;
+            resize: none;
+            font-family: inherit;
+            height: 48px;
+            line-height: 24px;
+        }
+        .gpt-input-box:focus { border-color: rgba(0,0,0,0.5); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         
-        /* UI Classes */
-        #ai-chatbot-root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        .chat-scroll::-webkit-scrollbar { width: 6px; }
-        .chat-scroll::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.2); border-radius: 10px; }
-        .dark .chat-scroll::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,0.2); }
-        .hidden-chat { transform: scale(0.9); opacity: 0; pointer-events: none; }
-        .visible-chat { transform: scale(1); opacity: 1; pointer-events: auto; }
+        /* Typing Cursor */
+        .cursor::after { content: '▋'; display: inline-block; animation: blink 1s infinite; margin-left: 2px; color: var(--gpt-green); }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Scrollbar */
+        .gpt-scroll::-webkit-scrollbar { width: 6px; }
+        .gpt-scroll::-webkit-scrollbar-track { background: var(--gpt-bg); }
+        .gpt-scroll::-webkit-scrollbar-thumb { background: #565869; border-radius: 3px; }
+        .gpt-scroll::-webkit-scrollbar-thumb:hover { background: #8e8ea0; }
     `;
     document.head.appendChild(style);
 
-    // 2. CHÈN HTML VÀO TRANG (Nút & Cửa sổ chat)
-    const htmlStructure = `
-    <div id="ai-chatbot-root">
-        <div class="fixed bottom-6 left-6 z-50 flex flex-col gap-2 items-start">
-            <div id="chat-greeting" class="bg-white dark:bg-[#242526] p-3 rounded-2xl rounded-bl-none shadow-lg mb-1 animate-bounce origin-bottom-left max-w-[200px] border border-gray-100 dark:border-gray-700 relative">
-                <p class="text-xs font-bold text-gray-700 dark:text-gray-200">👋 Chào bạn! Tôi là AI tư vấn. Hỏi tôi bất cứ gì nhé!</p>
-                <button onclick="this.parentElement.remove()" class="absolute -top-2 -right-2 w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center text-[10px] text-gray-600">✕</button>
+    // 2. HTML STRUCTURE
+    const html = `
+    <div id="gpt-widget-root">
+        <div class="fixed bottom-6 left-6 z-50 group">
+            <div id="gpt-tooltip" class="absolute bottom-full left-0 mb-3 w-48 p-2 bg-black text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-gray-700 text-center">
+                AI Assistant 2.0 (Local)
             </div>
-            <button onclick="window.toggleChatbot()" class="w-16 h-16 rounded-full bg-gradient-to-br from-[#0084FF] to-[#0066CC] shadow-2xl flex items-center justify-center text-white transition hover:scale-110 active:scale-95 group relative overflow-hidden">
-                <i class="ph-fill ph-messenger-logo text-3xl z-10"></i>
-                <span class="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-75"></span>
+            <button onclick="window.toggleGPT()" class="gpt-launcher w-14 h-14 rounded-full bg-[#10A37F] flex items-center justify-center text-white cursor-pointer relative overflow-hidden">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="28" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><path d="M4.93 19.07a2 2 0 0 1 0-2.83l1.41-1.41a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-1.41 1.41a2 2 0 0 1-2.83 0z"></path><path d="M19.07 4.93a2 2 0 0 1 2.83 0l1.41 1.41a2 2 0 0 1 0 2.83l-1.41 1.41a2 2 0 0 1-2.83 0l-1.41-1.41a2 2 0 0 1 0-2.83z"></path><path d="M2 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"></path><path d="M16 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path><path d="M12 16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z"></path><rect x="9" y="9" width="6" height="6" rx="1"></rect></svg>
             </button>
         </div>
 
-        <div id="ai-chatbot-window" class="fixed bottom-24 left-6 w-[90vw] md:w-[380px] h-[550px] max-h-[70vh] bg-white dark:bg-[#242526] rounded-t-2xl rounded-br-2xl shadow-2xl z-50 flex flex-col hidden-chat transform origin-bottom-left transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden">
-            <div class="bg-white dark:bg-[#242526] p-4 flex items-center justify-between shadow-sm z-10 border-b border-gray-100 dark:border-gray-700">
-                <div class="flex items-center gap-3">
-                    <div class="relative">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#0084FF] to-cyan-400 p-0.5">
-                            <img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" class="w-full h-full rounded-full object-cover border-2 border-white dark:border-[#242526]">
-                        </div>
-                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white dark:border-[#242526] rounded-full"></div>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-[15px] text-gray-900 dark:text-white leading-tight">Trợ Lý Nhà Đất LB</h3>
-                        <span class="text-[11px] text-blue-500 font-medium">Đang hoạt động • AI Local</span>
-                    </div>
+        <div id="gpt-window" class="gpt-window fixed bottom-24 left-6 w-[95vw] md:w-[400px] h-[600px] max-h-[75vh] rounded-lg flex flex-col z-50">
+            <div class="flex items-center justify-between px-4 py-3 border-b border-[#565869] bg-[#343541]">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm font-bold text-gray-200">Nhà Đất AI Assistant</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] bg-[#FAE69E] text-[#343541] font-bold">PLUS</span>
                 </div>
-                <div class="flex gap-2">
-                    <button onclick="window.resetChat()" class="w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center text-gray-500 transition"><i class="ph-bold ph-trash"></i></button>
-                    <button onclick="window.toggleChatbot()" class="w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center text-[#0084FF] transition"><i class="ph-bold ph-caret-down"></i></button>
+                <div class="flex gap-3 text-gray-400">
+                    <button onclick="window.clearChat()" class="hover:text-white transition" title="New Chat"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+                    <button onclick="window.toggleGPT()" class="hover:text-white transition"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
                 </div>
             </div>
 
-            <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-white dark:bg-[#242526] chat-scroll">
-                <div class="flex items-end gap-2 group">
-                    <div class="w-7 h-7 rounded-full bg-gray-200 overflow-hidden flex-shrink-0"><img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" class="w-full h-full object-cover"></div>
-                    <div class="max-w-[80%] bg-[#F0F2F5] dark:bg-[#3A3B3C] text-[#050505] dark:text-[#E4E6EB] px-4 py-2.5 rounded-2xl rounded-bl-none text-[14px] leading-relaxed shadow-sm">
-                        Chào bạn! Tôi đã đọc hết thông tin trên trang web này. Bạn cần tìm nhà khu vực nào, giá khoảng bao nhiêu?
+            <div id="gpt-messages" class="flex-1 overflow-y-auto gpt-scroll bg-[#343541]">
+                <div class="h-full flex flex-col items-center justify-center text-center p-6 opacity-60" id="gpt-intro">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4"><svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" height="24" width="24" class="text-gray-300"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><rect x="9" y="9" width="6" height="6" rx="1"></rect></svg></div>
+                    <h3 class="text-lg font-semibold mb-6">Khả năng</h3>
+                    <div class="space-y-3 w-full">
+                        <button onclick="window.sendGPT('Giá nhà ở Long Biên?')" class="w-full bg-[#40414F] hover:bg-[#2A2B32] p-3 rounded text-sm transition">"Giá nhà ở Long Biên?" →</button>
+                        <button onclick="window.sendGPT('Tư vấn phong thủy?')" class="w-full bg-[#40414F] hover:bg-[#2A2B32] p-3 rounded text-sm transition">"Tư vấn phong thủy?" →</button>
+                        <button onclick="window.sendGPT('Quy trình mua bán?')" class="w-full bg-[#40414F] hover:bg-[#2A2B32] p-3 rounded text-sm transition">"Quy trình mua bán?" →</button>
                     </div>
-                </div>
-                <div class="pl-9 flex flex-wrap gap-2">
-                    <button onclick="window.sendMessage('Giá nhà Long Biên thế nào?')" class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-[#0084FF] text-xs font-bold rounded-full hover:bg-blue-100 transition">💰 Giá nhà</button>
-                    <button onclick="window.sendMessage('Có nhà ô tô vào không?')" class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-[#0084FF] text-xs font-bold rounded-full hover:bg-blue-100 transition">🚗 Nhà ô tô vào</button>
-                    <button onclick="window.sendMessage('Thủ tục mua bán?')" class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-[#0084FF] text-xs font-bold rounded-full hover:bg-blue-100 transition">📝 Thủ tục</button>
                 </div>
             </div>
 
-            <div class="p-3 bg-white dark:bg-[#242526] border-t border-gray-100 dark:border-gray-700 flex items-center gap-2">
-                <input type="text" id="chat-input" placeholder="Nhập câu hỏi..." class="flex-1 bg-[#F0F2F5] dark:bg-[#3A3B3C] text-gray-900 dark:text-white px-4 py-2.5 rounded-full text-[14px] outline-none border border-transparent focus:border-blue-500 transition">
-                <button onclick="window.handleUserMessage()" class="w-10 h-10 rounded-full bg-[#0084FF] text-white flex items-center justify-center hover:bg-blue-600 transition shadow-md active:scale-95"><i class="ph-fill ph-paper-plane-right text-lg"></i></button>
+            <div class="gpt-input-area relative">
+                <input type="text" id="gpt-input" class="gpt-input-box" placeholder="Gửi tin nhắn..." autocomplete="off">
+                <button onclick="window.handleGPT()" class="absolute right-6 top-[28px] text-gray-400 hover:text-white transition">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="20" width="20"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
             </div>
+            <div class="text-[10px] text-center py-2 text-gray-500 bg-[#343541]">Dữ liệu được thu thập tự động từ nội dung website.</div>
         </div>
-    </div>`;
-    
-    document.body.insertAdjacentHTML('beforeend', htmlStructure);
+    </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', html);
 
-    // 3. LOGIC XỬ LÝ (Crawler & Chat)
-    let siteKnowledge = [];
-    const chatWindow = document.getElementById('ai-chatbot-window');
-    const chatMessages = document.getElementById('chat-messages');
-    const chatInput = document.getElementById('chat-input');
-    let isChatOpen = false;
+    // 3. LOGIC XỬ LÝ
+    let knowledge = [];
+    const chatWin = document.getElementById('gpt-window');
+    const msgs = document.getElementById('gpt-messages');
+    const input = document.getElementById('gpt-input');
+    const intro = document.getElementById('gpt-intro');
+    let isOpen = false;
 
-    // Crawler: Quét dữ liệu web
-    function crawlSiteData() {
-        const contentNodes = document.querySelectorAll('main h1, main h2, main h3, main p, main li, #vip-listing p, #faq summary, #faq div');
-        contentNodes.forEach(node => {
-            const text = node.innerText.trim();
-            if (text.length > 20) {
-                siteKnowledge.push({ text: text, keywords: text.toLowerCase().split(/\s+/), score: 0 });
-            }
+    // CRAWLER: Học dữ liệu
+    function learn() {
+        const els = document.querySelectorAll('main h1, main h2, main p, main li, .prose');
+        els.forEach(el => {
+            const txt = el.innerText.trim();
+            if (txt.length > 30) knowledge.push(txt);
         });
-        console.log("AI Chatbot: Đã học " + siteKnowledge.length + " mục dữ liệu.");
+        console.log(`GPT Local: Learned ${knowledge.length} contexts.`);
     }
-    setTimeout(crawlSiteData, 1000); // Đợi web load xong mới quét
+    setTimeout(learn, 1000);
 
-    // Tìm câu trả lời
-    function findBestAnswer(query) {
-        const queryKeywords = query.toLowerCase().split(/\s+/);
-        let bestMatch = null;
+    // AI FINDER
+    function getAnswer(q) {
+        const words = q.toLowerCase().split(' ');
+        let bestText = "";
         let maxScore = 0;
-        siteKnowledge.forEach(item => item.score = 0);
-        
-        siteKnowledge.forEach(item => {
-            queryKeywords.forEach(qWord => { if (item.keywords.includes(qWord)) item.score += 1; });
-            if (item.text.toLowerCase().includes(query.toLowerCase())) item.score += 3;
-            if (item.score > maxScore) { maxScore = item.score; bestMatch = item.text; }
+
+        knowledge.forEach(txt => {
+            let score = 0;
+            words.forEach(w => { if (txt.toLowerCase().includes(w)) score++; });
+            if (score > maxScore) { maxScore = score; bestText = txt; }
         });
 
-        if (maxScore > 0) return bestMatch;
-        // Fallback answers
-        if (query.includes("chào") || query.includes("hi")) return "Chào bạn! Tôi có thể giúp gì cho việc mua bán nhà đất của bạn?";
-        if (query.includes("liên hệ") || query.includes("sđt") || query.includes("số")) return "Bạn hãy gọi ngay hotline: 0845 622 012 để được hỗ trợ nhanh nhất nhé!";
-        if (query.includes("địa chỉ")) return "Văn phòng chúng tôi tại 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên.";
-        return "Xin lỗi, tôi chưa tìm thấy thông tin này trên trang. Bạn vui lòng gọi 0845 622 012 để hỏi trực tiếp nhé!";
+        if (maxScore > 0) return bestText;
+        if (q.includes("chào")) return "Xin chào! Tôi là trợ lý ảo AI chuyên về Bất động sản Long Biên. Tôi có thể giúp gì cho bạn?";
+        if (q.includes("liên hệ") || q.includes("số")) return "Bạn có thể liên hệ trực tiếp qua Hotline: 0845 622 012.";
+        return "Xin lỗi, tôi chưa tìm thấy thông tin cụ thể trong dữ liệu hiện tại. Bạn vui lòng thử câu hỏi khác hoặc gọi 0845 622 012 nhé.";
     }
 
-    // Các hàm Global để gọi từ HTML
-    window.toggleChatbot = function() {
-        isChatOpen = !isChatOpen;
-        const greeting = document.getElementById('chat-greeting');
-        if(greeting) greeting.remove();
-        
-        if (isChatOpen) {
-            chatWindow.classList.remove('hidden-chat');
-            chatWindow.classList.add('visible-chat');
-            setTimeout(() => chatInput.focus(), 100);
-        } else {
-            chatWindow.classList.remove('visible-chat');
-            chatWindow.classList.add('hidden-chat');
+    // TYPEWRITER EFFECT (Hiệu ứng gõ chữ)
+    function typeText(element, text, speed = 15) {
+        let i = 0;
+        element.classList.add('cursor');
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                msgs.scrollTop = msgs.scrollHeight; // Auto scroll
+                setTimeout(type, speed);
+            } else {
+                element.classList.remove('cursor');
+            }
         }
+        type();
     }
 
-    window.handleUserMessage = function() {
-        const text = chatInput.value.trim();
-        if (!text) return;
-        window.sendMessage(text);
-        chatInput.value = '';
-    }
+    // GLOBAL FUNCTIONS
+    window.toggleGPT = function() {
+        isOpen = !isOpen;
+        if (isOpen) {
+            chatWin.classList.add('active');
+            setTimeout(() => input.focus(), 300);
+        } else {
+            chatWin.classList.remove('active');
+        }
+    };
 
-    window.sendMessage = function(text) {
-        addMessageUI(text, 'user');
-        showTyping();
-        setTimeout(() => {
-            removeTyping();
-            const answer = findBestAnswer(text);
-            addMessageUI(answer, 'bot');
-        }, 1200);
-    }
-
-    window.resetChat = function() {
-        chatMessages.innerHTML = `<div class="flex items-end gap-2 group"><div class="w-7 h-7 rounded-full bg-gray-200 overflow-hidden flex-shrink-0"><img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" class="w-full h-full object-cover"></div><div class="max-w-[80%] bg-[#F0F2F5] dark:bg-[#3A3B3C] text-[#050505] dark:text-[#E4E6EB] px-4 py-2.5 rounded-2xl rounded-bl-none text-[14px] leading-relaxed shadow-sm">Cuộc trò chuyện đã được làm mới. Bạn cần hỗ trợ gì?</div></div>`;
-    }
-
-    // Xử lý phím Enter
-    chatInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') window.handleUserMessage();
-    });
-
-    // Helper UI
-    function addMessageUI(text, sender) {
-        const div = document.createElement('div');
-        div.className = sender === 'user' ? 'flex items-end justify-end gap-2' : 'flex items-end gap-2 group';
-        const bgClass = sender === 'user' ? 'bg-[#0084FF] text-white rounded-br-none' : 'bg-[#F0F2F5] dark:bg-[#3A3B3C] text-[#050505] dark:text-[#E4E6EB] rounded-bl-none';
-        const avatar = sender === 'bot' ? `<div class="w-7 h-7 rounded-full bg-gray-200 overflow-hidden flex-shrink-0"><img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" class="w-full h-full object-cover"></div>` : '';
+    window.sendGPT = function(txt) {
+        if(intro) intro.style.display = 'none';
         
-        div.innerHTML = `${avatar}<div class="max-w-[80%] ${bgClass} px-4 py-2.5 rounded-2xl text-[14px] leading-relaxed shadow-sm animate-[popIn_0.3s_ease-out]">${text}</div>`;
-        chatMessages.appendChild(div);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
+        // 1. User Message
+        const userRow = document.createElement('div');
+        userRow.className = 'msg-row user';
+        userRow.innerHTML = `
+            <div class="avatar user-avt"><svg stroke="white" fill="none" stroke-width="2" viewBox="0 0 24 24" height="16" width="16"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+            <div class="text-gray-200">${txt}</div>
+        `;
+        msgs.appendChild(userRow);
 
-    function showTyping() {
-        const div = document.createElement('div');
-        div.id = 'typing-indicator';
-        div.className = 'flex items-end gap-2 group';
-        div.innerHTML = `<div class="w-7 h-7 rounded-full bg-gray-200 overflow-hidden flex-shrink-0"><img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" class="w-full h-full object-cover"></div><div class="bg-[#F0F2F5] dark:bg-[#3A3B3C] px-4 py-3 rounded-2xl rounded-bl-none flex gap-1 items-center shadow-sm"><div class="w-1.5 h-1.5 bg-gray-400 rounded-full typing-dot"></div><div class="w-1.5 h-1.5 bg-gray-400 rounded-full typing-dot"></div><div class="w-1.5 h-1.5 bg-gray-400 rounded-full typing-dot"></div></div>`;
-        chatMessages.appendChild(div);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
+        // 2. Bot Processing (Bot container empty first)
+        const botRow = document.createElement('div');
+        botRow.className = 'msg-row bot';
+        botRow.innerHTML = `
+            <div class="avatar bot-avt"><svg stroke="white" fill="none" stroke-width="2" viewBox="0 0 24 24" height="16" width="16"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+            <div class="bot-content text-gray-200 leading-7" style="min-height: 24px"></div>
+        `;
+        msgs.appendChild(botRow);
+        msgs.scrollTop = msgs.scrollHeight;
 
-    function removeTyping() {
-        const el = document.getElementById('typing-indicator');
-        if (el) el.remove();
-    }
+        // 3. Generate Answer & Type
+        const ans = getAnswer(txt);
+        const botContent = botRow.querySelector('.bot-content');
+        
+        setTimeout(() => {
+            typeText(botContent, ans);
+        }, 600);
+    };
+
+    window.handleGPT = function() {
+        const txt = input.value.trim();
+        if (!txt) return;
+        window.sendGPT(txt);
+        input.value = '';
+    };
+
+    window.clearChat = function() {
+        msgs.innerHTML = ''; // Clear all
+        if(intro) {
+            intro.style.display = 'flex'; // Restore intro
+            msgs.appendChild(intro);
+        }
+    };
+
+    input.addEventListener('keypress', (e) => { if(e.key === 'Enter') window.handleGPT(); });
 
 })();
