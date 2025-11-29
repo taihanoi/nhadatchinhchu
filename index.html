@@ -1,1051 +1,1006 @@
 <!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <!-- FIX: Cho phép zoom để thân thiện với người lớn tuổi (khách mua nhà) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Nhà Đất Long Biên Hà Nội - Chính Chủ 0845 622 012</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Mua bán nhà đất Long Biên Hà Nội chính chủ, giá tốt dưới 3 tỷ, 5 tỷ. Sổ đỏ trao tay, hỗ trợ vay vốn ngân hàng. Gọi ngay 0845 622 012 để xem nhà.">
-    <meta name="keywords" content="nhà đất long biên, bán nhà long biên, mua nhà chính chủ hà nội, nhà đất giá rẻ long biên, nhà ngõ ô tô long biên">
-    <meta name="author" content="Công Thị Tân">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#F2F2F7">
-    
-    <!-- Open Graph (Hiển thị đẹp khi share Zalo/Facebook) -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Nhà Đất Long Biên">
-    <meta property="og:title" content="Bán Nhà Long Biên - Sổ Đỏ Chính Chủ">
-    <meta property="og:description" content="Kho nhà đẹp Long Biên, giá tốt, pháp lý sạch. Liên hệ: 0845 622 012">
-    <!-- Lưu ý: Nên thay link ảnh này bằng link ảnh thật ổn định hơn -->
-    <meta property="og:image" content="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+   <meta charset="UTF-8">
+   <!-- FIX: Cho phép zoom để thân thiện với người lớn tuổi (khách mua nhà) -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+   <title>Nhà Đất Long Biên Hà Nội - Chính Chủ 0845 622 012</title>
+   
+   <!-- SEO Meta Tags -->
+   <meta name="description" content="Mua bán nhà đất Long Biên Hà Nội chính chủ, giá tốt dưới 3 tỷ, 5 tỷ. Sổ đỏ trao tay, hỗ trợ vay vốn ngân hàng. Gọi ngay 0845 622 012 để xem nhà.">
+   <meta name="keywords" content="nhà đất long biên, bán nhà long biên, mua nhà chính chủ hà nội, nhà đất giá rẻ long biên, nhà ngõ ô tô long biên">
+   <meta name="author" content="Công Thị Tân">
+   <meta name="robots" content="index, follow">
+   <meta name="theme-color" content="#F2F2F7">
+   
+   <!-- Open Graph (Hiển thị đẹp khi share Zalo/Facebook) -->
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="Nhà Đất Long Biên">
+   <meta property="og:title" content="Bán Nhà Long Biên - Sổ Đỏ Chính Chủ">
+   <meta property="og:description" content="Kho nhà đẹp Long Biên, giá tốt, pháp lý sạch. Liên hệ: 0845 622 012">
+   <meta property="og:image" content="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png">
+   <meta property="og:image:width" content="1200">
+   <meta property="og:image:height" content="630">
 
-    <!-- Favicon -->
-    <link rel="icon" href="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" type="image/png">
+   <!-- Favicon -->
+   <link rel="icon" href="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" type="image/png">
 
-    <!-- Tailwind CSS (Lưu ý: Dùng CDN chỉ tốt cho web nhỏ, web lớn nên build file css riêng) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+   <!-- Tailwind CSS -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   
+   <!-- Phosphor Icons -->
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Cấu hình Tailwind -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        app: {
-                            bg: '#F2F2F7', 
-                            card: '#FFFFFF',
-                            text: '#1C1C1E',
-                            blue: '#007AFF',
-                            green: '#34C759',
-                            red: '#FF3B30',
-                            orange: '#FF9500',
-                            gray: '#8E8E93',
-                            dark: '#000000',
-                            darkCard: '#1C1C1E'
-                        },
-                        fb: {
-                            blue: '#0866FF',
-                            bg: '#F0F2F5'
-                        }
-                    },
-                    boxShadow: {
-                        'ultra': '0 8px 32px rgba(0, 0, 0, 0.08)',
-                        'float': '0 10px 40px rgba(0, 122, 255, 0.25)',
-                        'dock': '0 4px 24px rgba(0, 0, 0, 0.15)',
-                    },
-                    borderRadius: {
-                        'ultra': '2rem', 
-                        'squircle': '1.25rem'
-                    }
-                }
-            }
-        }
-    </script>
+   <!-- Cấu hình Tailwind -->
+   <script>
+       tailwind.config = {
+           darkMode: 'class',
+           theme: {
+               extend: {
+                   fontFamily: {
+                       sans: ['Inter', 'sans-serif'],
+                   },
+                   colors: {
+                       app: {
+                           bg: '#F2F2F7',
+                           card: '#FFFFFF',
+                           text: '#1C1C1E',
+                           blue: '#007AFF',
+                           green: '#34C759',
+                           red: '#FF3B30',
+                           orange: '#FF9500',
+                           gray: '#8E8E93',
+                           dark: '#000000',
+                           darkCard: '#1C1C1E'
+                       },
+                       fb: {
+                           blue: '#0866FF',
+                           bg: '#F0F2F5'
+                       }
+                   },
+                   boxShadow: {
+                       'ultra': '0 8px 32px rgba(0, 0, 0, 0.08)',
+                       'float': '0 10px 40px rgba(0, 122, 255, 0.25)',
+                       'dock': '0 4px 24px rgba(0, 0, 0, 0.15)',
+                   },
+                   borderRadius: {
+                       'ultra': '2rem',
+                       'squircle': '1.25rem'
+                   }
+               }
+           }
+       }
+   </script>
 
-    <style>
-        /* CSS Reset & Custom */
-        body { 
-            -webkit-tap-highlight-color: transparent; 
-            -webkit-touch-callout: none;
-        }
-        
-        /* Ẩn thanh cuộn nhưng vẫn cho phép cuộn */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Glassmorphism Header */
-        .glass-header {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.05);
-        }
-        .dark .glass-header {
-            background: rgba(28, 28, 30, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+   <style>
+       /* CSS Reset & Custom */
+       body {
+           -webkit-tap-highlight-color: transparent;
+           -webkit-touch-callout: none;
+       }
+       
+       /* Ẩn thanh cuộn nhưng vẫn cho phép cuộn */
+       .no-scrollbar::-webkit-scrollbar { display: none; }
+       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+       
+       /* Glassmorphism Header */
+       .glass-header {
+           background: rgba(255, 255, 255, 0.85);
+           backdrop-filter: blur(20px);
+           -webkit-backdrop-filter: blur(20px);
+           border: 1px solid rgba(255, 255, 255, 0.5);
+           box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+       }
+       .dark .glass-header {
+           background: rgba(28, 28, 30, 0.85);
+           border: 1px solid rgba(255, 255, 255, 0.1);
+       }
 
-        /* Khi ở đầu trang, Header nền trong suốt hơn để hiện ảnh Hero */
-        .transparent-header {
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid transparent;
-            box-shadow: none;
-        }
-        .dark .transparent-header {
-            background: rgba(0, 0, 0, 0.3);
-        }
+       /* Khi ở đầu trang, Header nền trong suốt hơn để hiện ảnh Hero */
+       .transparent-header {
+           background: rgba(255, 255, 255, 0.5);
+           backdrop-filter: blur(5px);
+           -webkit-backdrop-filter: blur(5px);
+           border: 1px solid transparent;
+           box-shadow: none;
+       }
+       .dark .transparent-header {
+           background: rgba(0, 0, 0, 0.3);
+       }
 
-        /* Animation */
-        @keyframes breathe {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
-        .animate-hero { animation: breathe 4s infinite ease-in-out; }
-        
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-        .animate-shimmer {
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-        }
-        
-        /* Sound wave animation */
-        .sound-wave span {
-            display: inline-block;
-            width: 3px;
-            height: 10px;
-            background-color: currentColor;
-            border-radius: 2px;
-            animation: sound 0.5s infinite alternate;
-        }
-        .sound-wave span:nth-child(2) { animation-delay: 0.1s; height: 15px; }
-        .sound-wave span:nth-child(3) { animation-delay: 0.2s; height: 20px; }
-        .sound-wave span:nth-child(4) { animation-delay: 0.3s; height: 15px; }
-        .sound-wave span:nth-child(5) { animation-delay: 0.4s; height: 10px; }
-        @keyframes sound {
-            0% { transform: scaleY(0.5); }
-            100% { transform: scaleY(1.5); }
-        }
+       /* Animation */
+       @keyframes breathe {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.03); }
+       }
+       .animate-hero { animation: breathe 4s infinite ease-in-out; }
+       
+       @keyframes shimmer {
+           0% { background-position: -200% 0; }
+           100% { background-position: 200% 0; }
+       }
+       .animate-shimmer {
+           background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+           background-size: 200% 100%;
+           animation: shimmer 1.5s infinite;
+       }
+       
+       /* Sound wave animation */
+       .sound-wave span {
+           display: inline-block;
+           width: 3px;
+           height: 10px;
+           background-color: currentColor;
+           border-radius: 2px;
+           animation: sound 0.5s infinite alternate;
+       }
+       .sound-wave span:nth-child(2) { animation-delay: 0.1s; height: 15px; }
+       .sound-wave span:nth-child(3) { animation-delay: 0.2s; height: 20px; }
+       .sound-wave span:nth-child(4) { animation-delay: 0.3s; height: 15px; }
+       .sound-wave span:nth-child(5) { animation-delay: 0.4s; height: 10px; }
+       @keyframes sound {
+           0% { transform: scaleY(0.5); }
+           100% { transform: scaleY(1.5); }
+       }
 
-        /* Padding cho scroll để không bị Header che mất tiêu đề */
-        html { scroll-padding-top: 110px; }
-        
-        /* Fix cho Maps */
-        iframe { max-width: 100%; }
-        
-        /* Markdown style for AI response */
-        .ai-response strong { font-weight: 700; color: #007AFF; }
-        .dark .ai-response strong { color: #0A84FF; }
-        .ai-response ul { list-style-type: disc; padding-left: 1.2rem; margin: 0.5rem 0; }
-        .ai-response li { margin-bottom: 0.25rem; }
-    </style>
+       /* Padding cho scroll để không bị Header che mất tiêu đề */
+       html { scroll-padding-top: 110px; }
+       
+       /* Fix cho Maps */
+       iframe { max-width: 100%; }
+       
+       /* Markdown style for AI response */
+       .ai-response strong { font-weight: 700; color: #007AFF; }
+       .dark .ai-response strong { color: #0A84FF; }
+       .ai-response ul { list-style-type: disc; padding-left: 1.2rem; margin: 0.5rem 0; }
+       .ai-response li { margin-bottom: 0.25rem; }
+   </style>
 </head>
 <body class="bg-app-bg dark:bg-black text-app-text dark:text-white transition-colors duration-300 min-h-screen pb-32 selection:bg-fb-blue selection:text-white">
 
-    <!-- ULTRA HEADER -->
-    <header class="fixed top-0 left-0 w-full z-50 pointer-events-none pt-3 px-3">
-        <!-- Thêm transition cho background colors -->
-        <div class="max-w-6xl mx-auto rounded-full px-3 py-2.5 flex items-center justify-between pointer-events-auto transition-all duration-500 glass-header" id="main-header">
-            
-            <!-- Logo & Status -->
-            <div class="flex items-center gap-3 pl-1 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <div class="relative w-11 h-11 rounded-squircle overflow-hidden bg-gradient-to-br from-fb-blue to-blue-600 flex items-center justify-center text-white shadow-lg group-active:scale-95 transition">
-                    <i class="ph-fill ph-house text-2xl"></i>
-                    <!-- Online Dot -->
-                    <div class="absolute bottom-0.5 right-0.5 w-3 h-3 bg-app-green border-2 border-white rounded-full animate-pulse"></div>
-                </div>
-                <div class="flex flex-col justify-center">
-                    <span class="font-bold text-sm leading-tight tracking-tight">Nhà Đất LB</span>
-                    <span id="ai-status" class="text-[10px] font-medium text-gray-500 dark:text-gray-400 mt-0.5 flex items-center gap-1">
-                        <!-- Sẽ được JS điền vào -->
-                    </span>
-                </div>
-            </div>
+   <!-- ULTRA HEADER -->
+   <header class="fixed top-0 left-0 w-full z-50 pointer-events-none pt-3 px-3">
+       <!-- Thêm transition cho background colors -->
+       <div class="max-w-6xl mx-auto rounded-full px-3 py-2.5 flex items-center justify-between pointer-events-auto transition-all duration-500 glass-header" id="main-header">
+           
+           <!-- Logo & Status -->
+           <div class="flex items-center gap-3 pl-1 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+               <div class="relative w-11 h-11 rounded-squircle overflow-hidden bg-gradient-to-br from-fb-blue to-blue-600 flex items-center justify-center text-white shadow-lg group-active:scale-95 transition">
+                   <i class="ph-fill ph-house text-2xl"></i>
+                   <!-- Online Dot -->
+                   <div class="absolute bottom-0.5 right-0.5 w-3 h-3 bg-app-green border-2 border-white rounded-full animate-pulse"></div>
+               </div>
+               <div class="flex flex-col justify-center">
+                   <span class="font-bold text-sm leading-tight tracking-tight">Nhà Đất LB</span>
+                   <span id="ai-status" class="text-[10px] font-medium text-gray-500 dark:text-gray-400 mt-0.5 flex items-center gap-1">
+                       <!-- Sẽ được JS điền vào -->
+                   </span>
+               </div>
+           </div>
 
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center bg-gray-100/80 dark:bg-white/10 rounded-full px-1.5 py-1.5 gap-1 backdrop-blur-sm">
-                <a href="#trangchu" class="px-5 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition text-gray-700 dark:text-gray-200">Trang chủ</a>
-                <a href="#aitools" class="px-5 py-2 rounded-full text-xs font-bold text-fb-blue bg-blue-50 hover:bg-blue-100 transition flex items-center gap-1"><i class="ph-fill ph-sparkle"></i> Công cụ AI</a>
-                <a href="#banggia" class="px-5 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200">Bảng giá</a>
-                <a href="#lienhe" class="px-5 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200">Liên hệ</a>
-            </nav>
+           <!-- Desktop Nav -->
+           <nav class="hidden md:flex items-center bg-gray-100/80 dark:bg-white/10 rounded-full px-1.5 py-1.5 gap-1 backdrop-blur-sm">
+               <a href="#trangchu" class="px-5 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition text-gray-700 dark:text-gray-200">Trang chủ</a>
+               <a href="#aitools" class="px-5 py-2 rounded-full text-xs font-bold text-fb-blue bg-blue-50 hover:bg-blue-100 transition flex items-center gap-1"><i class="ph-fill ph-sparkle"></i> Công cụ AI</a>
+               <a href="#banggia" class="px-5 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200">Bảng giá</a>
+               <a href="#lienhe" class="px-5 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200">Liên hệ</a>
+           </nav>
 
-            <!-- Actions -->
-            <div class="flex items-center gap-2 pr-1">
-                <button id="theme-btn" aria-label="Chuyển chế độ tối" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center transition hover:bg-gray-200 dark:hover:bg-gray-700 active:scale-95">
-                    <i class="ph-bold ph-moon text-lg"></i>
-                </button>
-                <button onclick="toggleMenu()" aria-label="Menu" class="md:hidden w-10 h-10 rounded-full bg-fb-blue text-white flex items-center justify-center shadow-md active:scale-95 transition">
-                    <i class="ph-bold ph-list text-lg"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+           <!-- Actions -->
+           <div class="flex items-center gap-2 pr-1">
+               <button id="theme-btn" aria-label="Chuyển chế độ tối" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center transition hover:bg-gray-200 dark:hover:bg-gray-700 active:scale-95">
+                   <i class="ph-bold ph-moon text-lg"></i>
+               </button>
+               <button onclick="toggleMenu()" aria-label="Menu" class="md:hidden w-10 h-10 rounded-full bg-fb-blue text-white flex items-center justify-center shadow-md active:scale-95 transition">
+                   <i class="ph-bold ph-list text-lg"></i>
+               </button>
+           </div>
+       </div>
+   </header>
 
-    <!-- MOBILE MENU (Bottom Sheet) -->
-    <div id="menu-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleMenu()"></div>
-    <div id="ultra-menu" class="fixed bottom-0 left-0 w-full bg-white dark:bg-app-darkCard rounded-t-[32px] z-[70] transform translate-y-full transition-transform duration-500 shadow-2xl border-t border-white/10">
-        <div class="w-full flex justify-center pt-3 pb-5" onclick="toggleMenu()">
-            <div class="w-12 h-1.5 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
-        </div>
-        <div class="px-6 pb-12 grid grid-cols-4 gap-y-8 gap-x-4">
-            <a href="#trangchu" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-gray-700 text-fb-blue flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-house"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">Trang chủ</span></a>
-            <a href="#aitools" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-gray-700 text-purple-600 flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-sparkle"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">AI Tools</span></a>
-            <a href="#banggia" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-green-50 dark:bg-gray-700 text-app-green flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-money"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">Bảng giá</span></a>
-            <a href="#faq" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-gray-700 text-app-orange flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-question"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">FAQ</span></a>
-            <a href="tel:0845622012" class="col-span-4 flex items-center justify-between px-5 py-4 rounded-2xl bg-fb-blue text-white group active:scale-95 transition shadow-lg shadow-blue-500/30">
-                <div class="flex flex-col items-start">
-                    <span class="text-xs font-bold">Gọi ngay</span>
-                    <span class="text-[10px] opacity-80">0845 622 012</span>
-                </div>
-                <i class="ph-fill ph-phone-call text-xl"></i>
-            </a>
-        </div>
-    </div>
+   <!-- MOBILE MENU (Bottom Sheet) -->
+   <div id="menu-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleMenu()"></div>
+   <div id="ultra-menu" class="fixed bottom-0 left-0 w-full bg-white dark:bg-app-darkCard rounded-t-[32px] z-[70] transform translate-y-full transition-transform duration-500 shadow-2xl border-t border-white/10">
+       <div class="w-full flex justify-center pt-3 pb-5" onclick="toggleMenu()">
+           <div class="w-12 h-1.5 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+       </div>
+       <div class="px-6 pb-12 grid grid-cols-4 gap-y-8 gap-x-4">
+           <a href="#trangchu" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-gray-700 text-fb-blue flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-house"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">Trang chủ</span></a>
+           <a href="#aitools" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-gray-700 text-purple-600 flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-sparkle"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">AI Tools</span></a>
+           <a href="#banggia" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-green-50 dark:bg-gray-700 text-app-green flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-money"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">Bảng giá</span></a>
+           <a href="#faq" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition"><div class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-gray-700 text-app-orange flex items-center justify-center text-2xl shadow-sm"><i class="ph-fill ph-question"></i></div><span class="text-[11px] font-semibold text-gray-600 dark:text-gray-300">FAQ</span></a>
+           <a href="tel:0845622012" class="col-span-4 flex items-center justify-between px-5 py-4 rounded-2xl bg-fb-blue text-white group active:scale-95 transition shadow-lg shadow-blue-500/30">
+               <div class="flex flex-col items-start">
+                   <span class="text-xs font-bold">Gọi ngay</span>
+                   <span class="text-[10px] opacity-80">0845 622 012</span>
+               </div>
+               <i class="ph-fill ph-phone-call text-xl"></i>
+           </a>
+       </div>
+   </div>
 
-    <!-- MAIN CONTENT -->
-    <main class="max-w-5xl mx-auto px-4 pt-24 space-y-8">
+   <!-- MAIN CONTENT -->
+   <main class="max-w-5xl mx-auto px-4 pt-24 space-y-8">
 
-        <!-- HERO SECTION -->
-        <section id="trangchu" class="relative w-full aspect-[4/3] md:aspect-[21/9] rounded-ultra overflow-hidden shadow-ultra group bg-gray-900">
-            <!-- Thêm onerror để xử lý nếu ảnh chết -->
-            <img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" 
-                 alt="Nhà Đất Long Biên Chính Chủ" 
-                 class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105 opacity-80"
-                 loading="eager"
-                 onerror="this.src='https://via.placeholder.com/800x600?text=Nha+Dat+Long+Bien'">
-            
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-12">
-                <div class="bg-white/20 backdrop-blur-md rounded-xl px-3 py-1 self-start mb-4 border border-white/20">
-                    <span class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                        <span class="w-2 h-2 bg-app-red rounded-full animate-pulse"></span> Hot Deal 2025
-                    </span>
-                </div>
-                <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-xl max-w-3xl mb-3">
-                    Nhà Đất Long Biên Hà Nội - Chính Chủ Giá Tốt
-                </h1>
-                <p class="text-gray-200 text-sm md:text-lg line-clamp-2 max-w-2xl font-medium">
-                    Sổ đỏ sẵn sàng - Giao dịch chính chủ - Hỗ trợ vay vốn ngân hàng. Liên hệ ngay để nhận danh sách nhà đẹp.
-                </p>
-            </div>
-        </section>
+       <!-- HERO SECTION -->
+       <section id="trangchu" class="relative w-full aspect-[4/3] md:aspect-[21/9] rounded-ultra overflow-hidden shadow-ultra group bg-gray-900">
+           <!-- Thêm onerror để xử lý nếu ảnh chết -->
+           <img src="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png"
+                alt="Nhà Đất Long Biên Chính Chủ"
+                class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105 opacity-80"
+                loading="eager"
+                onerror="this.src='https://via.placeholder.com/800x600?text=Nha+Dat+Long+Bien'">
+           
+           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-12">
+               <div class="bg-white/20 backdrop-blur-md rounded-xl px-3 py-1 self-start mb-4 border border-white/20">
+                   <span class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                       <span class="w-2 h-2 bg-app-red rounded-full animate-pulse"></span> Hot Deal 2025
+                   </span>
+               </div>
+               <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-xl max-w-3xl mb-3">
+                   Nhà Đất Long Biên Hà Nội - Chính Chủ Giá Tốt
+               </h1>
+               <p class="text-gray-200 text-sm md:text-lg line-clamp-2 max-w-2xl font-medium">
+                   Sổ đỏ sẵn sàng - Giao dịch chính chủ - Hỗ trợ vay vốn ngân hàng. Liên hệ ngay để nhận danh sách nhà đẹp.
+               </p>
+           </div>
+       </section>
 
-        <!-- STATS GRID -->
-        <section id="gioithieu" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
-                <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-fb-blue text-2xl"><i class="ph-duotone ph-house-line"></i></div>
-                <div><span class="font-extrabold text-2xl block">200+</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Căn nhà</span></div>
-            </div>
-            <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
-                <div class="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-app-orange text-2xl"><i class="ph-duotone ph-users"></i></div>
-                <div><span class="font-extrabold text-2xl block">1000+</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Khách hàng</span></div>
-            </div>
-            <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
-                <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-app-green text-2xl"><i class="ph-duotone ph-seal-check"></i></div>
-                <div><span class="font-extrabold text-2xl block">100%</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Sổ đỏ thật</span></div>
-            </div>
-            <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
-                <div class="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-app-red text-2xl"><i class="ph-duotone ph-phone-call"></i></div>
-                <div><span class="font-extrabold text-2xl block">24/7</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Hỗ trợ</span></div>
-            </div>
-        </section>
+       <!-- STATS GRID -->
+       <section id="gioithieu" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+           <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
+               <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-fb-blue text-2xl"><i class="ph-duotone ph-house-line"></i></div>
+               <div><span class="font-extrabold text-2xl block">200+</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Căn nhà</span></div>
+           </div>
+           <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
+               <div class="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-app-orange text-2xl"><i class="ph-duotone ph-users"></i></div>
+               <div><span class="font-extrabold text-2xl block">1000+</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Khách hàng</span></div>
+           </div>
+           <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
+               <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-app-green text-2xl"><i class="ph-duotone ph-seal-check"></i></div>
+               <div><span class="font-extrabold text-2xl block">100%</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Sổ đỏ thật</span></div>
+           </div>
+           <div class="bg-app-card dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition duration-300">
+               <div class="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-app-red text-2xl"><i class="ph-duotone ph-phone-call"></i></div>
+               <div><span class="font-extrabold text-2xl block">24/7</span><span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Hỗ trợ</span></div>
+           </div>
+       </section>
 
-        <!-- AI TOOLS SECTION (GEMINI POWERED) -->
-        <section id="aitools" class="scroll-mt-28">
-            <div class="bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 rounded-ultra p-1 shadow-ultra">
-                <div class="bg-white dark:bg-gray-900 rounded-[30px] p-6 md:p-8">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center animate-bounce">
-                            <i class="ph-fill ph-sparkle text-xl"></i>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">Trợ Lý AI Long Biên</h2>
-                            <p class="text-xs text-gray-500 font-medium">Powered by Gemini Google</p>
-                        </div>
-                    </div>
+       <!-- AI TOOLS SECTION (SIMULATED FOR DEMO) -->
+       <section id="aitools" class="scroll-mt-28">
+           <div class="bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 rounded-ultra p-1 shadow-ultra">
+               <div class="bg-white dark:bg-gray-900 rounded-[30px] p-6 md:p-8">
+                   <div class="flex items-center gap-3 mb-6">
+                       <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center animate-bounce">
+                           <i class="ph-fill ph-sparkle text-xl"></i>
+                       </div>
+                       <div>
+                           <h2 class="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">Trợ Lý AI Long Biên</h2>
+                           <p class="text-xs text-gray-500 font-medium">Phiên bản Demo (Giả lập)</p>
+                       </div>
+                   </div>
 
-                    <!-- AI Tabs -->
-                    <div class="flex gap-2 mb-6 bg-gray-100 dark:bg-white/5 p-1 rounded-2xl overflow-x-auto no-scrollbar">
-                        <button onclick="switchAiTab('price')" id="tab-price" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-white dark:bg-gray-800 shadow-sm text-purple-600">
-                            Định Giá
-                        </button>
-                        <button onclick="switchAiTab('copywriter')" id="tab-copywriter" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-                            Viết Tin Bán
-                        </button>
-                        <button onclick="switchAiTab('vision')" id="tab-vision" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 flex items-center gap-1">
-                             Phân Tích Ảnh
-                        </button>
-                        <!-- NEW BUTTON -->
-                        <button onclick="switchAiTab('design')" id="tab-design" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 flex items-center gap-1">
-                             Nội Thất AI 🎨
-                        </button>
-                        <button onclick="switchAiTab('chat')" id="tab-chat" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-                            Hỏi Đáp
-                        </button>
-                    </div>
+                   <!-- AI Tabs -->
+                   <div class="flex gap-2 mb-6 bg-gray-100 dark:bg-white/5 p-1 rounded-2xl overflow-x-auto no-scrollbar">
+                       <button onclick="switchAiTab('price')" id="tab-price" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-white dark:bg-gray-800 shadow-sm text-purple-600">
+                           Định Giá
+                       </button>
+                       <button onclick="switchAiTab('copywriter')" id="tab-copywriter" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                           Viết Tin Bán
+                       </button>
+                       <button onclick="switchAiTab('vision')" id="tab-vision" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 flex items-center gap-1">
+                            Phân Tích Ảnh
+                       </button>
+                       <!-- NEW BUTTON -->
+                       <button onclick="switchAiTab('design')" id="tab-design" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 flex items-center gap-1">
+                            Nội Thất AI 🎨
+                       </button>
+                       <button onclick="switchAiTab('chat')" id="tab-chat" class="flex-1 whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                           Hỏi Đáp
+                       </button>
+                   </div>
 
-                    <!-- Tool 1: Price Estimator -->
-                    <div id="tool-price" class="space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold text-gray-500 ml-1">Diện tích (m²)</label>
-                                <input type="number" id="ai-area" placeholder="VD: 45" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none">
-                            </div>
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold text-gray-500 ml-1">Số tầng</label>
-                                <input type="number" id="ai-floors" placeholder="VD: 4" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none">
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold text-gray-500 ml-1">Vị trí</label>
-                            <select id="ai-location" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none appearance-none">
-                                <option value="Ngõ nhỏ xe máy">Ngõ nhỏ (Xe máy)</option>
-                                <option value="Ngõ nông gần phố">Ngõ nông (Gần phố)</option>
-                                <option value="Ngõ ô tô đỗ cửa">Ngõ ô tô đỗ cửa</option>
-                                <option value="Mặt phố kinh doanh">Mặt phố kinh doanh</option>
-                            </select>
-                        </div>
-                        <button onclick="callGeminiPrice()" id="btn-price" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-2xl shadow-lg shadow-purple-500/30 active:scale-95 transition flex items-center justify-center gap-2 relative overflow-hidden group">
-                            <span class="relative z-10 flex items-center gap-2"><i class="ph-bold ph-magic-wand"></i> Định Giá Ngay ✨</span>
-                            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                        </button>
-                    </div>
+                   <!-- Tool 1: Price Estimator -->
+                   <div id="tool-price" class="space-y-4">
+                       <div class="grid grid-cols-2 gap-4">
+                           <div class="space-y-1">
+                               <label class="text-xs font-bold text-gray-500 ml-1">Diện tích (m²)</label>
+                               <input type="number" id="ai-area" placeholder="VD: 45" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none">
+                           </div>
+                           <div class="space-y-1">
+                               <label class="text-xs font-bold text-gray-500 ml-1">Số tầng</label>
+                               <input type="number" id="ai-floors" placeholder="VD: 4" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none">
+                           </div>
+                       </div>
+                       <div class="space-y-1">
+                           <label class="text-xs font-bold text-gray-500 ml-1">Vị trí</label>
+                           <select id="ai-location" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none appearance-none">
+                               <option value="Ngõ nhỏ xe máy">Ngõ nhỏ (Xe máy)</option>
+                               <option value="Ngõ nông gần phố">Ngõ nông (Gần phố)</option>
+                               <option value="Ngõ ô tô đỗ cửa">Ngõ ô tô đỗ cửa</option>
+                               <option value="Mặt phố kinh doanh">Mặt phố kinh doanh</option>
+                           </select>
+                       </div>
+                       <button onclick="callGeminiPrice()" id="btn-price" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-2xl shadow-lg shadow-purple-500/30 active:scale-95 transition flex items-center justify-center gap-2 relative overflow-hidden group">
+                           <span class="relative z-10 flex items-center gap-2"><i class="ph-bold ph-magic-wand"></i> Định Giá Ngay ✨</span>
+                           <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                       </button>
+                   </div>
 
-                    <!-- Tool 2: Copywriter -->
-                    <div id="tool-copywriter" class="hidden space-y-4">
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold text-gray-500 ml-1">Loại Bất Động Sản</label>
-                            <select id="ai-copy-type" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-pink-500 outline-none appearance-none">
-                                <option value="Nhà riêng">Nhà riêng / Nhà thổ cư</option>
-                                <option value="Đất nền">Đất nền / Thửa đất</option>
-                                <option value="Chung cư">Căn hộ Chung cư</option>
-                                <option value="Biệt thự">Biệt thự / Liền kề</option>
-                            </select>
-                        </div>
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold text-gray-500 ml-1">Điểm nổi bật & Giá</label>
-                            <textarea id="ai-copy-features" rows="3" placeholder="VD: 3 tỷ, ngõ thông, gần Aeon Mall, sổ đỏ cất két, cần bán gấp..." class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-medium text-gray-900 dark:text-white focus:ring-2 focus:ring-pink-500 outline-none resize-none"></textarea>
-                        </div>
-                        <button onclick="callGeminiCopywriter()" id="btn-copywriter" class="w-full bg-gradient-to-r from-pink-600 to-rose-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-pink-500/30 active:scale-95 transition flex items-center justify-center gap-2">
-                            <i class="ph-bold ph-pen-nib"></i> Viết Tin Đăng Hấp Dẫn ✨
-                        </button>
-                    </div>
+                   <!-- Tool 2: Copywriter -->
+                   <div id="tool-copywriter" class="hidden space-y-4">
+                       <div class="space-y-1">
+                           <label class="text-xs font-bold text-gray-500 ml-1">Loại Bất Động Sản</label>
+                           <select id="ai-copy-type" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-pink-500 outline-none appearance-none">
+                               <option value="Nhà riêng">Nhà riêng / Nhà thổ cư</option>
+                               <option value="Đất nền">Đất nền / Thửa đất</option>
+                               <option value="Chung cư">Căn hộ Chung cư</option>
+                               <option value="Biệt thự">Biệt thự / Liền kề</option>
+                           </select>
+                       </div>
+                       <div class="space-y-1">
+                           <label class="text-xs font-bold text-gray-500 ml-1">Điểm nổi bật & Giá</label>
+                           <textarea id="ai-copy-features" rows="3" placeholder="VD: 3 tỷ, ngõ thông, gần Aeon Mall, sổ đỏ cất két, cần bán gấp..." class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-medium text-gray-900 dark:text-white focus:ring-2 focus:ring-pink-500 outline-none resize-none"></textarea>
+                       </div>
+                       <button onclick="callGeminiCopywriter()" id="btn-copywriter" class="w-full bg-gradient-to-r from-pink-600 to-rose-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-pink-500/30 active:scale-95 transition flex items-center justify-center gap-2">
+                           <i class="ph-bold ph-pen-nib"></i> Viết Tin Đăng Hấp Dẫn ✨
+                       </button>
+                   </div>
 
-                    <!-- Tool 3: Vision (AI Phân Tích Ảnh) -->
-                    <div id="tool-vision" class="hidden space-y-4">
-                         <div class="relative w-full h-48 border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-2xl flex flex-col items-center justify-center bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition cursor-pointer overflow-hidden group" onclick="document.getElementById('ai-image-input').click()">
-                            <input type="file" id="ai-image-input" accept="image/*" class="hidden" onchange="handleImageUpload(this)">
-                            <div id="ai-image-preview" class="hidden w-full h-full">
-                                <img src="" alt="Preview" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                                    <span class="text-white font-bold text-sm"><i class="ph-bold ph-camera-rotate"></i> Đổi ảnh khác</span>
-                                </div>
-                            </div>
-                            <div id="ai-image-placeholder" class="text-center p-4">
-                                <i class="ph-duotone ph-image text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-sm font-bold text-gray-500">Chạm để tải ảnh nhà</p>
-                                <p class="text-[10px] text-gray-400 mt-1">Hỗ trợ JPG, PNG</p>
-                            </div>
-                        </div>
-                        <button onclick="callGeminiVision()" id="btn-vision" class="w-full bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-teal-500/30 active:scale-95 transition flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                            <i class="ph-bold ph-scan"></i> Phân Tích Ảnh Nhà ✨
-                        </button>
-                    </div>
+                   <!-- Tool 3: Vision (AI Phân Tích Ảnh) -->
+                   <div id="tool-vision" class="hidden space-y-4">
+                        <div class="relative w-full h-48 border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-2xl flex flex-col items-center justify-center bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition cursor-pointer overflow-hidden group" onclick="document.getElementById('ai-image-input').click()">
+                           <input type="file" id="ai-image-input" accept="image/*" class="hidden" onchange="handleImageUpload(this)">
+                           <div id="ai-image-preview" class="hidden w-full h-full">
+                               <img src="" alt="Preview" class="w-full h-full object-cover">
+                               <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                   <span class="text-white font-bold text-sm"><i class="ph-bold ph-camera-rotate"></i> Đổi ảnh khác</span>
+                               </div>
+                           </div>
+                           <div id="ai-image-placeholder" class="text-center p-4">
+                               <i class="ph-duotone ph-image text-4xl text-gray-400 mb-2"></i>
+                               <p class="text-sm font-bold text-gray-500">Chạm để tải ảnh nhà</p>
+                               <p class="text-[10px] text-gray-400 mt-1">Hỗ trợ JPG, PNG</p>
+                           </div>
+                       </div>
+                       <button onclick="callGeminiVision()" id="btn-vision" class="w-full bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-teal-500/30 active:scale-95 transition flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                           <i class="ph-bold ph-scan"></i> Phân Tích Ảnh Nhà ✨
+                       </button>
+                   </div>
 
-                    <!-- Tool 4: Interior Designer (NEW) -->
-                    <div id="tool-design" class="hidden space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold text-gray-500 ml-1">Loại Phòng</label>
-                                <select id="ai-design-room" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none appearance-none">
-                                    <option value="Living room">Phòng khách</option>
-                                    <option value="Bedroom">Phòng ngủ</option>
-                                    <option value="Kitchen">Nhà bếp</option>
-                                    <option value="Bathroom">Phòng tắm</option>
-                                    <option value="Balcony">Ban công</option>
-                                </select>
-                            </div>
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold text-gray-500 ml-1">Phong Cách</label>
-                                <select id="ai-design-style" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none appearance-none">
-                                    <option value="Modern">Hiện đại</option>
-                                    <option value="Nordic">Bắc Âu (Nordic)</option>
-                                    <option value="Luxury">Sang trọng</option>
-                                    <option value="Minimalist">Tối giản</option>
-                                    <option value="Indochine">Đông Dương</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold text-gray-500 ml-1">Chi tiết mong muốn</label>
-                            <textarea id="ai-design-prompt" rows="2" placeholder="VD: Tông màu trắng be, có sofa da, cửa sổ lớn đón nắng..." class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-medium text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
-                        </div>
-                        <button onclick="callGeminiDesign()" id="btn-design" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold py-4 rounded-2xl shadow-lg shadow-indigo-500/30 active:scale-95 transition flex items-center justify-center gap-2 group relative overflow-hidden">
-                            <span class="relative z-10 flex items-center gap-2"><i class="ph-bold ph-paint-brush-broad"></i> Thiết Kế Ngay (AI) ✨</span>
-                            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                        </button>
-                    </div>
+                   <!-- Tool 4: Interior Designer (NEW) -->
+                   <div id="tool-design" class="hidden space-y-4">
+                       <div class="grid grid-cols-2 gap-4">
+                           <div class="space-y-1">
+                               <label class="text-xs font-bold text-gray-500 ml-1">Loại Phòng</label>
+                               <select id="ai-design-room" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none appearance-none">
+                                   <option value="living room">Phòng khách</option>
+                                   <option value="bedroom">Phòng ngủ</option>
+                                   <option value="kitchen">Nhà bếp</option>
+                                   <option value="bathroom">Phòng tắm</option>
+                                   <option value="balcony">Ban công</option>
+                               </select>
+                           </div>
+                           <div class="space-y-1">
+                               <label class="text-xs font-bold text-gray-500 ml-1">Phong Cách</label>
+                               <select id="ai-design-style" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-bold text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none appearance-none">
+                                   <option value="Modern">Hiện đại</option>
+                                   <option value="Nordic">Bắc Âu (Nordic)</option>
+                                   <option value="Luxury">Sang trọng</option>
+                                   <option value="Minimalist">Tối giản</option>
+                                   <option value="Indochine">Đông Dương</option>
+                               </select>
+                           </div>
+                       </div>
+                       <div class="space-y-1">
+                           <label class="text-xs font-bold text-gray-500 ml-1">Chi tiết mong muốn</label>
+                           <textarea id="ai-design-prompt" rows="2" placeholder="VD: Tông màu trắng be, có sofa da, cửa sổ lớn đón nắng..." class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-medium text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+                       </div>
+                       <button onclick="callGeminiDesign()" id="btn-design" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold py-4 rounded-2xl shadow-lg shadow-indigo-500/30 active:scale-95 transition flex items-center justify-center gap-2 group relative overflow-hidden">
+                           <span class="relative z-10 flex items-center gap-2"><i class="ph-bold ph-paint-brush-broad"></i> Thiết Kế Ngay (AI) ✨</span>
+                           <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                       </button>
+                   </div>
 
-                    <!-- Tool 5: Chatbot -->
-                    <div id="tool-chat" class="hidden space-y-4">
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold text-gray-500 ml-1">Câu hỏi của bạn</label>
-                            <textarea id="ai-question" rows="3" placeholder="VD: Thủ tục sang tên sổ đỏ mất bao lâu? Sinh năm 1985 hợp hướng nào?" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-medium text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none resize-none"></textarea>
-                        </div>
-                        <button onclick="callGeminiChat()" id="btn-chat" class="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-500/30 active:scale-95 transition flex items-center justify-center gap-2">
-                            <i class="ph-bold ph-chat-circle-text"></i> Hỏi AI Ngay ✨
-                        </button>
-                    </div>
+                   <!-- Tool 5: Chatbot -->
+                   <div id="tool-chat" class="hidden space-y-4">
+                       <div class="space-y-1">
+                           <label class="text-xs font-bold text-gray-500 ml-1">Câu hỏi của bạn</label>
+                           <textarea id="ai-question" rows="3" placeholder="VD: Thủ tục sang tên sổ đỏ mất bao lâu? Sinh năm 1985 hợp hướng nào?" class="w-full bg-gray-50 dark:bg-white/5 border-0 rounded-2xl p-4 font-medium text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none resize-none"></textarea>
+                       </div>
+                       <button onclick="callGeminiChat()" id="btn-chat" class="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-500/30 active:scale-95 transition flex items-center justify-center gap-2">
+                           <i class="ph-bold ph-chat-circle-text"></i> Hỏi AI Ngay ✨
+                       </button>
+                   </div>
 
-                    <!-- AI Result Display -->
-                    <div id="ai-result-container" class="mt-6 hidden">
-                        <div class="p-5 bg-purple-50 dark:bg-purple-900/10 border border-purple-100 dark:border-purple-500/20 rounded-2xl relative overflow-hidden">
-                            <!-- Shimmer Loading -->
-                            <div id="ai-loading" class="absolute inset-0 z-10 bg-white/50 dark:bg-black/50 backdrop-blur-sm flex items-center justify-center hidden">
-                                <div class="flex flex-col items-center gap-2">
-                                    <i class="ph-duotone ph-spinner text-3xl text-purple-600 animate-spin"></i>
-                                    <span class="text-xs font-bold text-purple-600 animate-pulse">Đang xử lý...</span>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-3">
-                                <div class="w-10 h-10 rounded-full bg-white dark:bg-white/10 flex-shrink-0 flex items-center justify-center shadow-sm">
-                                    <i class="ph-fill ph-robot text-xl text-purple-600"></i>
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <div class="flex items-center justify-between mb-2">
-                                        <h3 class="text-sm font-bold text-purple-700 dark:text-purple-400">Kết quả:</h3>
-                                        <div class="flex gap-2">
-                                            <!-- TTS Button -->
-                                            <button onclick="playTTS()" id="btn-tts" class="hidden text-[10px] bg-white dark:bg-white/10 px-2 py-1 rounded-md font-bold text-gray-500 hover:text-purple-600 transition flex items-center gap-1">
-                                                <i class="ph-bold ph-speaker-high"></i> Nghe
-                                            </button>
-                                            <button onclick="copyAiResult()" class="text-[10px] bg-white dark:bg-white/10 px-2 py-1 rounded-md font-bold text-gray-500 hover:text-purple-600 transition flex items-center gap-1">
-                                                <i class="ph-bold ph-copy"></i> Sao chép
-                                            </button>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Content Area -->
-                                    <div id="ai-content" class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed ai-response overflow-x-auto"></div>
-                                    
-                                    <!-- Generated Image Area -->
-                                    <div id="ai-generated-image-container" class="hidden mt-3 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
-                                        <img id="ai-generated-image" src="" alt="AI Generated Design" class="w-full h-auto object-cover">
-                                        <div class="p-2 bg-white dark:bg-gray-800 text-center">
-                                            <a id="ai-download-link" href="#" download="thiet-ke-ai.png" class="text-xs font-bold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400">
-                                                <i class="ph-bold ph-download-simple"></i> Tải ảnh về
-                                            </a>
-                                        </div>
-                                    </div>
+                   <!-- AI Result Display -->
+                   <div id="ai-result-container" class="mt-6 hidden">
+                       <div class="p-5 bg-purple-50 dark:bg-purple-900/10 border border-purple-100 dark:border-purple-500/20 rounded-2xl relative overflow-hidden">
+                           <!-- Shimmer Loading -->
+                           <div id="ai-loading" class="absolute inset-0 z-10 bg-white/50 dark:bg-black/50 backdrop-blur-sm flex items-center justify-center hidden">
+                               <div class="flex flex-col items-center gap-2">
+                                   <i class="ph-duotone ph-spinner text-3xl text-purple-600 animate-spin"></i>
+                                   <span class="text-xs font-bold text-purple-600 animate-pulse">Đang xử lý...</span>
+                               </div>
+                           </div>
+                           
+                           <div class="flex items-start gap-3">
+                               <div class="w-10 h-10 rounded-full bg-white dark:bg-white/10 flex-shrink-0 flex items-center justify-center shadow-sm">
+                                   <i class="ph-fill ph-robot text-xl text-purple-600"></i>
+                               </div>
+                               <div class="flex-1 min-w-0">
+                                   <div class="flex items-center justify-between mb-2">
+                                       <h3 class="text-sm font-bold text-purple-700 dark:text-purple-400">Kết quả (Giả lập):</h3>
+                                       <div class="flex gap-2">
+                                           <!-- TTS Button -->
+                                           <button onclick="playTTS()" id="btn-tts" class="hidden text-[10px] bg-white dark:bg-white/10 px-2 py-1 rounded-md font-bold text-gray-500 hover:text-purple-600 transition flex items-center gap-1">
+                                               <i class="ph-bold ph-speaker-high"></i> Nghe
+                                           </button>
+                                           <button onclick="copyAiResult()" class="text-[10px] bg-white dark:bg-white/10 px-2 py-1 rounded-md font-bold text-gray-500 hover:text-purple-600 transition flex items-center gap-1">
+                                               <i class="ph-bold ph-copy"></i> Sao chép
+                                           </button>
+                                       </div>
+                                   </div>
+                                   
+                                   <!-- Content Area -->
+                                   <div id="ai-content" class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed ai-response overflow-x-auto"></div>
+                                   
+                                   <!-- Generated Image Area -->
+                                   <div id="ai-generated-image-container" class="hidden mt-3 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                                       <img id="ai-generated-image" src="" alt="AI Generated Design" class="w-full h-auto object-cover">
+                                       <div class="p-2 bg-white dark:bg-gray-800 text-center">
+                                           <a id="ai-download-link" href="#" target="_blank" class="text-xs font-bold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400">
+                                               <i class="ph-bold ph-download-simple"></i> Xem ảnh lớn
+                                           </a>
+                                       </div>
+                                   </div>
 
-                                    <!-- Audio Player Hidden -->
-                                    <audio id="ai-audio-player" class="hidden"></audio>
-                                    <div id="tts-loading" class="hidden mt-2 flex items-center gap-1 text-xs text-purple-600 font-bold">
-                                        <div class="sound-wave flex items-center gap-0.5 h-4">
-                                            <span></span><span></span><span></span><span></span><span></span>
-                                        </div>
-                                        Đang tạo giọng nói...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                                   <!-- TTS Loading -->
+                                   <div id="tts-loading" class="hidden mt-2 flex items-center gap-1 text-xs text-purple-600 font-bold">
+                                       <div class="sound-wave flex items-center gap-0.5 h-4">
+                                           <span></span><span></span><span></span><span></span><span></span>
+                                       </div>
+                                       Đang đọc...
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
 
-        <!-- PRICING TABLE -->
-        <section id="banggia" class="bg-app-card dark:bg-app-darkCard rounded-ultra shadow-ultra overflow-hidden">
-            <div class="p-6 border-b border-gray-100 dark:border-white/5 flex items-center justify-between bg-gray-50/50 dark:bg-white/5">
-                <h2 class="text-xl font-bold flex items-center gap-2"><i class="ph-fill ph-tag text-app-blue"></i> Bảng Giá Tham Khảo</h2>
-                <span class="text-[10px] font-bold bg-fb-blue text-white px-3 py-1 rounded-full uppercase tracking-wider">Update 2025</span>
-            </div>
-            <div class="divide-y divide-gray-100 dark:divide-white/5">
-                <!-- Item 1 -->
-                <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-900/40 text-fb-blue flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-house-simple"></i></div>
-                        <div>
-                            <h3 class="font-bold text-base text-gray-900 dark:text-white">Phân khúc Nhỏ</h3>
-                            <p class="text-xs text-gray-500 font-medium">30m² - 45m² • Ngõ nhỏ</p>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <span class="block font-bold text-fb-blue text-lg">~ 2 - 3 Tỷ</span>
-                        <span class="text-[10px] text-gray-400">Sổ đỏ riêng</span>
-                    </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900/40 text-app-orange flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-car"></i></div>
-                        <div>
-                            <h3 class="font-bold text-base text-gray-900 dark:text-white">Phân khúc Vừa</h3>
-                            <p class="text-xs text-gray-500 font-medium">45m² - 60m² • Ô tô đỗ gần</p>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <span class="block font-bold text-fb-blue text-lg">3 - 5 Tỷ</span>
-                        <span class="text-[10px] text-gray-400">Giao dịch nhanh</span>
-                    </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-900/40 text-app-red flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-crown"></i></div>
-                        <div>
-                            <h3 class="font-bold text-base text-gray-900 dark:text-white">Mặt Phố / VIP</h3>
-                            <p class="text-xs text-gray-500 font-medium">Kinh doanh tốt • Ô tô vào nhà</p>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <span class="block font-bold text-fb-blue text-lg">5 - 10 Tỷ</span>
-                        <span class="text-[10px] text-gray-400">Vị trí đắc địa</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <!-- PRICING TABLE -->
+       <section id="banggia" class="bg-app-card dark:bg-app-darkCard rounded-ultra shadow-ultra overflow-hidden">
+           <div class="p-6 border-b border-gray-100 dark:border-white/5 flex items-center justify-between bg-gray-50/50 dark:bg-white/5">
+               <h2 class="text-xl font-bold flex items-center gap-2"><i class="ph-fill ph-tag text-app-blue"></i> Bảng Giá Tham Khảo</h2>
+               <span class="text-[10px] font-bold bg-fb-blue text-white px-3 py-1 rounded-full uppercase tracking-wider">Update 2025</span>
+           </div>
+           <div class="divide-y divide-gray-100 dark:divide-white/5">
+               <!-- Item 1 -->
+               <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
+                   <div class="flex items-center gap-4">
+                       <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-900/40 text-fb-blue flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-house-simple"></i></div>
+                       <div>
+                           <h3 class="font-bold text-base text-gray-900 dark:text-white">Phân khúc Nhỏ</h3>
+                           <p class="text-xs text-gray-500 font-medium">30m² - 45m² • Ngõ nhỏ</p>
+                       </div>
+                   </div>
+                   <div class="text-right">
+                       <span class="block font-bold text-fb-blue text-lg">~ 2 - 3 Tỷ</span>
+                       <span class="text-[10px] text-gray-400">Sổ đỏ riêng</span>
+                   </div>
+               </div>
+               <!-- Item 2 -->
+               <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
+                   <div class="flex items-center gap-4">
+                       <div class="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900/40 text-app-orange flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-car"></i></div>
+                       <div>
+                           <h3 class="font-bold text-base text-gray-900 dark:text-white">Phân khúc Vừa</h3>
+                           <p class="text-xs text-gray-500 font-medium">45m² - 60m² • Ô tô đỗ gần</p>
+                       </div>
+                   </div>
+                   <div class="text-right">
+                       <span class="block font-bold text-fb-blue text-lg">3 - 5 Tỷ</span>
+                       <span class="text-[10px] text-gray-400">Giao dịch nhanh</span>
+                   </div>
+               </div>
+               <!-- Item 3 -->
+               <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
+                   <div class="flex items-center gap-4">
+                       <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-900/40 text-app-red flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-crown"></i></div>
+                       <div>
+                           <h3 class="font-bold text-base text-gray-900 dark:text-white">Mặt Phố / VIP</h3>
+                           <p class="text-xs text-gray-500 font-medium">Kinh doanh tốt • Ô tô vào nhà</p>
+                       </div>
+                   </div>
+                   <div class="text-right">
+                       <span class="block font-bold text-fb-blue text-lg">5 - 10 Tỷ</span>
+                       <span class="text-[10px] text-gray-400">Vị trí đắc địa</span>
+                   </div>
+               </div>
+           </div>
+       </section>
 
-        <!-- FAQ & POLICY -->
-        <section class="grid md:grid-cols-2 gap-6">
-            <!-- FAQ -->
-            <div id="faq" class="space-y-4">
-                <h2 class="font-bold text-xl ml-2 mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-purple-500"></i> Hỏi Đáp (FAQ)</h2>
-                
-                <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
-                    <summary class="flex justify-between items-center list-none font-bold text-sm">
-                        Làm sao để xem nhà?
-                        <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i>
-                    </summary>
-                    <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">
-                        Bạn chỉ cần gọi trực tiếp <a href="tel:0845622012" class="font-bold text-fb-blue">0845 622 012</a> trước 30 phút. Chúng tôi sẽ dẫn bạn đi xem miễn phí.
-                    </div>
-                </details>
+       <!-- FAQ & POLICY -->
+       <section class="grid md:grid-cols-2 gap-6">
+           <!-- FAQ -->
+           <div id="faq" class="space-y-4">
+               <h2 class="font-bold text-xl ml-2 mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-purple-500"></i> Hỏi Đáp (FAQ)</h2>
+               
+               <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
+                   <summary class="flex justify-between items-center list-none font-bold text-sm">
+                       Làm sao để xem nhà?
+                       <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i>
+                   </summary>
+                   <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">
+                       Bạn chỉ cần gọi trực tiếp <a href="tel:0845622012" class="font-bold text-fb-blue">0845 622 012</a> trước 30 phút. Chúng tôi sẽ dẫn bạn đi xem miễn phí.
+                   </div>
+               </details>
 
-                <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
-                    <summary class="flex justify-between items-center list-none font-bold text-sm">
-                        Phí môi giới là bao nhiêu?
-                        <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i>
-                    </summary>
-                    <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">
-                        Với người mua, chúng tôi <strong>MIỄN PHÍ 100%</strong>. Bạn làm việc giá cả trực tiếp với chủ nhà.
-                    </div>
-                </details>
-            </div>
+               <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
+                   <summary class="flex justify-between items-center list-none font-bold text-sm">
+                       Phí môi giới là bao nhiêu?
+                       <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i>
+                   </summary>
+                   <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">
+                       Với người mua, chúng tôi <strong>MIỄN PHÍ 100%</strong>. Bạn làm việc giá cả trực tiếp với chủ nhà.
+                   </div>
+               </details>
+           </div>
 
-            <!-- POLICY -->
-            <div id="chinhsach" class="bg-gradient-to-br from-fb-blue to-blue-700 rounded-ultra shadow-ultra p-6 text-white relative overflow-hidden">
-                <i class="ph-duotone ph-shield-check absolute -bottom-6 -right-6 text-[140px] opacity-10 rotate-12"></i>
-                <h2 class="font-bold text-xl mb-4 flex items-center gap-2"><i class="ph-fill ph-shield-check"></i> Chính Sách</h2>
-                <ul class="space-y-4 relative z-10">
-                    <li class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div>
-                        <span class="text-sm font-medium opacity-90">Bảo mật tuyệt đối thông tin khách hàng.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div>
-                        <span class="text-sm font-medium opacity-90">Hỗ trợ kiểm tra quy hoạch, pháp lý miễn phí.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div>
-                        <span class="text-sm font-medium opacity-90">Hỗ trợ thủ tục sang tên sổ đỏ trọn gói.</span>
-                    </li>
-                </ul>
-                <div id="dieukhoan" class="mt-6 pt-4 border-t border-white/20 text-xs opacity-70">
-                    * Bằng việc liên hệ, quý khách đồng ý với các điều khoản sử dụng dịch vụ của chúng tôi.
-                </div>
-            </div>
-        </section>
+           <!-- POLICY -->
+           <div id="chinhsach" class="bg-gradient-to-br from-fb-blue to-blue-700 rounded-ultra shadow-ultra p-6 text-white relative overflow-hidden">
+               <i class="ph-duotone ph-shield-check absolute -bottom-6 -right-6 text-[140px] opacity-10 rotate-12"></i>
+               <h2 class="font-bold text-xl mb-4 flex items-center gap-2"><i class="ph-fill ph-shield-check"></i> Chính Sách</h2>
+               <ul class="space-y-4 relative z-10">
+                   <li class="flex items-start gap-3">
+                       <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div>
+                       <span class="text-sm font-medium opacity-90">Bảo mật tuyệt đối thông tin khách hàng.</span>
+                   </li>
+                   <li class="flex items-start gap-3">
+                       <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div>
+                       <span class="text-sm font-medium opacity-90">Hỗ trợ kiểm tra quy hoạch, pháp lý miễn phí.</span>
+                   </li>
+                   <li class="flex items-start gap-3">
+                       <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div>
+                       <span class="text-sm font-medium opacity-90">Hỗ trợ thủ tục sang tên sổ đỏ trọn gói.</span>
+                   </li>
+               </ul>
+               <div id="dieukhoan" class="mt-6 pt-4 border-t border-white/20 text-xs opacity-70">
+                   * Bằng việc liên hệ, quý khách đồng ý với các điều khoản sử dụng dịch vụ của chúng tôi.
+               </div>
+           </div>
+       </section>
 
-        <!-- MAP & CONTACT WIDGET -->
-        <section id="lienhe" class="bg-app-card dark:bg-app-darkCard p-2 rounded-ultra shadow-ultra">
-            <div class="relative w-full h-72 rounded-[24px] overflow-hidden bg-gray-100">
-                <!-- Google Maps Embed: Thêm lazy loading -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.649629683933!2d105.88582967599895!3d21.046695387158737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a96f1315053f%3A0x633519393355030!2zMTEyIE5ndXnhu4VuIFbEg24gQ-G7qywgTmfhu41jIEzDom0sIExvbmcgQmnDqm4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1709220000000!5m2!1svi!2s" 
-                        class="w-full h-full border-0" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-            <div class="p-6 flex flex-col items-center text-center">
-                <h2 class="font-bold text-xl mb-1">Liên Hệ Xem Nhà</h2>
-                <p class="text-sm text-gray-500 mb-6 font-medium">112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
-                <div class="flex gap-4 w-full md:w-2/3">
-                    <a href="tel:0845622012" class="flex-1 bg-fb-blue hover:bg-blue-600 text-white py-3.5 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30 transition active:scale-95">
-                        <i class="ph-fill ph-phone-call text-xl"></i> Gọi 0845 622 012
-                    </a>
-                    <a href="https://zalo.me/0845622012" target="_blank" class="flex-1 bg-blue-50 dark:bg-white/10 text-fb-blue dark:text-white py-3.5 rounded-2xl font-bold flex items-center justify-center gap-2 border border-blue-100 dark:border-white/10 transition active:scale-95">
-                        <i class="ph-fill ph-chat-circle-dots text-xl"></i> Zalo
-                    </a>
-                </div>
-            </div>
-        </section>
+       <!-- MAP & CONTACT WIDGET -->
+       <section id="lienhe" class="bg-app-card dark:bg-app-darkCard p-2 rounded-ultra shadow-ultra">
+           <div class="relative w-full h-72 rounded-[24px] overflow-hidden bg-gray-100">
+               <!-- Google Maps Embed: Thêm lazy loading -->
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.649629683933!2d105.88582967599895!3d21.046695387158737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a96f1315053f%3A0x633519393355030!2zMTEyIE5ndXnhu4VuIFbEg24gQ-G7qywgTmfhu41jIEzDom0sIExvbmcgQmnDqm4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1709220000000!5m2!1svi!2s"
+                       class="w-full h-full border-0"
+                       allowfullscreen=""
+                       loading="lazy"
+                       referrerpolicy="no-referrer-when-downgrade">
+               </iframe>
+           </div>
+           <div class="p-6 flex flex-col items-center text-center">
+               <h2 class="font-bold text-xl mb-1">Liên Hệ Xem Nhà</h2>
+               <p class="text-sm text-gray-500 mb-6 font-medium">112 Nguyễn Văn Cừ, Long Biên, Hà Nội</p>
+               <div class="flex gap-4 w-full md:w-2/3">
+                   <a href="tel:0845622012" class="flex-1 bg-fb-blue hover:bg-blue-600 text-white py-3.5 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30 transition active:scale-95">
+                       <i class="ph-fill ph-phone-call text-xl"></i> Gọi 0845 622 012
+                   </a>
+                   <a href="https://zalo.me/0845622012" target="_blank" class="flex-1 bg-blue-50 dark:bg-white/10 text-fb-blue dark:text-white py-3.5 rounded-2xl font-bold flex items-center justify-center gap-2 border border-blue-100 dark:border-white/10 transition active:scale-95">
+                       <i class="ph-fill ph-chat-circle-dots text-xl"></i> Zalo
+                   </a>
+               </div>
+           </div>
+       </section>
 
-    </main>
+   </main>
 
-    <!-- ULTRA FOOTER -->
-    <footer class="mt-16 bg-[#0F1115] text-gray-400 pt-16 pb-28 rounded-t-[48px] shadow-inner border-t border-white/5 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fb-blue via-purple-500 to-app-orange opacity-50"></div>
-        
-        <div class="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <!-- Col 1 -->
-            <div class="flex flex-col gap-5">
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fb-blue to-blue-600 flex items-center justify-center text-white shadow-glow">
-                        <i class="ph-fill ph-house text-2xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-bold text-xl">Nhà Đất LB</h3>
-                        <p class="text-xs text-gray-500 font-medium">Ultra App v4.0 AI Gen</p>
-                    </div>
-                </div>
-                <p class="text-sm leading-relaxed text-gray-400">
-                    Nền tảng kết nối mua bán bất động sản chính chủ uy tín hàng đầu tại Long Biên. Minh bạch, nhanh chóng, hiệu quả.
-                </p>
-            </div>
+   <!-- ULTRA FOOTER -->
+   <footer class="mt-16 bg-[#0F1115] text-gray-400 pt-16 pb-28 rounded-t-[48px] shadow-inner border-t border-white/5 relative overflow-hidden">
+       <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fb-blue via-purple-500 to-app-orange opacity-50"></div>
+       
+       <div class="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+           <!-- Col 1 -->
+           <div class="flex flex-col gap-5">
+               <div class="flex items-center gap-3">
+                   <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fb-blue to-blue-600 flex items-center justify-center text-white shadow-glow">
+                       <i class="ph-fill ph-house text-2xl"></i>
+                   </div>
+                   <div>
+                       <h3 class="text-white font-bold text-xl">Nhà Đất LB</h3>
+                       <p class="text-xs text-gray-500 font-medium">Ultra App v4.0 AI Gen</p>
+                   </div>
+               </div>
+               <p class="text-sm leading-relaxed text-gray-400">
+                   Nền tảng kết nối mua bán bất động sản chính chủ uy tín hàng đầu tại Long Biên. Minh bạch, nhanh chóng, hiệu quả.
+               </p>
+           </div>
 
-            <!-- Col 2 -->
-            <div>
-                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-l-2 border-fb-blue pl-3">Lối Tắt</h4>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li><a href="#trangchu" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-fb-blue group-hover:text-white transition"><i class="ph-bold ph-house"></i></span> Trang chủ</a></li>
-                    <li><a href="#aitools" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-purple-500 group-hover:text-white transition"><i class="ph-bold ph-sparkle"></i></span> AI Tools</a></li>
-                    <li><a href="#banggia" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-app-green group-hover:text-white transition"><i class="ph-bold ph-tag"></i></span> Bảng giá</a></li>
-                </ul>
-            </div>
+           <!-- Col 2 -->
+           <div>
+               <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-l-2 border-fb-blue pl-3">Lối Tắt</h4>
+               <ul class="space-y-4 text-sm font-medium">
+                   <li><a href="#trangchu" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-fb-blue group-hover:text-white transition"><i class="ph-bold ph-house"></i></span> Trang chủ</a></li>
+                   <li><a href="#aitools" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-purple-500 group-hover:text-white transition"><i class="ph-bold ph-sparkle"></i></span> AI Tools</a></li>
+                   <li><a href="#banggia" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-app-green group-hover:text-white transition"><i class="ph-bold ph-tag"></i></span> Bảng giá</a></li>
+               </ul>
+           </div>
 
-            <!-- Col 3 -->
-            <div>
-                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-l-2 border-app-red pl-3">Pháp Lý</h4>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li><a href="#chinhsach" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-app-red group-hover:text-white transition"><i class="ph-bold ph-shield-check"></i></span> Chính sách</a></li>
-                    <li><a href="#lienhe" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-fb-blue group-hover:text-white transition"><i class="ph-bold ph-map-trifold"></i></span> Chỉ đường</a></li>
-                </ul>
-            </div>
+           <!-- Col 3 -->
+           <div>
+               <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-l-2 border-app-red pl-3">Pháp Lý</h4>
+               <ul class="space-y-4 text-sm font-medium">
+                   <li><a href="#chinhsach" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-app-red group-hover:text-white transition"><i class="ph-bold ph-shield-check"></i></span> Chính sách</a></li>
+                   <li><a href="#lienhe" class="flex items-center gap-3 hover:text-white transition group"><span class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-fb-blue group-hover:text-white transition"><i class="ph-bold ph-map-trifold"></i></span> Chỉ đường</a></li>
+               </ul>
+           </div>
 
-            <!-- Col 4 -->
-            <div>
-                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-l-2 border-app-green pl-3">Liên Hệ</h4>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li class="flex items-start gap-3">
-                        <i class="ph-fill ph-phone-call text-app-green text-lg mt-0.5"></i>
-                        <div>
-                            <span class="block text-gray-500 text-xs">Hotline 24/7</span>
-                            <a href="tel:0845622012" class="text-white font-bold text-base hover:text-app-green transition">0845 622 012</a>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="ph-fill ph-envelope text-app-orange text-lg mt-0.5"></i>
-                        <div>
-                            <span class="block text-gray-500 text-xs">Email</span>
-                            <span class="text-white">congttan1981@gmail.com</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="mt-12 pt-8 border-t border-white/5 text-center text-xs text-gray-600 font-medium">
-            © 2025 Nhà Đất Long Biên.
-        </div>
-    </footer>
+           <!-- Col 4 -->
+           <div>
+               <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-l-2 border-app-green pl-3">Liên Hệ</h4>
+               <ul class="space-y-4 text-sm font-medium">
+                   <li class="flex items-start gap-3">
+                       <i class="ph-fill ph-phone-call text-app-green text-lg mt-0.5"></i>
+                       <div>
+                           <span class="block text-gray-500 text-xs">Hotline 24/7</span>
+                           <a href="tel:0845622012" class="text-white font-bold text-base hover:text-app-green transition">0845 622 012</a>
+                       </div>
+                   </li>
+                   <li class="flex items-start gap-3">
+                       <i class="ph-fill ph-envelope text-app-orange text-lg mt-0.5"></i>
+                       <div>
+                           <span class="block text-gray-500 text-xs">Email</span>
+                           <span class="text-white">congttan1981@gmail.com</span>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+       </div>
+       
+       <div class="mt-12 pt-8 border-t border-white/5 text-center text-xs text-gray-600 font-medium">
+           © 2025 Nhà Đất Long Biên.
+       </div>
+   </footer>
 
-    <!-- QUICK CALL DOCK -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
-        <div id="quick-actions" class="flex flex-col gap-3 transition-all duration-300 opacity-0 translate-y-10 scale-90 origin-bottom">
-            <a href="https://maps.app.goo.gl/c18zQ3MQvLHTw5T87?g_st=ipc" target="_blank" class="pointer-events-auto w-12 h-12 rounded-2xl bg-app-green text-white shadow-lg flex items-center justify-center hover:scale-110 transition tooltip" title="Bản đồ">
-                <i class="ph-fill ph-map-pin text-xl"></i>
-            </a>
-            <a href="https://zalo.me/0845622012" target="_blank" class="pointer-events-auto w-12 h-12 rounded-2xl bg-blue-500 text-white shadow-lg flex items-center justify-center hover:scale-110 transition tooltip" title="Chat Zalo">
-                <span class="font-bold text-[10px]">Zalo</span>
-            </a>
-        </div>
-        
-        <button onclick="toggleQuickCall()" aria-label="Menu gọi nhanh" class="pointer-events-auto w-16 h-16 rounded-[24px] bg-gradient-to-br from-fb-blue to-blue-600 text-white shadow-dock flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 group relative">
-            <i class="ph-fill ph-phone-call text-3xl group-[.active]:hidden"></i>
-            <i class="ph-bold ph-x text-2xl hidden group-[.active]:block"></i>
-            <span class="absolute inset-0 rounded-[24px] bg-fb-blue opacity-30 animate-ping pointer-events-none group-[.active]:hidden"></span>
-        </button>
-    </div>
+   <!-- QUICK CALL DOCK -->
+   <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
+       <div id="quick-actions" class="flex flex-col gap-3 transition-all duration-300 opacity-0 translate-y-10 scale-90 origin-bottom">
+           <a href="https://maps.app.goo.gl/c18zQ3MQvLHTw5T87?g_st=ipc" target="_blank" class="pointer-events-auto w-12 h-12 rounded-2xl bg-app-green text-white shadow-lg flex items-center justify-center hover:scale-110 transition tooltip" title="Bản đồ">
+               <i class="ph-fill ph-map-pin text-xl"></i>
+           </a>
+           <a href="https://zalo.me/0845622012" target="_blank" class="pointer-events-auto w-12 h-12 rounded-2xl bg-blue-500 text-white shadow-lg flex items-center justify-center hover:scale-110 transition tooltip" title="Chat Zalo">
+               <span class="font-bold text-[10px]">Zalo</span>
+           </a>
+       </div>
+       
+       <button onclick="toggleQuickCall()" aria-label="Menu gọi nhanh" class="pointer-events-auto w-16 h-16 rounded-[24px] bg-gradient-to-br from-fb-blue to-blue-600 text-white shadow-dock flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 group relative">
+           <i class="ph-fill ph-phone-call text-3xl group-[.active]:hidden"></i>
+           <i class="ph-bold ph-x text-2xl hidden group-[.active]:block"></i>
+           <span class="absolute inset-0 rounded-[24px] bg-fb-blue opacity-30 animate-ping pointer-events-none group-[.active]:hidden"></span>
+       </button>
+   </div>
 
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        const apiKey = ""; // API key will be injected here
-        let currentImageBase64 = null; // Store uploaded image
-        
-        // --- AI LOGIC START ---
-        
-        async function fetchGemini(payload, type = 'text') {
-            const resultDiv = document.getElementById('ai-result-container');
-            const contentDiv = document.getElementById('ai-content');
-            const loading = document.getElementById('ai-loading');
-            const ttsLoading = document.getElementById('tts-loading');
-            const imgContainer = document.getElementById('ai-generated-image-container');
-            const ttsBtn = document.getElementById('btn-tts');
-            
-            // Show UI states
-            if (type !== 'tts') {
-                resultDiv.classList.remove('hidden');
-                loading.classList.remove('hidden');
-                contentDiv.innerHTML = '';
-                imgContainer.classList.add('hidden');
-            } else {
-                ttsLoading.classList.remove('hidden');
-            }
-            
-            try {
-                let modelName, url;
-                
-                if (type === 'tts') {
-                    modelName = 'gemini-2.5-flash-preview-tts';
-                    url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
-                } else if (type === 'image') {
-                    modelName = 'imagen-3.0-generate-001';
-                    url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:predict?key=${apiKey}`;
-                } else {
-                    modelName = 'gemini-2.5-flash-preview-09-2025';
-                    url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
-                }
-                
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
+   <!-- JAVASCRIPT LOGIC -->
+   <script>
+       let currentImageBase64 = null; // Store uploaded image
+       
+       // --- SIMULATED AI LOGIC START ---
+       // (Thay thế hoàn toàn phần gọi API cũ bằng phần trả lời tự động)
+       
+       async function fetchGemini(payload, type = 'text') {
+           const resultDiv = document.getElementById('ai-result-container');
+           const contentDiv = document.getElementById('ai-content');
+           const loading = document.getElementById('ai-loading');
+           const ttsLoading = document.getElementById('tts-loading');
+           const imgContainer = document.getElementById('ai-generated-image-container');
+           const ttsBtn = document.getElementById('btn-tts');
+           
+           // Show UI states
+           if (type !== 'tts') {
+               resultDiv.classList.remove('hidden');
+               loading.classList.remove('hidden');
+               contentDiv.innerHTML = '';
+               imgContainer.classList.add('hidden');
+               ttsBtn.classList.add('hidden'); // Hide until loaded
+           } else {
+               ttsLoading.classList.remove('hidden');
+           }
+           
+           // SIMULATE DELAY (Giả lập mạng bị chậm 1.5 giây cho giống thật)
+           await new Promise(r => setTimeout(r, 1500));
 
-                const data = await response.json();
-                
-                if (data.error) {
-                    throw new Error(data.error.message);
-                }
+           try {
+               // MOCK RESPONSES (Câu trả lời giả lập)
+               if (type === 'tts') {
+                   // Sử dụng SpeechSynthesis của trình duyệt (Không cần API)
+                   const text = payload.contents[0].parts[0].text;
+                   if ('speechSynthesis' in window) {
+                       const utterance = new SpeechSynthesisUtterance(text);
+                       utterance.lang = 'vi-VN'; // Set Vietnamese
+                       utterance.rate = 1.0;
+                       window.speechSynthesis.speak(utterance);
+                   } else {
+                       alert("Trình duyệt không hỗ trợ đọc giọng nói.");
+                   }
+               }
+               else if (type === 'image') {
+                    // Mock Image: Sử dụng ảnh random từ LoremFlickr cho nội thất
+                    const roomType = document.getElementById('ai-design-room').value.toLowerCase().replace(' ', '');
+                    const randomId = Math.floor(Math.random() * 1000);
+                    const imageUrl = `https://loremflickr.com/800/600/interior,${roomType}/all?lock=${randomId}`;
+                   
+                    const img = document.getElementById('ai-generated-image');
+                    const dlLink = document.getElementById('ai-download-link');
+                   
+                    img.src = imageUrl;
+                    dlLink.href = imageUrl;
+                   
+                    imgContainer.classList.remove('hidden');
+                    contentDiv.innerHTML = '<span class="text-indigo-600 font-bold">Đây là bản thiết kế gợi ý (Mô phỏng) cho căn nhà của bạn:</span>';
+                    ttsBtn.classList.add('hidden');
+               }
+               else {
+                   // Handle Text Responses based on Payload content
+                   let text = "";
+                   const promptText = payload.contents[0].parts[0].text;
 
-                if (type === 'tts') {
-                    // Handle Audio Response
-                    const audioData = data.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
-                    if (audioData) {
-                        playAudioBase64(audioData);
-                    }
-                } else if (type === 'image') {
-                     // Handle Image Generation Response
-                     // Structure for Imagen: { predictions: [ { bytesBase64Encoded: "..." } ] }
-                     const imageBase64 = data.predictions?.[0]?.bytesBase64Encoded;
-                     if(imageBase64) {
-                         const img = document.getElementById('ai-generated-image');
-                         const dlLink = document.getElementById('ai-download-link');
-                         const src = `data:image/png;base64,${imageBase64}`;
-                         
-                         img.src = src;
-                         dlLink.href = src;
-                         
-                         imgContainer.classList.remove('hidden');
-                         contentDiv.innerHTML = '<span class="text-indigo-600 font-bold">Đây là bản thiết kế gợi ý từ AI cho căn nhà của bạn:</span>';
-                         ttsBtn.classList.add('hidden');
-                     }
+                   if (promptText.includes("Định giá")) {
+                       text = `<strong>Kết quả Định giá (AI Mô phỏng):</strong><br>
+                               Dựa trên dữ liệu thị trường Long Biên tháng 11/2025:<br>
+                               <ul>
+                                   <li><strong>Đơn giá ước tính:</strong> 110 - 125 triệu/m²</li>
+                                   <li><strong>Tổng giá trị:</strong> Khoảng 4.8 - 5.2 Tỷ đồng</li>
+                                   <li><strong>Nhận định:</strong> Giá đang tăng nhẹ 5% so với đầu năm do quy hoạch cầu Trần Hưng Đạo.</li>
+                                   <li><strong>Khuyên dùng:</strong> Nên bán trước Tết để được giá tốt nhất.</li>
+                               </ul>`;
+                   }
+                   else if (promptText.includes("Viết tin")) {
+                       text = `🔥 <strong>BÁN NHÀ LONG BIÊN - SIÊU PHẨM 2025</strong> 🔥<br><br>
+                               🏠 <strong>Thông tin:</strong> Nhà đẹp lung linh, thiết kế hiện đại, công năng tối ưu.<br>
+                               📍 <strong>Vị trí đắc địa:</strong> Ngõ thông, ô tô đỗ cửa, cách Aeon Mall chỉ 5 phút.<br>
+                               📕 <strong>Pháp lý:</strong> Sổ đỏ chính chủ, vuông vắn như tờ A4, sẵn sàng giao dịch.<br><br>
+                               💰 <strong>Giá chào:</strong> Nhỉnh 4 tỷ (Có thương lượng mạnh cho khách thiện chí).<br>
+                               📞 <strong>Liên hệ ngay:</strong> 0845 622 012 (Chính chủ) để ép giá!`;
+                   }
+                   else if (promptText.includes("hãy nhìn bức ảnh")) {
+                       text = `<strong>Phân tích ảnh (AI Vision):</strong><br>
+                               <ul>
+                                   <li><strong>Phong cách:</strong> Hiện đại, tối giản, tông màu sáng.</li>
+                                   <li><strong>Tình trạng:</strong> Nhà mới, sàn gỗ cao cấp, tường sơn đẹp không bong tróc.</li>
+                                   <li><strong>Điểm cộng:</strong> Cửa sổ lớn đón ánh sáng tự nhiên, không gian thoáng đãng.</li>
+                                   <li><strong>Từ khóa gợi ý:</strong> #NhaDepLongBien #FullNoiThat #VaoO_Ngay</li>
+                               </ul>`;
+                   }
+                   else {
+                       // Chatbot generic response
+                       text = `<strong>Trợ lý AI Long Biên trả lời:</strong><br>
+                               "${document.getElementById('ai-question').value}" là một câu hỏi hay.<br><br>
+                               Theo quy định hiện hành và kinh nghiệm thực tế tại Long Biên: Thủ tục này thường mất khoảng 15-20 ngày làm việc. Bạn cần chuẩn bị đủ CMND/CCCD, Sổ hộ khẩu, Giấy đăng ký kết hôn (nếu có) và Sổ đỏ bản gốc. Lệ phí sang tên khoảng 2.5% giá trị hợp đồng.`;
+                   }
+                   
+                   contentDiv.innerHTML = text;
+                   ttsBtn.classList.remove('hidden');
+               }
 
-                } else {
-                    // Handle Text Response
-                    let text = data.candidates?.[0]?.content?.parts?.[0]?.text || "Không nhận được phản hồi.";
-                    
-                    // Simple Markdown Parsing
-                    text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Bold
-                    text = text.replace(/\* (.*?)\n/g, '<li>$1</li>'); // List items
-                    text = text.replace(/\n/g, '<br>'); // Line breaks
-                    
-                    contentDiv.innerHTML = text;
-                    ttsBtn.classList.remove('hidden'); // Show TTS button only for text
-                }
+           } catch (error) {
+               console.error("AI Error:", error);
+               contentDiv.innerHTML = `<span class="text-red-500 font-bold">Lỗi giả lập. Vui lòng thử lại.</span>`;
+           } finally {
+               loading.classList.add('hidden');
+               ttsLoading.classList.add('hidden');
+           }
+       }
 
-            } catch (error) {
-                console.error("AI Error:", error);
-                if (type !== 'tts') {
-                    contentDiv.innerHTML = `<span class="text-red-500 font-bold">Lỗi kết nối AI. Vui lòng thử lại sau. (${error.message})</span>`;
-                } else {
-                    alert("Lỗi: " + error.message);
-                }
-            } finally {
-                loading.classList.add('hidden');
-                ttsLoading.classList.add('hidden');
-            }
-        }
+       // 1. Vision Logic (Phân Tích Ảnh)
+       function handleImageUpload(input) {
+           const file = input.files[0];
+           if (file) {
+               const reader = new FileReader();
+               reader.onload = function(e) {
+                   currentImageBase64 = e.target.result.split(',')[1]; // Get Base64 only
+                   const preview = document.getElementById('ai-image-preview');
+                   const img = preview.querySelector('img');
+                   const placeholder = document.getElementById('ai-image-placeholder');
+                   
+                   img.src = e.target.result;
+                   preview.classList.remove('hidden');
+                   placeholder.classList.add('hidden');
+                   
+                   document.getElementById('btn-vision').disabled = false;
+               };
+               reader.readAsDataURL(file);
+           }
+       }
 
-        // 1. Vision Logic (Phân Tích Ảnh)
-        function handleImageUpload(input) {
-            const file = input.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    currentImageBase64 = e.target.result.split(',')[1]; // Get Base64 only
-                    const preview = document.getElementById('ai-image-preview');
-                    const img = preview.querySelector('img');
-                    const placeholder = document.getElementById('ai-image-placeholder');
-                    
-                    img.src = e.target.result;
-                    preview.classList.remove('hidden');
-                    placeholder.classList.add('hidden');
-                    
-                    document.getElementById('btn-vision').disabled = false;
-                };
-                reader.readAsDataURL(file);
-            }
-        }
+       function callGeminiVision() {
+           // Simulated call
+           fetchGemini({ contents: [{ parts: [{ text: "hãy nhìn bức ảnh" }] }] }, 'text');
+       }
+       
+       // 2. Interior Design Logic (Image Generation)
+       function callGeminiDesign() {
+           fetchGemini({}, 'image');
+       }
 
-        function callGeminiVision() {
-            if (!currentImageBase64) return;
-            
-            const prompt = "Đóng vai chuyên gia bất động sản. Hãy nhìn bức ảnh này và: 1. Mô tả phong cách/tình trạng căn nhà. 2. Đánh giá ưu điểm nổi bật nhất. 3. Gợi ý 3 từ khóa đắt giá để đăng tin bán nhà này. Trả lời ngắn gọn, hấp dẫn.";
-            
-            const payload = {
-                contents: [{
-                    parts: [
-                        { text: prompt },
-                        { inlineData: { mimeType: "image/jpeg", data: currentImageBase64 } }
-                    ]
-                }]
-            };
-            
-            fetchGemini(payload, 'text');
-        }
-        
-        // 2. Interior Design Logic (Image Generation)
-        function callGeminiDesign() {
-            const room = document.getElementById('ai-design-room').value;
-            const style = document.getElementById('ai-design-style').value;
-            const details = document.getElementById('ai-design-prompt').value;
+       // 3. TTS Logic (Text-to-Speech)
+       function playTTS() {
+           const textContent = document.getElementById('ai-content').innerText;
+           if (!textContent) return;
+           // Simulated payload for TTS function
+           fetchGemini({ contents: [{ parts: [{ text: textContent }] }] }, 'tts');
+       }
+       
+       // Existing Tools Logic
+       function callGeminiPrice() {
+           const area = document.getElementById('ai-area').value;
+           const floors = document.getElementById('ai-floors').value;
+           const loc = document.getElementById('ai-location').value;
 
-            // Create a detailed prompt for better results
-            const prompt = `Photorealistic interior design of a ${room} in ${style} style. ${details}. High quality, 4k, architectural photography, soft lighting, cozy atmosphere.`;
-            
-            // Imagen Payload
-            const payload = {
-                instances: [{ prompt: prompt }],
-                parameters: { sampleCount: 1 }
-            };
-            
-            fetchGemini(payload, 'image');
-        }
+           if (!area || !floors) {
+               alert("Vui lòng nhập đủ thông tin diện tích và số tầng!");
+               return;
+           }
+           fetchGemini({ contents: [{ parts: [{ text: `Định giá ${area}m2` }] }] }, 'text');
+       }
 
-        // 3. TTS Logic (Text-to-Speech)
-        function playTTS() {
-            const textContent = document.getElementById('ai-content').innerText;
-            if (!textContent) return;
+       function callGeminiCopywriter() {
+           const features = document.getElementById('ai-copy-features').value;
 
-            // Shorten text if too long (TTS limit)
-            const textToSpeak = textContent.substring(0, 400); 
+           if (!features) {
+               alert("Vui lòng nhập điểm nổi bật hoặc giá!");
+               return;
+           }
+           fetchGemini({ contents: [{ parts: [{ text: "Viết tin đăng" }] }] }, 'text');
+       }
 
-            const payload = {
-                contents: [{ parts: [{ text: textToSpeak }] }],
-                generationConfig: {
-                    responseModalities: ["AUDIO"],
-                    speechConfig: {
-                        voiceConfig: {
-                            prebuiltVoiceConfig: { voiceName: "Aoede" } 
-                        }
-                    }
-                }
-            };
-            
-            fetchGemini(payload, 'tts');
-        }
-        
-        function playAudioBase64(base64String) {
-            const audioPlayer = document.getElementById('ai-audio-player');
-            audioPlayer.src = "data:audio/wav;base64," + base64String;
-            audioPlayer.play();
-        }
+       function callGeminiChat() {
+           const question = document.getElementById('ai-question').value;
+           if (!question) { alert("Vui lòng nhập câu hỏi!"); return; }
+           fetchGemini({ contents: [{ parts: [{ text: "Chatbot" }] }] }, 'text');
+       }
 
-        // Existing Tools Logic
-        function callGeminiPrice() {
-            const area = document.getElementById('ai-area').value;
-            const floors = document.getElementById('ai-floors').value;
-            const loc = document.getElementById('ai-location').value;
+       function copyAiResult() {
+           const content = document.getElementById('ai-content').innerText;
+           navigator.clipboard.writeText(content).then(() => {
+               alert("Đã sao chép nội dung!");
+           }).catch(err => {
+               console.error('Không thể sao chép: ', err);
+           });
+       }
 
-            if (!area || !floors) {
-                alert("Vui lòng nhập đủ thông tin diện tích và số tầng!");
-                return;
-            }
+       function switchAiTab(tab) {
+           const tabs = ['price', 'copywriter', 'vision', 'chat', 'design'];
+           const resultDiv = document.getElementById('ai-result-container');
+           
+           // Hide result when switching
+           resultDiv.classList.add('hidden');
 
-            const prompt = `Đóng vai chuyên gia bất động sản Long Biên, Hà Nội. Định giá sơ bộ: Diện tích ${area}m2, ${floors} tầng, vị trí ${loc}. 1. Khoảng giá. 2. Ưu/nhược điểm. 3. Lời khuyên bán nhanh.`;
+           tabs.forEach(t => {
+               const btn = document.getElementById(`tab-${t}`);
+               const tool = document.getElementById(`tool-${t}`);
+               
+               if (t === tab) {
+                   // Active State
+                   btn.classList.add('bg-white', 'dark:bg-gray-800', 'shadow-sm', 'text-purple-600');
+                   btn.classList.remove('text-gray-500', 'hover:text-gray-700', 'dark:hover:text-gray-300');
+                   tool.classList.remove('hidden');
+               } else {
+                   // Inactive State
+                   btn.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow-sm', 'text-purple-600');
+                   btn.classList.add('text-gray-500', 'hover:text-gray-700', 'dark:hover:text-gray-300');
+                   tool.classList.add('hidden');
+               }
+           });
+       }
 
-            fetchGemini({ contents: [{ parts: [{ text: prompt }] }] }, 'text');
-        }
+       // --- SIMULATED AI LOGIC END ---
 
-        function callGeminiCopywriter() {
-            const type = document.getElementById('ai-copy-type').value;
-            const features = document.getElementById('ai-copy-features').value;
+       document.addEventListener('DOMContentLoaded', () => {
+           // 1. AI Time Logic
+           function checkTime() {
+               const now = new Date();
+               const h = now.getHours();
+               const statusEl = document.getElementById('ai-status');
+               if(!statusEl) return;
+               
+               const isOpen = h >= 8 && h < 20;
 
-            if (!features) {
-                alert("Vui lòng nhập điểm nổi bật hoặc giá!");
-                return;
-            }
+               if (isOpen) {
+                   statusEl.innerHTML = '<span class="text-app-green font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-app-green animate-pulse"></span> Đang mở cửa</span>';
+               } else {
+                   statusEl.innerHTML = '<span class="text-app-red font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-app-red"></span> Đã đóng cửa</span>';
+               }
+           }
+           setInterval(checkTime, 60000);
+           checkTime();
 
-            const prompt = `Viết tin đăng bán nhà Facebook hấp dẫn (có icon) cho: ${type}, đặc điểm: ${features}. Kêu gọi gọi 0845 622 012.`;
+           // 2. Dark Mode Toggle
+           const html = document.documentElement;
+           const themeBtn = document.getElementById('theme-btn');
 
-            fetchGemini({ contents: [{ parts: [{ text: prompt }] }] }, 'text');
-        }
+           // Khôi phục cài đặt từ localStorage nếu có
+           if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+               html.classList.add('dark');
+           } else {
+               html.classList.remove('dark');
+           }
+           updateThemeIcon();
 
-        function callGeminiChat() {
-            const question = document.getElementById('ai-question').value;
-            if (!question) { alert("Vui lòng nhập câu hỏi!"); return; }
-            const prompt = `Trả lời ngắn gọn câu hỏi BĐS/Phong thủy: "${question}".`;
-            fetchGemini({ contents: [{ parts: [{ text: prompt }] }] }, 'text');
-        }
+           themeBtn.addEventListener('click', () => {
+               html.classList.toggle('dark');
+               // Lưu preference
+               localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+               updateThemeIcon();
+           });
 
-        function copyAiResult() {
-            const content = document.getElementById('ai-content').innerText;
-            navigator.clipboard.writeText(content).then(() => {
-                alert("Đã sao chép nội dung!");
-            }).catch(err => {
-                console.error('Không thể sao chép: ', err);
-            });
-        }
+           function updateThemeIcon() {
+               if (html.classList.contains('dark')) {
+                   themeBtn.innerHTML = '<i class="ph-bold ph-sun text-app-orange text-xl"></i>';
+               } else {
+                   themeBtn.innerHTML = '<i class="ph-bold ph-moon text-xl"></i>';
+               }
+           }
 
-        function switchAiTab(tab) {
-            const tabs = ['price', 'copywriter', 'vision', 'chat', 'design'];
-            const resultDiv = document.getElementById('ai-result-container');
-            
-            // Hide result when switching
-            resultDiv.classList.add('hidden');
+           // 3. Header Scroll Effect
+           const header = document.getElementById('main-header');
+           if (window.scrollY < 20) {
+                header.classList.add('rounded-full', 'transparent-header');
+                header.classList.remove('rounded-[24px]', 'glass-header');
+           }
 
-            tabs.forEach(t => {
-                const btn = document.getElementById(`tab-${t}`);
-                const tool = document.getElementById(`tool-${t}`);
-                
-                if (t === tab) {
-                    // Active State
-                    btn.classList.add('bg-white', 'dark:bg-gray-800', 'shadow-sm', 'text-purple-600');
-                    btn.classList.remove('text-gray-500', 'hover:text-gray-700', 'dark:hover:text-gray-300');
-                    tool.classList.remove('hidden');
-                } else {
-                    // Inactive State
-                    btn.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow-sm', 'text-purple-600');
-                    btn.classList.add('text-gray-500', 'hover:text-gray-700', 'dark:hover:text-gray-300');
-                    tool.classList.add('hidden');
-                }
-            });
-        }
+           window.addEventListener('scroll', () => {
+               if (window.scrollY > 20) {
+                   header.classList.remove('rounded-full', 'transparent-header');
+                   header.classList.add('rounded-[24px]', 'glass-header');
+               } else {
+                   header.classList.add('rounded-full', 'transparent-header');
+                   header.classList.remove('rounded-[24px]', 'glass-header');
+               }
+           });
+       });
 
-        // --- AI LOGIC END ---
+       // Functions outside DOMContentLoaded for onclick attributes
+       function toggleMenu() {
+           const menu = document.getElementById('ultra-menu');
+           const backdrop = document.getElementById('menu-backdrop');
+           
+           const isClosed = menu.classList.contains('translate-y-full');
+           
+           if (isClosed) {
+               menu.classList.remove('translate-y-full');
+               backdrop.classList.remove('hidden');
+               setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+               document.body.style.overflow = 'hidden';
+           } else {
+               menu.classList.add('translate-y-full');
+               backdrop.classList.add('opacity-0');
+               setTimeout(() => backdrop.classList.add('hidden'), 300);
+               document.body.style.overflow = '';
+           }
+       }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. AI Time Logic
-            function checkTime() {
-                const now = new Date();
-                const h = now.getHours();
-                const statusEl = document.getElementById('ai-status');
-                if(!statusEl) return;
-                
-                const isOpen = h >= 8 && h < 20;
-
-                if (isOpen) {
-                    statusEl.innerHTML = '<span class="text-app-green font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-app-green animate-pulse"></span> Đang mở cửa</span>';
-                } else {
-                    statusEl.innerHTML = '<span class="text-app-red font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-app-red"></span> Đã đóng cửa</span>';
-                }
-            }
-            setInterval(checkTime, 60000);
-            checkTime();
-
-            // 2. Dark Mode Toggle
-            const html = document.documentElement;
-            const themeBtn = document.getElementById('theme-btn');
-
-            // Khôi phục cài đặt từ localStorage nếu có
-            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                html.classList.add('dark');
-            } else {
-                html.classList.remove('dark');
-            }
-            updateThemeIcon();
-
-            themeBtn.addEventListener('click', () => {
-                html.classList.toggle('dark');
-                // Lưu preference
-                localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
-                updateThemeIcon();
-            });
-
-            function updateThemeIcon() {
-                if (html.classList.contains('dark')) {
-                    themeBtn.innerHTML = '<i class="ph-bold ph-sun text-app-orange text-xl"></i>';
-                } else {
-                    themeBtn.innerHTML = '<i class="ph-bold ph-moon text-xl"></i>';
-                }
-            }
-
-            // 3. Header Scroll Effect
-            const header = document.getElementById('main-header');
-            if (window.scrollY < 20) {
-                 header.classList.add('rounded-full', 'transparent-header');
-                 header.classList.remove('rounded-[24px]', 'glass-header');
-            }
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    header.classList.remove('rounded-full', 'transparent-header');
-                    header.classList.add('rounded-[24px]', 'glass-header');
-                } else {
-                    header.classList.add('rounded-full', 'transparent-header');
-                    header.classList.remove('rounded-[24px]', 'glass-header');
-                }
-            });
-        });
-
-        // Functions outside DOMContentLoaded for onclick attributes
-        function toggleMenu() {
-            const menu = document.getElementById('ultra-menu');
-            const backdrop = document.getElementById('menu-backdrop');
-            
-            const isClosed = menu.classList.contains('translate-y-full');
-            
-            if (isClosed) {
-                menu.classList.remove('translate-y-full');
-                backdrop.classList.remove('hidden');
-                setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
-                document.body.style.overflow = 'hidden'; 
-            } else {
-                menu.classList.add('translate-y-full');
-                backdrop.classList.add('opacity-0');
-                setTimeout(() => backdrop.classList.add('hidden'), 300);
-                document.body.style.overflow = '';
-            }
-        }
-
-        function toggleQuickCall() {
-            const actions = document.getElementById('quick-actions');
-            const btn = document.querySelector('button[onclick="toggleQuickCall()"]');
-            
-            btn.classList.toggle('active');
-            
-            if (btn.classList.contains('active')) {
-                actions.classList.remove('opacity-0', 'translate-y-10', 'scale-90');
-                actions.classList.add('pointer-events-auto');
-            } else {
-                actions.classList.add('opacity-0', 'translate-y-10', 'scale-90');
-                actions.classList.remove('pointer-events-auto');
-            }
-        }
-    </script>
+       function toggleQuickCall() {
+           const actions = document.getElementById('quick-actions');
+           const btn = document.querySelector('button[onclick="toggleQuickCall()"]');
+           
+           btn.classList.toggle('active');
+           
+           if (btn.classList.contains('active')) {
+               actions.classList.remove('opacity-0', 'translate-y-10', 'scale-90');
+               actions.classList.add('pointer-events-auto');
+           } else {
+               actions.classList.add('opacity-0', 'translate-y-10', 'scale-90');
+               actions.classList.remove('pointer-events-auto');
+           }
+       }
+   </script>
 </body>
 </html>
