@@ -170,7 +170,12 @@
                    <div class="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-gray-700 text-indigo-600 flex items-center justify-center text-2xl shadow-sm border border-indigo-100 dark:border-white/5 group-hover:bg-indigo-100"><i class="ph-fill ph-question"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Hỏi đáp</span>
                </a>
-               <!-- Menu Item 8 -->
+               <!-- Menu Item 8 (New: Điều khoản) -->
+               <a href="#dieukhoan" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
+                   <div class="w-14 h-14 rounded-2xl bg-teal-50 dark:bg-gray-700 text-teal-600 flex items-center justify-center text-2xl shadow-sm border border-teal-100 dark:border-white/5 group-hover:bg-teal-100"><i class="ph-fill ph-file-text"></i></div>
+                   <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Điều khoản</span>
+               </a>
+               <!-- Menu Item 9 (Liên hệ - pushed to end) -->
                <a href="#lienhe" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-400 flex items-center justify-center text-2xl shadow-sm border border-gray-100 dark:border-white/5 group-hover:bg-gray-200"><i class="ph-fill ph-phone-call"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Liên hệ</span>
@@ -335,81 +340,171 @@
            </div>
        </section>
 
-       <!-- BUYING PROCESS -->
+       <!-- BUYING PROCESS (Updated: 5 Steps) -->
        <section id="quytrinh" class="relative overflow-hidden scroll-mt-28">
            <h2 class="text-xl font-bold mb-6 text-center">Quy Trình Mua Nhà An Toàn</h2>
-           <div class="relative flex flex-col md:flex-row justify-between gap-4">
-               <div class="flex-1 bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-fb-blue relative">
-                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-fb-blue text-white flex items-center justify-center font-bold text-sm">1</div><h3 class="font-bold text-sm mb-1">Tư vấn nhu cầu</h3><p class="text-xs text-gray-500">Xác định tài chính, khu vực và tiêu chí nhà ở.</p>
+           <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+               <!-- Step 1 -->
+               <div class="bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-fb-blue relative">
+                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-fb-blue text-white flex items-center justify-center font-bold text-sm">1</div><h3 class="font-bold text-sm mb-1">Tư vấn</h3><p class="text-[11px] text-gray-500">Xác định tài chính, khu vực và tiêu chí.</p>
                </div>
-               <div class="flex-1 bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-purple-500 relative">
-                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-sm">2</div><h3 class="font-bold text-sm mb-1">Xem thực tế</h3><p class="text-xs text-gray-500">Khảo sát nhà, check quy hoạch, xem sổ đỏ gốc.</p>
+               <!-- Step 2 -->
+               <div class="bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-purple-500 relative">
+                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-sm">2</div><h3 class="font-bold text-sm mb-1">Xem nhà</h3><p class="text-[11px] text-gray-500">Khảo sát thực tế, check quy hoạch.</p>
                </div>
-               <div class="flex-1 bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-app-green relative">
-                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-app-green text-white flex items-center justify-center font-bold text-sm">3</div><h3 class="font-bold text-sm mb-1">Chốt cọc & Sang tên</h3><p class="text-xs text-gray-500">Hỗ trợ công chứng, sang tên sổ đỏ trọn gói.</p>
+               <!-- Step 3 -->
+               <div class="bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-orange-500 relative">
+                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">3</div><h3 class="font-bold text-sm mb-1">Đặt cọc</h3><p class="text-[11px] text-gray-500">Ký hợp đồng cọc với chính chủ.</p>
+               </div>
+                <!-- Step 4 -->
+               <div class="bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-teal-500 relative">
+                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold text-sm">4</div><h3 class="font-bold text-sm mb-1">Công chứng</h3><p class="text-[11px] text-gray-500">Thanh toán nốt tiền, ký HĐMB.</p>
+               </div>
+                <!-- Step 5 -->
+               <div class="bg-white dark:bg-app-darkCard p-5 rounded-2xl shadow-sm border-l-4 border-app-green relative">
+                   <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-app-green text-white flex items-center justify-center font-bold text-sm">5</div><h3 class="font-bold text-sm mb-1">Bàn giao</h3><p class="text-[11px] text-gray-500">Nhận sổ đỏ và bàn giao nhà.</p>
                </div>
            </div>
        </section>
 
-       <!-- PRICING TABLE -->
+       <!-- PRICING TABLE (Updated: 5 Items) -->
        <section id="banggia" class="bg-app-card dark:bg-app-darkCard rounded-ultra shadow-ultra overflow-hidden scroll-mt-28">
            <div class="p-6 border-b border-gray-100 dark:border-white/5 flex items-center justify-between bg-gray-50/50 dark:bg-white/5"><h2 class="text-xl font-bold flex items-center gap-2"><i class="ph-fill ph-tag text-app-blue"></i> Bảng Giá Tham Khảo</h2><span class="text-[10px] font-bold bg-fb-blue text-white px-3 py-1 rounded-full uppercase tracking-wider">Update 2025</span></div>
            <div class="divide-y divide-gray-100 dark:divide-white/5">
+               <!-- Item 1 -->
                <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
-                   <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-900/40 text-fb-blue flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-house-simple"></i></div><div><h3 class="font-bold text-base text-gray-900 dark:text-white">Phân khúc Nhỏ</h3><p class="text-xs text-gray-500 font-medium">30m² - 45m² • Ngõ nhỏ</p></div></div>
-                   <div class="text-right"><span class="block font-bold text-fb-blue text-lg">~ 2 - 3 Tỷ</span><span class="text-[10px] text-gray-400">Sổ đỏ riêng</span></div>
+                   <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-900/40 text-fb-blue flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-house-simple"></i></div><div><h3 class="font-bold text-base text-gray-900 dark:text-white">Phân khúc Nhỏ</h3><p class="text-xs text-gray-500 font-medium">30m² - 35m² • Ngõ nhỏ</p></div></div>
+                   <div class="text-right"><span class="block font-bold text-fb-blue text-lg">~ 3 Tỷ</span><span class="text-[10px] text-gray-400">Sổ đỏ riêng</span></div>
                </div>
+               <!-- Item 2 -->
                <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
-                   <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900/40 text-app-orange flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-car"></i></div><div><h3 class="font-bold text-base text-gray-900 dark:text-white">Phân khúc Vừa</h3><p class="text-xs text-gray-500 font-medium">45m² - 60m² • Ô tô đỗ gần</p></div></div>
-                   <div class="text-right"><span class="block font-bold text-fb-blue text-lg">3 - 5 Tỷ</span><span class="text-[10px] text-gray-400">Giao dịch nhanh</span></div>
+                   <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900/40 text-app-orange flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-scooter"></i></div><div><h3 class="font-bold text-base text-gray-900 dark:text-white">Ngõ Nông, Rộng</h3><p class="text-xs text-gray-500 font-medium">35m² - 45m² • Xe máy tránh</p></div></div>
+                   <div class="text-right"><span class="block font-bold text-fb-blue text-lg">3.5 - 5 Tỷ</span><span class="text-[10px] text-gray-400">Thanh khoản nhanh</span></div>
+               </div>
+               <!-- Item 3 -->
+               <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
+                   <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-900/40 text-purple-600 flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-car"></i></div><div><h3 class="font-bold text-base text-gray-900 dark:text-white">Ô Tô Đỗ Cửa</h3><p class="text-xs text-gray-500 font-medium">45m² - 60m² • Ngõ thông</p></div></div>
+                   <div class="text-right"><span class="block font-bold text-fb-blue text-lg">5 - 7 Tỷ</span><span class="text-[10px] text-gray-400">Giao dịch nhiều</span></div>
+               </div>
+               <!-- Item 4 -->
+               <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
+                   <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-900/40 text-app-red flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-garage"></i></div><div><h3 class="font-bold text-base text-gray-900 dark:text-white">Gara Ô Tô, Thang Máy</h3><p class="text-xs text-gray-500 font-medium">50m² - 80m² • Nhà mới đẹp</p></div></div>
+                   <div class="text-right"><span class="block font-bold text-fb-blue text-lg">7 - 12 Tỷ</span><span class="text-[10px] text-gray-400">Ở sướng</span></div>
+               </div>
+               <!-- Item 5 -->
+               <div class="p-5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition cursor-pointer group">
+                   <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-teal-100 dark:bg-teal-900/40 text-teal-600 flex items-center justify-center text-xl group-hover:scale-110 transition"><i class="ph-fill ph-buildings"></i></div><div><h3 class="font-bold text-base text-gray-900 dark:text-white">Mặt Phố, Biệt Thự</h3><p class="text-xs text-gray-500 font-medium">Kinh doanh, View sông</p></div></div>
+                   <div class="text-right"><span class="block font-bold text-fb-blue text-lg">15 - 50 Tỷ+</span><span class="text-[10px] text-gray-400">Đẳng cấp</span></div>
                </div>
            </div>
        </section>
 
-       <!-- REVIEWS -->
+       <!-- REVIEWS (Updated: 5 Reviews) -->
        <section class="grid md:grid-cols-2 gap-4">
-           <div class="bg-gradient-to-br from-gray-900 to-black text-white p-6 rounded-ultra shadow-lg">
+           <!-- Review 1 -->
+           <div class="bg-gradient-to-br from-gray-900 to-black text-white p-6 rounded-ultra shadow-lg md:col-span-2">
                <div class="flex items-center gap-2 text-app-orange mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
                <p class="text-sm font-medium italic mb-4">"Mua nhà lần đầu nên mình rất lo về pháp lý. May nhờ chị Tân hỗ trợ check quy hoạch và đàm phán giá tốt với chủ nhà. Giờ gia đình đã an cư lạc nghiệp."</p>
                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center font-bold">A.H</div><div><span class="block font-bold text-sm">Anh Hùng</span><span class="text-[10px] text-gray-400">Mua nhà ngõ 66 Ngọc Lâm</span></div></div>
            </div>
-            <div class="bg-white dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra border border-gray-100 dark:border-white/5">
+           <!-- Review 2 -->
+           <div class="bg-white dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra border border-gray-100 dark:border-white/5">
                <div class="flex items-center gap-2 text-app-orange mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
                <p class="text-sm font-medium italic text-gray-600 dark:text-gray-300 mb-4">"Dịch vụ chuyên nghiệp, kho nhà phong phú. Mình tìm nhà ô tô vào mà 3 ngày đã chốt được căn ưng ý. Rất recommend!"</p>
                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-blue-100 text-fb-blue flex items-center justify-center font-bold">C.M</div><div><span class="block font-bold text-sm text-gray-900 dark:text-white">Chị Mai</span><span class="text-[10px] text-gray-500">Mua nhà Bồ Đề</span></div></div>
            </div>
+           <!-- Review 3 (Added) -->
+           <div class="bg-white dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra border border-gray-100 dark:border-white/5">
+               <div class="flex items-center gap-2 text-app-orange mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+               <p class="text-sm font-medium italic text-gray-600 dark:text-gray-300 mb-4">"Nhiệt tình, dẫn đi xem cả chục căn không ngại nắng mưa. Cuối cùng chốt được căn Thạch Bàn giá quá hợp lý."</p>
+               <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-green-100 text-app-green flex items-center justify-center font-bold">A.T</div><div><span class="block font-bold text-sm text-gray-900 dark:text-white">Anh Tuấn</span><span class="text-[10px] text-gray-500">Mua nhà Thạch Bàn</span></div></div>
+           </div>
+           <!-- Review 4 (Added) -->
+           <div class="bg-white dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra border border-gray-100 dark:border-white/5">
+               <div class="flex items-center gap-2 text-app-orange mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+               <p class="text-sm font-medium italic text-gray-600 dark:text-gray-300 mb-4">"Chị Tân làm việc rất có tâm, tư vấn pháp lý rõ ràng. Mình bán nhà cũ mua nhà mới đều qua tay chị ấy lo liệu hết."</p>
+               <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">C.L</div><div><span class="block font-bold text-sm text-gray-900 dark:text-white">Cô Lan</span><span class="text-[10px] text-gray-500">Khách hàng cũ</span></div></div>
+           </div>
+           <!-- Review 5 (Added) -->
+           <div class="bg-white dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra border border-gray-100 dark:border-white/5">
+               <div class="flex items-center gap-2 text-app-orange mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+               <p class="text-sm font-medium italic text-gray-600 dark:text-gray-300 mb-4">"Đầu tư đất nền Long Biên năm ngoái theo lời khuyên của team, năm nay lãi tốt. Sẽ tiếp tục ủng hộ."</p>
+               <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-red-100 text-app-red flex items-center justify-center font-bold">A.K</div><div><span class="block font-bold text-sm text-gray-900 dark:text-white">Anh Kiên</span><span class="text-[10px] text-gray-500">Nhà đầu tư</span></div></div>
+           </div>
        </section>
 
-       <!-- FENG SHUI -->
+       <!-- FENG SHUI (Updated: 6 items) -->
        <section id="phongthuy" class="bg-orange-50 dark:bg-orange-900/10 rounded-ultra p-6 border border-orange-100 dark:border-orange-500/20 scroll-mt-28">
            <h2 class="text-xl font-bold mb-3 flex items-center gap-2 text-orange-700 dark:text-orange-400"><i class="ph-fill ph-yin-yang"></i> Góc Phong Thủy</h2>
-           <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">Khi <strong>mua nhà đất Long Biên</strong>, ngoài giá cả, quý khách nên lưu ý hướng nhà hợp mệnh:</p>
-           <ul class="grid grid-cols-2 gap-2 text-xs font-bold text-gray-600 dark:text-gray-400">
+           <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Khi <strong>mua nhà đất Long Biên</strong>, ngoài giá cả, quý khách nên lưu ý các yếu tố sau:</p>
+           <ul class="grid grid-cols-2 gap-y-3 gap-x-2 text-xs font-bold text-gray-600 dark:text-gray-400">
                <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-app-red"></span> Đông Tứ Trạch: Bắc, Nam, Đông, ĐN</li>
                <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-gray-500"></span> Tây Tứ Trạch: Tây, TB, TN, ĐB</li>
+               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Hướng bếp: "Tọa hung hướng cát"</li>
+               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500"></span> Ban thờ: Tránh nhìn thẳng ra cửa</li>
+               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-purple-500"></span> Màu sắc: Chọn màu tương sinh mệnh</li>
+               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span> Vị trí giường: Tránh xà ngang đè</li>
            </ul>
        </section>
 
-       <!-- FAQ & POLICY -->
-       <section class="grid md:grid-cols-2 gap-6">
+       <!-- FAQ & POLICY (Updated) -->
+       <div class="grid md:grid-cols-2 gap-6">
            <div id="faq" class="space-y-4 scroll-mt-28">
                <h2 class="font-bold text-xl ml-2 mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-purple-500"></i> Hỏi Đáp (FAQ)</h2>
+               
+               <!-- FAQ 1 -->
                <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
                    <summary class="flex justify-between items-center list-none font-bold text-sm">Làm sao để xem nhà?<i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i></summary>
                    <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">Bạn chỉ cần gọi trực tiếp <a href="tel:0845622012" class="font-bold text-fb-blue">0845 622 012</a> trước 30 phút. Chúng tôi sẽ dẫn bạn đi xem miễn phí.</div>
                </details>
+               <!-- FAQ 2 -->
                <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
                    <summary class="flex justify-between items-center list-none font-bold text-sm">Phí môi giới là bao nhiêu?<i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i></summary>
                    <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">Với người mua, chúng tôi <strong>MIỄN PHÍ 100%</strong>. Bạn làm việc giá cả trực tiếp với chủ nhà.</div>
                </details>
+               <!-- FAQ 3 (Added) -->
+               <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
+                   <summary class="flex justify-between items-center list-none font-bold text-sm">Có hỗ trợ vay vốn không?<i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i></summary>
+                   <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">Có. Chúng tôi liên kết với các ngân hàng lớn (Vietcombank, Techcombank...) hỗ trợ vay tới 70% giá trị nhà.</div>
+               </details>
+               <!-- FAQ 4 (Added) -->
+               <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
+                   <summary class="flex justify-between items-center list-none font-bold text-sm">Thủ tục sang tên mất bao lâu?<i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i></summary>
+                   <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">Thông thường quy trình sang tên sổ đỏ tại Long Biên mất khoảng 15-20 ngày làm việc kể từ khi nộp hồ sơ.</div>
+               </details>
+               <!-- FAQ 5 (Added) -->
+               <details class="bg-app-card dark:bg-app-darkCard p-5 rounded-3xl shadow-ultra cursor-pointer group">
+                   <summary class="flex justify-between items-center list-none font-bold text-sm">Nhà có dính quy hoạch không?<i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-gray-400"></i></summary>
+                   <div class="pt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 mt-3">Tất cả nhà trước khi bán đều được chúng tôi kiểm tra quy hoạch sơ bộ. Tuy nhiên, khách hàng nên check lại lần cuối để an tâm tuyệt đối.</div>
+               </details>
            </div>
+           
+           <!-- POLICY (Updated: 9 Items) -->
            <div id="chinhsach" class="bg-gradient-to-br from-fb-blue to-blue-700 rounded-ultra shadow-ultra p-6 text-white relative overflow-hidden">
                <i class="ph-duotone ph-shield-check absolute -bottom-6 -right-6 text-[140px] opacity-10 rotate-12"></i>
-               <h2 class="font-bold text-xl mb-4 flex items-center gap-2"><i class="ph-fill ph-shield-check"></i> Chính Sách</h2>
-               <ul class="space-y-4 relative z-10">
-                   <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div><span class="text-sm font-medium opacity-90">Bảo mật tuyệt đối thông tin khách hàng.</span></li>
-                   <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-xs"></i></div><span class="text-sm font-medium opacity-90">Hỗ trợ kiểm tra quy hoạch, pháp lý miễn phí.</span></li>
+               <h2 class="font-bold text-xl mb-4 flex items-center gap-2"><i class="ph-fill ph-shield-check"></i> Chính Sách & Cam Kết</h2>
+               <ul class="space-y-3 relative z-10">
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Bảo mật tuyệt đối thông tin khách hàng.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Hỗ trợ kiểm tra quy hoạch, pháp lý miễn phí.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Không thu phí người mua dưới mọi hình thức.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Giá cả đàm phán trực tiếp với chủ nhà.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Không cài cắm, chênh giá.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Hỗ trợ thủ tục công chứng, sang tên trọn gói.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Tư vấn vay vốn ngân hàng lãi suất tốt nhất.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Nguồn hàng thật, thông tin thật, ảnh thật.</span></li>
+                   <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="ph-bold ph-check text-[10px]"></i></div><span class="text-xs font-medium opacity-90">Hỗ trợ tư vấn phong thủy cơ bản.</span></li>
                </ul>
+           </div>
+       </div>
+
+       <!-- NEW SECTION: TERMS OF USE -->
+       <section id="dieukhoan" class="bg-white dark:bg-app-darkCard p-6 rounded-ultra shadow-ultra border border-gray-100 dark:border-white/5 scroll-mt-28">
+           <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="ph-fill ph-file-text text-teal-600"></i> Điều Khoản Sử Dụng</h2>
+           <div class="prose dark:prose-invert max-w-none text-xs text-gray-500 dark:text-gray-400 space-y-3 text-justify">
+               <p><strong>1. Miễn trừ trách nhiệm:</strong> Các thông tin về giá cả, diện tích và tình trạng bất động sản trên website chỉ mang tính chất tham khảo tại thời điểm đăng tải. Giá trị thực tế có thể thay đổi tùy thuộc vào thị trường và quyết định của chủ nhà mà không cần báo trước.</p>
+               <p><strong>2. Quyền sở hữu trí tuệ:</strong> Hình ảnh, nội dung và các công cụ AI trên website thuộc quyền sở hữu của Nhà Đất Long Biên. Nghiêm cấm sao chép dưới mọi hình thức thương mại khi chưa có sự đồng ý.</p>
+               <p><strong>3. Bảo mật thông tin:</strong> Chúng tôi cam kết không chia sẻ số điện thoại và thông tin cá nhân của khách hàng cho bên thứ 3, trừ khi có yêu cầu của cơ quan pháp luật.</p>
+               <p><strong>4. Quy định đặt lịch:</strong> Khách hàng vui lòng liên hệ trước tối thiểu 30 phút để chúng tôi sắp xếp lịch mở cửa xem nhà. Chúng tôi có quyền từ chối phục vụ nếu phát hiện hành vi thiếu trung thực.</p>
            </div>
        </section>
 
@@ -457,7 +552,7 @@
                    <li><a href="#quytrinh" class="hover:text-white transition flex items-center gap-2"><i class="ph-fill ph-steps text-orange-500"></i> Quy trình mua</a></li>
                    <li><a href="#phongthuy" class="hover:text-white transition flex items-center gap-2"><i class="ph-fill ph-yin-yang text-yellow-500"></i> Phong thủy</a></li>
                    <li><a href="#faq" class="hover:text-white transition flex items-center gap-2"><i class="ph-fill ph-question text-indigo-500"></i> Hỏi đáp</a></li>
-                   <li><a href="#chinhsach" class="hover:text-white transition flex items-center gap-2"><i class="ph-fill ph-shield-check text-blue-500"></i> Chính sách</a></li>
+                   <li><a href="#dieukhoan" class="hover:text-white transition flex items-center gap-2"><i class="ph-fill ph-file-text text-teal-500"></i> Điều khoản sử dụng</a></li>
                </ul>
            </div>
 
