@@ -77,6 +77,7 @@
 
    <!-- External Libs -->
    <link rel="icon" href="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" type="image/png">
+   <!-- NOTE: For Production, replace this CDN with a local build using PostCSS/CLI to avoid FOUC and improve performance -->
    <script src="https://cdn.tailwindcss.com"></script>
    <script src="https://unpkg.com/@phosphor-icons/web"></script>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -97,7 +98,14 @@
                        'float': '0 10px 40px rgba(0, 122, 255, 0.25)',
                        'dock': '0 10px 30px rgba(0,0,0,0.2)'
                    },
-                   borderRadius: { 'ultra': '2rem', 'squircle': '1.25rem' }
+                   borderRadius: { 'ultra': '2rem', 'squircle': '1.25rem' },
+                   // Extend Z-Index for Stability System
+                   zIndex: {
+                       'dock': '30',    // Floating buttons
+                       'header': '40',  // Sticky header
+                       'overlay': '50', // Backdrops
+                       'modal': '60'    // Drawers/Modals
+                   }
                }
            }
        }
@@ -126,8 +134,8 @@
 </head>
 <body class="bg-app-bg dark:bg-black text-app-text dark:text-white transition-colors duration-300 min-h-screen pb-32 selection:bg-fb-blue selection:text-white">
 
-   <!-- HEADER -->
-   <header class="fixed top-0 left-0 w-full z-50 pointer-events-none pt-3 px-3">
+   <!-- HEADER: Z-Index 40 (Below Modal/Overlay, Above Dock) -->
+   <header class="fixed top-0 left-0 w-full z-40 pointer-events-none pt-3 px-3">
        <div class="max-w-6xl mx-auto rounded-full px-3 py-2.5 flex items-center justify-between pointer-events-auto transition-all duration-500 glass-header" id="main-header">
            <div class="flex items-center gap-3 pl-1 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                <div class="relative w-11 h-11 rounded-squircle overflow-hidden bg-gradient-to-br from-fb-blue to-blue-600 flex items-center justify-center text-white shadow-lg group-active:scale-95 transition">
@@ -159,9 +167,9 @@
        </div>
    </header>
 
-   <!-- MOBILE MENU (FULL DRAWER STYLE) -->
-   <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleMenu()"></div>
-   <div id="ultra-menu" class="fixed bottom-0 left-0 w-full bg-white dark:bg-[#1C1C1E] rounded-t-[32px] z-[70] transform translate-y-full transition-transform duration-500 shadow-2xl border-t border-white/10 max-h-[85vh] overflow-y-auto">
+   <!-- MOBILE MENU: Z-Index 50 & 60 (Highest Level) -->
+   <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="toggleMenu()"></div>
+   <div id="ultra-menu" class="fixed bottom-0 left-0 w-full bg-white dark:bg-[#1C1C1E] rounded-t-[32px] z-[60] transform translate-y-full transition-transform duration-500 shadow-2xl border-t border-white/10 max-h-[85vh] overflow-y-auto">
        <div class="sticky top-0 w-full flex justify-center pt-3 pb-2 bg-white dark:bg-[#1C1C1E] z-10" onclick="toggleMenu()">
            <div class="w-12 h-1.5 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
        </div>
@@ -628,10 +636,11 @@
            </div>
        </section>
 
-       <!-- MAP & CONTACT WIDGET -->
+       <!-- MAP & CONTACT WIDGET (FIXED MAP) -->
        <section id="lienhe" class="bg-app-card dark:bg-app-darkCard p-2 rounded-ultra shadow-ultra scroll-mt-28">
            <div class="relative w-full h-72 rounded-[24px] overflow-hidden bg-gray-100 group">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.649629683933!2d105.88582967599895!3d21.046695387158737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a96f1315053f%3A0x633519393355030!2zMTEyIE5ndXnhu4VuIFbEg24gQ-G7qywgTmfhu41jIEzDom0sIExvbmcgQmnDqm4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1709220000000!5m2!1svi!2s" class="w-full h-full border-0 grayscale hover:grayscale-0 transition duration-500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               <!-- Updated Iframe: 112 Nguyễn Văn Cừ, Bồ Đề -->
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.656561066066!2d105.88373337596856!3d21.04642498716766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a97190d6e24b%3A0x860340798363624e!2zMTEyIMSQLiBOZ3V54buFbiBWxINuIEPhu6ssIELhu5MgxJDDqiwgTG9uZyBCacOqbiwgSMOgIE7huqFpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1709220000000!5m2!1sen!2s" class="w-full h-full border-0 grayscale hover:grayscale-0 transition duration-500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                <!-- External Link Button for Map -->
                <a href="https://maps.app.goo.gl/c2CZGgz6fFbXWzDE7?g_st=ipc" target="_blank" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-gray-800 text-xs font-bold py-2 px-4 rounded-full shadow-lg hover:bg-fb-blue hover:text-white transition flex items-center gap-2">
                    <i class="ph-fill ph-map-pin"></i> Mở Google Maps Chỉ Đường
@@ -697,8 +706,8 @@
        </div>
    </footer>
 
-   <!-- QUICK CALL DOCK -->
-   <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
+   <!-- QUICK CALL DOCK: Z-Index 30 (Below Header & Menu) -->
+   <div class="fixed bottom-6 right-6 z-30 flex flex-col items-end gap-3 pointer-events-none">
        <div id="quick-actions" class="flex flex-col gap-3 transition-all duration-300 opacity-0 translate-y-10 scale-90 origin-bottom">
            <!-- Updated Map Link -->
            <a href="https://maps.app.goo.gl/c2CZGgz6fFbXWzDE7?g_st=ipc" target="_blank" class="pointer-events-auto w-12 h-12 rounded-2xl bg-app-green text-white shadow-lg flex items-center justify-center hover:scale-110 transition tooltip" title="Bản đồ chỉ đường"><i class="ph-fill ph-map-pin text-xl"></i></a>
@@ -713,6 +722,38 @@
    <!-- SCRIPT LOGIC -->
    <script>
        let currentImageBase64 = null;
+
+       // === SECURITY FIX: XSS PROTECTION ===
+       // Hàm này sẽ lọc bỏ các thẻ độc hại trước khi chèn vào DOM
+       function sanitizeHTML(str) {
+            const temp = document.createElement('div');
+            temp.innerHTML = str;
+            // Xóa thẻ script
+            const scripts = temp.getElementsByTagName('script');
+            for (let i = scripts.length - 1; i >= 0; i--) {
+                scripts[i].parentNode.removeChild(scripts[i]);
+            }
+            // Xóa thẻ iframe, object, embed
+            const dangerousTags = ['iframe', 'object', 'embed', 'form'];
+            dangerousTags.forEach(tag => {
+                const elements = temp.getElementsByTagName(tag);
+                for (let i = elements.length - 1; i >= 0; i--) {
+                    elements[i].parentNode.removeChild(elements[i]);
+                }
+            });
+            // Xóa các event handler (onclick, onmouseover...)
+            const allElements = temp.getElementsByTagName('*');
+            for (let i = 0; i < allElements.length; i++) {
+                const attrs = allElements[i].attributes;
+                for (let j = attrs.length - 1; j >= 0; j--) {
+                    if (attrs[j].name.startsWith('on')) {
+                        allElements[i].removeAttribute(attrs[j].name);
+                    }
+                }
+            }
+            return temp.innerHTML;
+       }
+
        async function fetchGemini(payload, type = 'text') {
            const resultDiv = document.getElementById('ai-result-container');
            const contentDiv = document.getElementById('ai-content');
@@ -740,7 +781,10 @@
                    else if (promptText.includes("Viết tin")) { text = `🔥 <strong>BÁN NHÀ LONG BIÊN - SIÊU PHẨM 2025</strong> 🔥<br><br>🏠 <strong>Thông tin:</strong> Nhà đẹp lung linh, thiết kế hiện đại, công năng tối ưu.<br>📍 <strong>Vị trí đắc địa:</strong> Ngõ thông, ô tô đỗ cửa, cách Aeon Mall chỉ 5 phút.<br>📕 <strong>Pháp lý:</strong> Sổ đỏ chính chủ, vuông vắn như tờ A4, sẵn sàng giao dịch.<br><br>💰 <strong>Giá chào:</strong> Nhỉnh 4 tỷ (Có thương lượng mạnh cho khách thiện chí).<br>📞 <strong>Liên hệ ngay:</strong> 0845 622 012 (Chính chủ) để ép giá!`; }
                    else if (promptText.includes("hãy nhìn bức ảnh")) { text = `<strong>Phân tích ảnh (AI Vision):</strong><br><ul><li><strong>Phong cách:</strong> Hiện đại, tối giản, tông màu sáng.</li><li><strong>Tình trạng:</strong> Nhà mới, sàn gỗ cao cấp, tường sơn đẹp không bong tróc.</li><li><strong>Điểm cộng:</strong> Cửa sổ lớn đón ánh sáng tự nhiên, không gian thoáng đãng.</li><li><strong>Từ khóa gợi ý:</strong> #NhaDepLongBien #FullNoiThat #VaoO_Ngay</li></ul>`; }
                    else { text = `<strong>Trợ lý AI Long Biên trả lời:</strong><br>"${document.getElementById('ai-question').value}" là một câu hỏi hay.<br><br>Theo quy định hiện hành và kinh nghiệm thực tế tại Long Biên: Thủ tục này thường mất khoảng 15-20 ngày làm việc. Bạn cần chuẩn bị đủ CMND/CCCD, Sổ hộ khẩu, Giấy đăng ký kết hôn (nếu có) và Sổ đỏ bản gốc. Lệ phí sang tên khoảng 2.5% giá trị hợp đồng.`; }
-                   contentDiv.innerHTML = text; ttsBtn.classList.remove('hidden');
+                   
+                   // APPLY SANITIZER HERE
+                   contentDiv.innerHTML = sanitizeHTML(text); 
+                   ttsBtn.classList.remove('hidden');
                }
            } catch (error) { console.error("AI Error:", error); contentDiv.innerHTML = `<span class="text-red-500 font-bold">Lỗi giả lập. Vui lòng thử lại.</span>`; } finally { loading.classList.add('hidden'); ttsLoading.classList.add('hidden'); }
        }
