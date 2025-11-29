@@ -32,7 +32,7 @@
    <meta property="twitter:description" content="Mua bán nhà đất Long Biên uy tín. Kho hàng phong phú, làm việc trực tiếp chủ nhà.">
    <meta property="twitter:image" content="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png">
 
-   <!-- Schema Markup JSON-LD -->
+   <!-- Schema Markup JSON-LD (UPDATED WITH SOCIAL LINKS) -->
    <script type="application/ld+json">
    {
      "@context": "https://schema.org",
@@ -43,7 +43,13 @@
      "url": "https://taihanoi.github.io/nhadatchinhchu/",
      "telephone": "0845622012",
      "sameAs": [
-        "https://www.facebook.com/nhadatlongbien0374966430/"
+        "https://m.facebook.com/nhadatlongbien0374966430/",
+        "https://www.pinterest.com/nhadatlongbienhanoi/",
+        "https://www.tiktok.com/@nhadatlongbienhanoi",
+        "https://x.com/longbiennha",
+        "https://www.youtube.com/channel/UCsK9eqNgsZjXj2Nx2qnqewg",
+        "https://www.instagram.com/nhadatlongbienhanoi/",
+        "https://www.linkedin.com/in/nhadatlomgbien"
      ],
      "priceRange": "3 tỷ - 50 tỷ",
      "address": {
@@ -78,7 +84,6 @@
 
    <!-- External Libs -->
    <link rel="icon" href="https://i.postimg.cc/T2cW9Yk6/IMG-5191.png" type="image/png">
-   <!-- NOTE: For Production, replace this CDN with a local build using PostCSS/CLI to avoid FOUC and improve performance -->
    <script src="https://cdn.tailwindcss.com"></script>
    <script src="https://unpkg.com/@phosphor-icons/web"></script>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -100,12 +105,11 @@
                        'dock': '0 10px 30px rgba(0,0,0,0.2)'
                    },
                    borderRadius: { 'ultra': '2rem', 'squircle': '1.25rem' },
-                   // Extend Z-Index for Stability System
                    zIndex: {
-                       'dock': '30',    // Floating buttons
-                       'header': '40',  // Sticky header
-                       'overlay': '50', // Backdrops
-                       'modal': '60'    // Drawers/Modals
+                       'dock': '30',
+                       'header': '40',
+                       'overlay': '50',
+                       'modal': '60'
                    }
                }
            }
@@ -119,14 +123,12 @@
        .dark .glass-header { background: rgba(28, 28, 30, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); }
        .transparent-header { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px); border: 1px solid transparent; box-shadow: none; }
        .dark .transparent-header { background: rgba(0, 0, 0, 0.3); }
-       /* Sound wave animation */
        .sound-wave span { display: inline-block; width: 3px; height: 10px; background-color: currentColor; border-radius: 2px; animation: sound 0.5s infinite alternate; }
        .sound-wave span:nth-child(2) { animation-delay: 0.1s; height: 15px; }
        .sound-wave span:nth-child(3) { animation-delay: 0.2s; height: 20px; }
        .sound-wave span:nth-child(4) { animation-delay: 0.3s; height: 15px; }
        @keyframes sound { 0% { transform: scaleY(0.5); } 100% { transform: scaleY(1.5); } }
        html { scroll-padding-top: 100px; }
-       /* AI Text Style */
        .ai-response strong { font-weight: 700; color: #007AFF; }
        .dark .ai-response strong { color: #0A84FF; }
        .ai-response ul { list-style-type: disc; padding-left: 1.2rem; margin: 0.5rem 0; }
@@ -135,10 +137,10 @@
 </head>
 <body class="bg-app-bg dark:bg-black text-app-text dark:text-white transition-colors duration-300 min-h-screen pb-32 selection:bg-fb-blue selection:text-white">
 
-   <!-- HEADER: Z-Index 40 (Below Modal/Overlay, Above Dock) -->
+   <!-- HEADER: UPDATED DESKTOP MENU -->
    <header class="fixed top-0 left-0 w-full z-40 pointer-events-none pt-3 px-3">
-       <div class="max-w-6xl mx-auto rounded-full px-3 py-2.5 flex items-center justify-between pointer-events-auto transition-all duration-500 glass-header" id="main-header">
-           <div class="flex items-center gap-3 pl-1 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+       <div class="max-w-7xl mx-auto rounded-full px-3 py-2.5 flex items-center justify-between pointer-events-auto transition-all duration-500 glass-header" id="main-header">
+           <div class="flex items-center gap-3 pl-1 cursor-pointer group flex-shrink-0" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                <div class="relative w-11 h-11 rounded-squircle overflow-hidden bg-gradient-to-br from-fb-blue to-blue-600 flex items-center justify-center text-white shadow-lg group-active:scale-95 transition">
                    <i class="ph-fill ph-house text-2xl"></i>
                    <div class="absolute bottom-0.5 right-0.5 w-3 h-3 bg-app-green border-2 border-white rounded-full animate-pulse"></div>
@@ -149,26 +151,31 @@
                </div>
            </div>
            
-           <!-- Desktop Nav -->
-           <nav class="hidden md:flex items-center bg-gray-100/80 dark:bg-white/10 rounded-full px-1.5 py-1.5 gap-1 backdrop-blur-sm">
-               <a href="#trangchu" class="px-4 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition text-gray-700 dark:text-gray-200">Trang chủ</a>
-               <a href="#aitools" class="px-4 py-2 rounded-full text-xs font-bold text-fb-blue bg-blue-50 hover:bg-blue-100 transition flex items-center gap-1"><i class="ph-fill ph-sparkle"></i> AI Tools</a>
-               <a href="#banggia" class="px-4 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200">Bảng giá</a>
-               <a href="#lienhe" class="px-4 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200">Liên hệ</a>
+           <!-- UPDATED Desktop Nav: Full Links for Laptop/Tablet -->
+           <nav class="hidden lg:flex items-center bg-gray-100/80 dark:bg-white/10 rounded-full px-2 py-1.5 gap-1 backdrop-blur-sm overflow-x-auto no-scrollbar max-w-[65%]">
+               <a href="#trangchu" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition text-gray-700 dark:text-gray-200 whitespace-nowrap">Trang chủ</a>
+               <a href="#aitools" class="px-3 py-2 rounded-full text-xs font-bold text-fb-blue bg-blue-50 hover:bg-blue-100 transition flex items-center gap-1 whitespace-nowrap"><i class="ph-fill ph-sparkle"></i> AI Tools</a>
+               <a href="#khuvuc" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200 whitespace-nowrap">Khu vực</a>
+               <a href="#banggia" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200 whitespace-nowrap">Bảng giá</a>
+               <a href="#quytrinh" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200 whitespace-nowrap">Quy trình</a>
+               <a href="#phongthuy" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200 whitespace-nowrap">Phong thủy</a>
+               <a href="#faq" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200 whitespace-nowrap">Hỏi đáp</a>
+               <a href="#dieukhoan" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200 whitespace-nowrap">Điều khoản</a>
+               <a href="#lienhe" class="px-3 py-2 rounded-full text-xs font-bold hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition opacity-70 hover:opacity-100 text-gray-700 dark:text-gray-200 whitespace-nowrap">Liên hệ</a>
            </nav>
            
-           <div class="flex items-center gap-2 pr-1">
+           <div class="flex items-center gap-2 pr-1 flex-shrink-0">
                <button id="theme-btn" aria-label="Chuyển chế độ tối" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center transition hover:bg-gray-200 dark:hover:bg-gray-700 active:scale-95">
                    <i class="ph-bold ph-moon text-lg"></i>
                </button>
-               <button onclick="toggleMenu()" aria-label="Menu" class="md:hidden w-10 h-10 rounded-full bg-fb-blue text-white flex items-center justify-center shadow-md active:scale-95 transition group">
+               <button onclick="toggleMenu()" aria-label="Menu" class="lg:hidden w-10 h-10 rounded-full bg-fb-blue text-white flex items-center justify-center shadow-md active:scale-95 transition group">
                    <i class="ph-bold ph-squares-four text-xl"></i>
                </button>
            </div>
        </div>
    </header>
 
-   <!-- MOBILE MENU: Z-Index 50 & 60 (Highest Level) -->
+   <!-- MOBILE MENU: Z-Index 50 & 60 -->
    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="toggleMenu()"></div>
    <div id="ultra-menu" class="fixed bottom-0 left-0 w-full bg-white dark:bg-[#1C1C1E] rounded-t-[32px] z-[60] transform translate-y-full transition-transform duration-500 shadow-2xl border-t border-white/10 max-h-[85vh] overflow-y-auto">
        <div class="sticky top-0 w-full flex justify-center pt-3 pb-2 bg-white dark:bg-[#1C1C1E] z-10" onclick="toggleMenu()">
@@ -178,47 +185,38 @@
        <div class="px-6 pb-8 pt-2">
            <h3 class="text-sm font-bold text-gray-400 mb-4 uppercase tracking-wider pl-1">Danh mục chính</h3>
            <div class="grid grid-cols-4 gap-y-6 gap-x-2">
-               <!-- Menu Item 1 -->
                <a href="#trangchu" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-gray-700 text-fb-blue flex items-center justify-center text-2xl shadow-sm border border-blue-100 dark:border-white/5 group-hover:bg-blue-100"><i class="ph-fill ph-house"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Trang chủ</span>
                </a>
-               <!-- Menu Item 2 -->
                <a href="#aitools" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-gray-700 text-purple-600 flex items-center justify-center text-2xl shadow-sm border border-purple-100 dark:border-white/5 group-hover:bg-purple-100"><i class="ph-fill ph-sparkle"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">AI Tools</span>
                </a>
-               <!-- Menu Item 3 -->
                <a href="#khuvuc" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-red-50 dark:bg-gray-700 text-app-red flex items-center justify-center text-2xl shadow-sm border border-red-100 dark:border-white/5 group-hover:bg-red-100"><i class="ph-fill ph-fire"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Khu vực</span>
                </a>
-               <!-- Menu Item 4 -->
                <a href="#banggia" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-green-50 dark:bg-gray-700 text-app-green flex items-center justify-center text-2xl shadow-sm border border-green-100 dark:border-white/5 group-hover:bg-green-100"><i class="ph-fill ph-tag"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Bảng giá</span>
                </a>
-               <!-- Menu Item 5 -->
                <a href="#quytrinh" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-gray-700 text-app-orange flex items-center justify-center text-2xl shadow-sm border border-orange-100 dark:border-white/5 group-hover:bg-orange-100"><i class="ph-fill ph-steps"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Quy trình</span>
                </a>
-               <!-- Menu Item 6 -->
                <a href="#phongthuy" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-yellow-50 dark:bg-gray-700 text-yellow-600 flex items-center justify-center text-2xl shadow-sm border border-yellow-100 dark:border-white/5 group-hover:bg-yellow-100"><i class="ph-fill ph-yin-yang"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Phong thủy</span>
                </a>
-               <!-- Menu Item 7 -->
                <a href="#faq" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-gray-700 text-indigo-600 flex items-center justify-center text-2xl shadow-sm border border-indigo-100 dark:border-white/5 group-hover:bg-indigo-100"><i class="ph-fill ph-question"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Hỏi đáp</span>
                </a>
-               <!-- Menu Item 8 -->
                <a href="#dieukhoan" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-teal-50 dark:bg-gray-700 text-teal-600 flex items-center justify-center text-2xl shadow-sm border border-teal-100 dark:border-white/5 group-hover:bg-teal-100"><i class="ph-fill ph-file-text"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Điều khoản</span>
                </a>
-               <!-- Menu Item 9 -->
                <a href="#lienhe" onclick="toggleMenu()" class="flex flex-col items-center gap-2 group active:scale-95 transition">
                    <div class="w-14 h-14 rounded-2xl bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-400 flex items-center justify-center text-2xl shadow-sm border border-gray-100 dark:border-white/5 group-hover:bg-gray-200"><i class="ph-fill ph-phone-call"></i></div>
                    <span class="text-[10px] font-semibold text-center text-gray-600 dark:text-gray-300">Liên hệ</span>
@@ -659,7 +657,7 @@
 
    </main>
 
-   <!-- FOOTER -->
+   <!-- FOOTER WITH SOCIAL MEDIA ICONS -->
    <footer class="mt-16 bg-[#0F1115] text-gray-400 pt-16 pb-28 rounded-t-[48px] shadow-inner border-t border-white/5 relative overflow-hidden">
        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fb-blue via-purple-500 to-app-orange opacity-50"></div>
        <div class="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -700,10 +698,35 @@
                </ul>
            </div>
        </div>
-       <div class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600 font-medium">
-           <span>© 2025 Nhà Đất Long Biên. All rights reserved.</span>
-           <!-- Backlink Fanpage UPDATED -->
-           <a href="https://www.facebook.com/nhadatlongbien0374966430/" target="_blank" rel="dofollow" class="flex items-center gap-1 hover:text-fb-blue transition"><i class="ph-fill ph-facebook-logo"></i> Kết nối Fanpage Nhà Đất Long Biên</a>
+
+       <!-- Social Media & Copyright Row -->
+       <div class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 px-8">
+           <div class="text-xs text-gray-600 font-medium">© 2025 Nhà Đất Long Biên. All rights reserved.</div>
+           
+           <!-- SOCIAL MEDIA ICONS (Optimized for 3 devices) -->
+           <div class="flex flex-wrap justify-center gap-3">
+               <a href="https://www.facebook.com/nhadatlongbien0374966430/" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-fb-blue hover:text-white transition text-gray-400" title="Facebook">
+                   <i class="ph-fill ph-facebook-logo text-lg"></i>
+               </a>
+               <a href="https://www.youtube.com/channel/UCsK9eqNgsZjXj2Nx2qnqewg" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-600 hover:text-white transition text-gray-400" title="YouTube">
+                   <i class="ph-fill ph-youtube-logo text-lg"></i>
+               </a>
+               <a href="https://www.tiktok.com/@nhadatlongbienhanoi" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-black hover:text-white transition text-gray-400" title="TikTok">
+                   <i class="ph-fill ph-tiktok-logo text-lg"></i>
+               </a>
+               <a href="https://www.pinterest.com/nhadatlongbienhanoi/" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-700 hover:text-white transition text-gray-400" title="Pinterest">
+                   <i class="ph-fill ph-pinterest-logo text-lg"></i>
+               </a>
+               <a href="https://x.com/longbiennha" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-gray-800 hover:text-white transition text-gray-400" title="X (Twitter)">
+                   <i class="ph-fill ph-x-logo text-lg"></i>
+               </a>
+               <a href="https://www.instagram.com/nhadatlongbienhanoi/" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-pink-600 hover:text-white transition text-gray-400" title="Instagram">
+                   <i class="ph-fill ph-instagram-logo text-lg"></i>
+               </a>
+               <a href="https://www.linkedin.com/in/nhadatlomgbien" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-700 hover:text-white transition text-gray-400" title="LinkedIn">
+                   <i class="ph-fill ph-linkedin-logo text-lg"></i>
+               </a>
+           </div>
        </div>
    </footer>
 
