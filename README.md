@@ -107,7 +107,7 @@ Backlink Mạng Xã Hội
 
 Liên hệ
 	•	Điện thoại / Zalo: 0845622012
-	•	Email: info@congthitan.vn
+	•	Email: congttan1981@gmail.com
 	•	Địa chỉ: 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội
 
 ⸻
