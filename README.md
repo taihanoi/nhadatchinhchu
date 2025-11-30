@@ -1,67 +1,46 @@
-Chắc chắn 😎 Dưới đây là gợi ý README.md dài, đầy đủ thông tin cho repo GitHub của bạn, bao gồm mô tả, mục đích, hướng dẫn nhúng chatbot JS, schema markup, và backlink mạng xã hội. Bạn có thể copy thẳng vào GitHub.
-
 # Nhà Đất Long Biên - Công Thị Tân
 
 ![Nhà Đất Long Biên](https://i.postimg.cc/T2cW9Yk6/IMG-5191.png)
 
 ## Giới thiệu
-Chào mừng bạn đến với **Nhà Đất Long Biên - Công Thị Tân**, nơi cung cấp các giải pháp bất động sản **uy tín, chính chủ, giá tốt** tại Long Biên, Hà Nội.  
+Chào mừng bạn đến với **Nhà Đất Long Biên - Công Thị Tân**, đơn vị chuyên phân phối **nhà đất thổ cư, nhà phố, biệt thự và đất nền** tại Long Biên, Hà Nội.  
 
-Nếu bạn đang tìm kiếm **tổ ấm an cư** hoặc **cơ hội đầu tư sinh lời**, Công Thị Tân tự hào là đơn vị top đầu chuyên phân phối:
-
-- Nhà đất thổ cư  
-- Nhà phố  
-- Biệt thự  
-- Đất nền  
-
-Tại các khu vực hot như: **Bồ Đề, Ngọc Lâm, Nguyễn Văn Cừ, Sài Đồng, Việt Hưng**.  
-
-Các căn nhà được cung cấp đa dạng về diện tích, giá cả và tiện ích:  
+Nếu bạn đang tìm **tổ ấm an cư** hoặc **cơ hội đầu tư sinh lời**, Công Thị Tân cung cấp các căn nhà đa dạng tại các khu vực hot: **Bồ Đề, Ngọc Lâm, Nguyễn Văn Cừ, Sài Đồng, Việt Hưng**.
 
 - Giá: **3 – 5 tỷ**, **5 – 7 tỷ**, **7 – 10 tỷ**, tương đương **60 – 150 triệu/m²**  
-- Nhiều căn có tầng 3 tiện mở văn phòng hoặc không gian sinh hoạt.  
-- Vị trí trung tâm Long Biên, gần Gia Lâm, kết nối thuận tiện và đầy đủ tiện ích xung quanh.  
+- Nhiều căn có tầng 3 tiện mở văn phòng hoặc không gian sinh hoạt  
+- Vị trí trung tâm Long Biên, gần Gia Lâm, kết nối thuận tiện, đầy đủ tiện ích  
 
-Hãy để **Công Thị Tân** giúp bạn tìm được căn nhà ưng ý nhất với giá tốt nhất thị trường.  
-**Liên hệ ngay để đi xem nhà miễn phí!**
+Liên hệ ngay để được tư vấn và đi xem nhà miễn phí!
 
 ---
 
 ## Landing Page
-Bạn có thể truy cập landing page chính thức tại:  
+Truy cập landing page chính thức tại:  
 [https://taihanoi.github.io/nhadatchinhchu/](https://taihanoi.github.io/nhadatchinhchu/)
 
-Landing page này được tích hợp **chatbot tự động**, giúp khách hàng:
+Landing page đã tích hợp **chatbot AI RealEstateAI v7**, giúp khách hàng:
 
 - Tra cứu thông tin bất động sản nhanh chóng  
-- Gửi yêu cầu tư vấn trực tiếp  
-- Thu thập liên hệ như email, số điện thoại  
+- Tính giá nhà theo diện tích & vị trí (ngõ/mặt phố)  
+- Thu thập liên hệ qua số điện thoại, Zalo  
+- Trả lời nhanh các câu hỏi phổ biến  
 
-### Nhúng Chatbot JS
-Dưới đây là ví dụ cách nhúng chatbot vào landing page:
+---
+
+## Nhúng Chatbot JS
+Tích hợp chatbot bằng cách thêm file `RealEstateAI_v7_FinalFix.js` vào landing page:
 
 ```html
-<!-- Gemini Chatbot JS -->
-<script src="https://gemini.ai/embed/chatbot.js"></script>
-<script>
-  GeminiChatbot.init({
-    target: "#chatbot-container",
-    welcomeMessage: "Chào mừng bạn đến với Nhà Đất Long Biên - Công Thị Tân! Tôi có thể giúp gì cho bạn hôm nay?",
-    botName: "Công Thị Tân Bot",
-    theme: "light"
-  });
-</script>
+<script src="RealEstateAI_v7_FinalFix.js"></script>
 
-<!-- Container hiển thị chatbot -->
-<div id="chatbot-container"></div>
-
-Lưu ý: thay đổi target và welcomeMessage theo nhu cầu của bạn.
+Chatbot sẽ tự động hiển thị nút mở chat, giao diện Sheet trên mobile, popup trên desktop, và xử lý các câu hỏi, định giá nhà theo diện tích.
 
 ⸻
 
 Schema Markup (JSON-LD)
 
-Landing page đã tích hợp Schema cho Google và các công cụ tìm kiếm:
+Landing page đã tích hợp Schema cho SEO bất động sản:
 
 <script type="application/ld+json">
 {
@@ -116,8 +95,6 @@ Landing page đã tích hợp Schema cho Google và các công cụ tìm kiếm:
 ⸻
 
 Backlink Mạng Xã Hội
-
-Để khách truy cập và tìm kiếm thông tin nhanh chóng, landing page có backlink tới tất cả mạng xã hội:
 	•	Facebook￼
 	•	Pinterest￼
 	•	TikTok￼
@@ -129,19 +106,31 @@ Backlink Mạng Xã Hội
 ⸻
 
 Liên hệ
-	•	Điện thoại: 0845622012
+	•	Điện thoại / Zalo: 0845622012
 	•	Email: info@congthitan.vn
 	•	Địa chỉ: 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội
 
 ⸻
 
-Ghi chú
-	•	Landing page sử dụng chatbot Gemini để tự động tư vấn khách hàng.
-	•	Schema JSON-LD đã được tối ưu SEO cho tìm kiếm bất động sản tại Long Biên.
-	•	Các backlink mạng xã hội giúp tăng uy tín số, tương tác khách hàng và SEO.
+Mã Chatbot RealEstateAI v7
+
+File RealEstateAI_v7_FinalFix.js đã được viết sẵn, hỗ trợ:
+	•	Tính giá nhà theo diện tích & vị trí
+	•	Học thông tin từ nội dung landing page (deep crawl)
+	•	UI mobile Sheet, desktop popup, input chữ luôn rõ ràng
+	•	Tag nhanh 20, 30, 40, 50m², Mặt phố
+
+Thêm script này vào cuối <body> của landing page và nó sẽ tự khởi chạy:
+
+<script src="RealEstateAI_v7_FinalFix.js"></script>
+
 
 ⸻
 
-Đây là phiên bản README.md đầy đủ cho repo GitHub: vừa giới thiệu, vừa hướng dẫn nhúng chatbot, vừa có schema và backlink đầy đủ.
+README này giúp repo GitHub:
+	•	Giới thiệu landing page, chatbot, dịch vụ BĐS
+	•	Hướng dẫn nhúng chatbot, tối ưu SEO
+	•	Cung cấp backlink mạng xã hội
+	•	Mã chatbot sẵn sàng chạy trên landing page
 
 ---
